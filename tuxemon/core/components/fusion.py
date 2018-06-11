@@ -55,7 +55,7 @@ class Body(object):
 
     """
 
-    def __init__(self):
+    def __init__(self, save_data):
 
         # Name properties
         self.prefix = ""            # A name prefix to use when fusing sprites
@@ -80,6 +80,9 @@ class Body(object):
         self.primary_colors = [(0,0,0), (0,0,0), (0,0,0), (0,0,0), (0,0,0)]     # 5 primary colors of the sprite
         self.secondary_colors = [(0,0,0), (0,0,0), (0,0,0), (0,0,0), (0,0,0)]   # 5 secondary colors of the sprite
         self.tertiary_colors= [(0,0,0), (0,0,0), (0,0,0), (0,0,0), (0,0,0)]     # 5 tertiary colors of the sprite
+
+        if save_data:
+            self.set_state(save_data)
 
 
     def get_face_size(self):
@@ -190,6 +193,19 @@ class Body(object):
         self.body_image = Image.open(self.body_image_path)
         self.face_image = Image.open(self.face_image_path)
 
+    def get_state(self):
+        return {
+            "name": self.name,
+        }
+
+    def set_state(self, save_data):
+        if not save_data:
+            return
+
+        name = save_data.get('name')
+        if name:
+            filename = "fusion/%s.json" % name
+            self.load(filename, True)
 
 
 def replace_color(image, original_color, replacement_color):
