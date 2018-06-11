@@ -70,6 +70,20 @@
     <property name="cond4" value="not variable_set donegot:yes"/>
    </properties>
   </object>
+  <object id="35" name="create professor" type="event" x="144" y="192" width="16" height="16">
+   <properties>
+    <property name="act1" value="create_npc npc_professor,7,7,professor,stand"/>
+    <property name="act2" value="set_variable tuxchoice:welcome"/>
+    <property name="cond1" value="not variable_set tuxchoice:end"/>
+    <property name="cond2" value="not npc_exists npc_professor"/>
+   </properties>
+  </object>
+  <object id="36" name="watch player" type="event" x="144" y="192" width="16" height="16">
+   <properties>
+    <property name="act0" value="npc_face npc_professor,player"/>
+    <property name="cond2" value="is npc_exists npc_professor"/>
+   </properties>
+  </object>
   <object id="37" name="Talk to the professor" type="event" x="112" y="128" width="16" height="16">
    <properties>
     <property name="act1" value="translated_dialog_chain professor_dialog1"/>
@@ -79,66 +93,53 @@
     <property name="act5" value="translated_dialog_chain professor_dialog5"/>
     <property name="act6" value="translated_dialog_chain ${{end}}"/>
     <property name="act7" value="dialog_choice Hydrone:Rockitten:Fruitera,tuxchoice"/>
-    <property name="cond1" value="is player_at"/>
-    <property name="cond2" value="is player_facing up"/>
-    <property name="cond3" value="is button_pressed K_RETURN"/>
-    <property name="cond4" value="is npc_exists npc_professor"/>
-    <property name="cond5" value="is variable_set tuxchoice:welcome"/>
-   </properties>
-  </object>
-  <object id="42" name="hello Professor" type="event" x="144" y="192" width="16" height="16">
-   <properties>
-    <property name="act10" value="create_npc npc_professor,7,7,professor,stand"/>
-    <property name="act30" value="set_variable tuxchoice:welcome"/>
-    <property name="cond1" value="not variable_set tuxchoice:end"/>
-    <property name="cond2" value="not npc_exists npc_professor"/>
-    <property name="cond3" value="not variable_set tuxchoice:Hydrone"/>
-    <property name="cond4" value="not variable_set tuxchoice:Rockitten"/>
-    <property name="cond5" value="not variable_set tuxchoice:Fruitera"/>
+    <property name="cond1" value="is button_pressed K_RETURN"/>
+    <property name="cond2" value="is player_facing_npc npc_professor"/>
+    <property name="cond3" value="is variable_set tuxchoice:welcome"/>
    </properties>
   </object>
   <object id="38" name="maybeHydrone" type="event" x="112" y="128" width="16" height="16">
    <properties>
-    <property name="act0" value="set_variable tuxchoice:none"/>
-    <property name="act1" value="translated_dialog professor_dialog6.1"/>
-    <property name="act2" value="dialog_choice Take It:Maybe Not,chooseHydrone"/>
+    <property name="act1" value="set_variable tuxchoice:none"/>
+    <property name="act2" value="translated_dialog professor_dialog6.1"/>
+    <property name="act3" value="dialog_choice Take It:Maybe Not,chooseHydrone"/>
     <property name="cond1" value="is variable_set tuxchoice:Hydrone"/>
    </properties>
   </object>
   <object id="39" name="maybeRockitten" type="event" x="112" y="128" width="16" height="16">
    <properties>
-    <property name="act0" value="set_variable tuxchoice:none"/>
-    <property name="act1" value="translated_dialog professor_dialog6.2"/>
-    <property name="act2" value="dialog_choice Take It:Maybe Not,chooseRockitten"/>
+    <property name="act1" value="set_variable tuxchoice:none"/>
+    <property name="act2" value="translated_dialog professor_dialog6.2"/>
+    <property name="act3" value="dialog_choice Take It:Maybe Not,chooseRockitten"/>
     <property name="cond1" value="is variable_set tuxchoice:Rockitten"/>
    </properties>
   </object>
   <object id="40" name="maybeFruitera" type="event" x="112" y="128" width="16" height="16">
    <properties>
-    <property name="act0" value="set_variable tuxchoice:none"/>
-    <property name="act1" value="translated_dialog professor_dialog6.3"/>
-    <property name="act2" value="dialog_choice Take It:Maybe Not,chooseFruitera"/>
+    <property name="act1" value="set_variable tuxchoice:none"/>
+    <property name="act2" value="translated_dialog professor_dialog6.3"/>
+    <property name="act3" value="dialog_choice Take It:Maybe Not,chooseFruitera"/>
     <property name="cond1" value="is variable_set tuxchoice:Fruitera"/>
    </properties>
   </object>
   <object id="43" name="pick again" type="event" x="112" y="128" width="16" height="16">
    <properties>
-    <property name="act0" value="set_variable chooseFruitera:none"/>
-    <property name="act1" value="dialog_choice Hydrone:Rockitten:Fruitera,tuxchoice"/>
+    <property name="act1" value="set_variable chooseFruitera:none"/>
+    <property name="act2" value="dialog_choice Hydrone:Rockitten:Fruitera,tuxchoice"/>
     <property name="cond1" value="is variable_set chooseFruitera:Maybe Not"/>
    </properties>
   </object>
   <object id="44" name="pick again" type="event" x="112" y="128" width="16" height="16">
    <properties>
-    <property name="act0" value="set_variable chooseRockitten:none"/>
-    <property name="act1" value="dialog_choice Hydrone:Rockitten:Fruitera,tuxchoice"/>
+    <property name="act1" value="set_variable chooseRockitten:none"/>
+    <property name="act2" value="dialog_choice Hydrone:Rockitten:Fruitera,tuxchoice"/>
     <property name="cond1" value="is variable_set chooseRockitten:Maybe Not"/>
    </properties>
   </object>
   <object id="45" name="pick again" type="event" x="112" y="128" width="16" height="16">
    <properties>
-    <property name="act0" value="set_variable chooseHydrone:none"/>
-    <property name="act1" value="dialog_choice Hydrone:Rockitten:Fruitera,tuxchoice"/>
+    <property name="act1" value="set_variable chooseHydrone:none"/>
+    <property name="act2" value="dialog_choice Hydrone:Rockitten:Fruitera,tuxchoice"/>
     <property name="cond1" value="is variable_set chooseHydrone:Maybe Not"/>
    </properties>
   </object>

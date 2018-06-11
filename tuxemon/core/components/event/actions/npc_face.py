@@ -40,4 +40,22 @@ class NpcFaceAction(EventAction):
 
     def start(self):
         npc = get_npc(self.game, self.parameters.npc_slug)
-        npc.facing = self.parameters.direction
+        if self.parameters.direction == "player":
+            npc.facing = self.get_player_direction(npc)
+        else:
+            npc.facing = self.parameters.direction
+
+    def get_player_direction(self, npc):
+        """ Gets the direction of the player in relation to the npc
+        """
+        y_offset = npc.tile_pos[1] - self.game.player1.tile_pos[1]
+        x_offset = npc.tile_pos[0] - self.game.player1.tile_pos[0]
+        # Are they further away vertically or horizontally?
+        look_on_y_axis = abs(y_offset) >= abs(x_offset)
+
+        if look_on_y_axis:
+            player_location = "up" if y_offset > 0 else "down"
+        else:
+            player_location = "left" if x_offset > 0 else "right"
+
+        return player_location
