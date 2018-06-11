@@ -40,6 +40,7 @@ class NpcFaceAction(EventAction):
 
     def start(self):
         npc = get_npc(self.game, self.parameters.npc_slug)
+        print self.parameters.direction
         if self.parameters.direction == "player":
             npc.facing = self.get_player_direction(npc)
         else:

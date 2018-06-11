@@ -70,6 +70,7 @@ class RunningEvent(object):
         # if None, then make a new one
         try:
             action = self.map_event.acts[self.action_index]
+            print self.map_event.acts
 
         except IndexError:
             # reached end of list, remove event and move on
@@ -221,22 +222,31 @@ class EventEngine(object):
         else:
             return condition()
 
-    def check_condition(self, cond_data):
+    def check_condition(self, options):
         """ Check if condition is true of false
 
         Returns False if the condition is not loaded properly
 
-        :type cond_data: core.components.event.MapCondition
+        :type options: list of core.components.event.MapCondition
+            or single core.components.event.MapCondition
         :rtype: bool
         """
-        map_condition = self.get_condition(cond_data.type)
-        if map_condition is None:
-            logger.debug('map condition "{}" is not loaded'.format(cond_data.type))
-            return False
 
-        result = map_condition.test(self.game, cond_data) == (cond_data.operator == 'is')
-        logger.debug('map condition "{}": {} ({})'.format(map_condition.name, result, cond_data))
-        return result
+        if not isinstance(options, list):
+            options = [options]
+
+        for cond_data in options:
+            map_condition = self.get_condition(cond_data.type)
+            if map_condition is None:
+                logger.debug('map condition "{}" is not loaded'.format(cond_data.type))
+                continue
+
+            result = map_condition.test(self.game, cond_data) == (cond_data.operator == 'is')
+            logger.debug('map condition "{}": {} ({})'.format(map_condition.name, result, cond_data))
+            if result:
+                return True
+
+        return False
 
     def execute_action(self, action_name, parameters=None):
         """ Load and execute an action

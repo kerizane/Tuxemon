@@ -349,45 +349,52 @@ class Map(object):
         # We need to sort them by name, so that "act1" comes before "act2" and so on..
         keys = sorted(obj.properties.keys())
 
+
         x = int(obj.x / self.tile_size[0])
         y = int(obj.y / self.tile_size[1])
         w = int(obj.width / self.tile_size[0])
         h = int(obj.height / self.tile_size[1])
 
-        for k in keys:
-            if k.startswith('cond'):
-                words = obj.properties[k].split(' ', 2)
+        conditions = [(int(k[4:]), k) for k in keys if k.startswith('cond')]
+        actions = [(int(k[3:]), k) for k in keys if k.startswith('act')]
 
-                # Conditions have the form 'operator type parameters'.
-                operator, cond_type = words[0:2]
+        from operator import itemgetter
+        conditions.sort(key=itemgetter(0))
+        actions.sort(key=itemgetter(0))
 
-                # If this condition has parameters, split them into a
-                # list
-                if len(words) > 2:
-                    args = self.split_escaped(words[2])
-                else:
-                    args = list()
+        for _, k in conditions:
+            words = obj.properties[k].split(' ', 2)
 
-                # Create a condition object using named tuples
-                condition = MapCondition(cond_type, args, x, y, w, h, operator)
-                conds.append(condition)
+            # Conditions have the form 'operator type parameters'.
+            operator, cond_type = words[0:2]
 
-            elif k.startswith('act'):
-                words = obj.properties[k].split(' ', 1)
+            # If this condition has parameters, split them into a
+            # list
+            if len(words) > 2:
+                args = self.split_escaped(words[2])
+            else:
+                args = list()
 
-                # Actions have the form 'type parameters'.
-                act_type = words[0]
+            # Create a condition object using named tuples
+            condition = MapCondition(cond_type, args, x, y, w, h, operator)
+            conds.append(condition)
 
-                # If this action has parameters, split them into a
-                # list
-                if len(words) > 1:
-                    args = self.split_escaped(words[1])
-                else:
-                    args = list()
+        for _, k in actions:
+            words = obj.properties[k].split(' ', 1)
 
-                # Create an action object using named tuples
-                action = MapAction(act_type, args)
-                acts.append(action)
+            # Actions have the form 'type parameters'.
+            act_type = words[0]
+
+            # If this action has parameters, split them into a
+            # list
+            if len(words) > 1:
+                args = self.split_escaped(words[1])
+            else:
+                args = list()
+
+            # Create an action object using named tuples
+            action = MapAction(act_type, args)
+            acts.append(action)
 
         # TODO: move this to some post-creation function, as more may be needed
         # add a player_facing_tile condition automatically
