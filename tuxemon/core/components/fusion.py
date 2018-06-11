@@ -34,6 +34,8 @@ except ImportError:
     pass
 import json, pprint
 
+from tuxemon.core import prepare
+
 
 class Body(object):
     """A class that holds sprite, _color, and face position data for use with fusing two sprites
@@ -61,6 +63,8 @@ class Body(object):
         self.prefix = ""            # A name prefix to use when fusing sprites
         self.suffix = ""            # A name suffix to use when fusing sprites
         self.name = ""              # The full name of the sprite when you concat prefix + suffix
+        self.body_name = ""         # The name of the parent which provided the body
+        self.face_name = ""         # The name of the parent which provided the face
 
         # Face Properties
         self.face_image_path = ""   # The path to the face image to use.
@@ -156,7 +160,6 @@ class Body(object):
         >>> bulbasaur.load('fusion/Bulbasaur.json')
 
         """
-
         # If "file" is set to true, then assume that json_data is a path to a file containing json.
         if file:
             f = open(json_data, 'r')
@@ -190,6 +193,32 @@ class Body(object):
         self.body_image = Image.open(self.body_image_path)
         self.face_image = Image.open(self.face_image_path)
 
+    def get_state(self):
+        if self.name:
+            return {
+                "name": self.name,
+            }
+
+    def set_state(self, save_data):
+        if not save_data:
+            return
+
+        name = save_data.get('name')
+        if name:
+            file_name = "fusion/%s.json" % name
+            try:
+                self.load(file_name, True)
+            except IOError:
+                # If we don't have the file then we try to recreate it.
+                # Fusion isn't fully implemented, so this is untested
+                body_path = "fusion/%s.json" % save_data.get('body_name')
+                body = Body()
+                body.load(body_path)
+                face_path = "fusion/%s.json" % save_data.get('face_name')
+                face = Body()
+                face.load(face_path)
+                fuse(body, face, True)
+                self.load(file_name, True)
 
 
 def replace_color(image, original_color, replacement_color):

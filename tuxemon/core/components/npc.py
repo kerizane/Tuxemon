@@ -163,6 +163,7 @@ class Npc(Entity):
         """
         return {
             'current_map': game.get_map_name(),
+            'facing': self.facing,
             'game_variables': self.game_variables,
             'inventory': encode_items(self.inventory),
             'monsters': encode_monsters(self.monsters),
@@ -183,13 +184,15 @@ class Npc(Entity):
         :returns: None
 
         """
+        self.facing = save_data.get('facing', 'down')
         self.game_variables = save_data['game_variables']
         self.inventory = decode_items(save_data)
         self.monsters = decode_monsters(save_data)
         self.name = save_data['player_name']
-        self.storage = save_data['storage']
-        self.storage['items'] = decode_items(save_data['storage'])
-        self.storage['monsters'] = decode_monsters(save_data['storage'])
+        self.storage = {
+            'items': decode_items(save_data['storage']),
+            'monsters': decode_monsters(save_data['storage']),
+        }
 
     def load_sprites(self):
         """ Load sprite graphics

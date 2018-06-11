@@ -65,7 +65,7 @@ class Technique(object):
 
     """
 
-    def __init__(self, slug=None):
+    def __init__(self, slug=None, save_data=None):
         self.slug = slug
         self.name = "Pound"
         self.category = "attack"
@@ -78,6 +78,9 @@ class Technique(object):
         # If a slug of the technique was provided, autoload it.
         if slug:
             self.load(slug)
+
+        if save_data:
+            self.set_state(save_data)
 
     def load(self, slug):
         """Loads and sets this technique's attributes from the technique
@@ -351,3 +354,11 @@ class Technique(object):
             'success': True,
             'should_tackle': False,
         }
+
+    def get_state(self):
+        return self.slug
+
+    def set_state(self, save_data):
+        slug = save_data
+        if slug:
+            self.load(slug)
