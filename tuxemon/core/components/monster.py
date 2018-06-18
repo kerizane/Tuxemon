@@ -60,7 +60,6 @@ SIMPLE_PERSISTANCE_ATTRIBUTES = (
     'special_attack',
     'special_defense',
     'total_experience',
-    'status',
 )
 
 
@@ -458,6 +457,8 @@ class Monster(object):
         }
 
         save_data["moves"] = [i.get_state() for i in self.moves]
+        if self.status:
+            save_data["status"] = [i.get_state() for i in self.status]
         body = self.body.get_state()
         if body:
             save_data["body"] = body
@@ -481,9 +482,11 @@ class Monster(object):
         for key, value in save_data.items():
             if key == 'moves' and value:
                 self.moves = [Technique(save_data=i) for i in value]
+            elif key == 'status' and value:
+                self.status = [Technique(save_data=i) for i in value]
             elif key == 'body' and value:
                 self.body.set_state(value)
-            if key in SIMPLE_PERSISTANCE_ATTRIBUTES:
+            elif key in SIMPLE_PERSISTANCE_ATTRIBUTES:
                 setattr(self, key, value)
 
         self.load_sprites()
