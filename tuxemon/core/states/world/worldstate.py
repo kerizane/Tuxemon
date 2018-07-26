@@ -477,7 +477,7 @@ class WorldState(state.State):
         pathnode = self.pathfind_r(
             dest,
             [PathfindNode(start)],
-            [],
+            set(),
         )
 
         if pathnode:
@@ -500,7 +500,7 @@ class WorldState(state.State):
 
         :type dest: tuple
         :type queue: list
-        :type visited: list
+        :type visited: set
         :type depth: int
 
         :rtype: list
@@ -528,7 +528,7 @@ class WorldState(state.State):
                 for adj_pos in self.get_exits(next_node.get_value()):
                     if adj_pos not in visited and adj_pos not in map(lambda x: x.get_value(), queue):
                         mini_queue.append(PathfindNode(adj_pos, next_node))
-                        visited.append(next_node.get_value())
+                        visited.add(next_node.get_value())
 
                 queue += sorted(mini_queue, key=lambda x: x.get_depth())
 
