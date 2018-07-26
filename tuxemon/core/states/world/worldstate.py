@@ -495,12 +495,12 @@ class WorldState(state.State):
                          str(start) + " to " + str(dest) +
                          ". Are you sure that an obstacle-free path exists?")
 
-    def pathfind_r(self, dest, queue, visited):
+    def pathfind_r(self, dest, queue, known_node):
         """ Recursive breadth first search algorithm
 
         :type dest: tuple
         :type queue: list
-        :type visited: set
+        :type known_node: set
         :type depth: int
 
         :rtype: list
@@ -516,19 +516,15 @@ class WorldState(state.State):
                 return queue[0]
 
             else:
-                # sort the queue by node depth
-                # queue = sorted(queue, key=lambda x: x.get_depth())
-
-                # pop next tile off queue
                 next_node = queue.pop(0)
                 mini_queue = []
-
                 # add neighbors of current tile to queue
                 # if we haven't checked them already
                 for adj_pos in self.get_exits(next_node.get_value()):
-                    if adj_pos not in visited and adj_pos not in map(lambda x: x.get_value(), queue):
-                        mini_queue.append(PathfindNode(adj_pos, next_node))
-                        visited.add(next_node.get_value())
+                    if adj_pos not in known_node:
+                        new_node = PathfindNode(adj_pos, next_node)
+                        mini_queue.append(new_node)
+                        known_node.add(new_node.get_value())
 
                 queue += sorted(mini_queue, key=lambda x: x.get_depth())
 
