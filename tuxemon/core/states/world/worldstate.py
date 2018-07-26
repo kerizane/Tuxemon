@@ -474,10 +474,11 @@ class WorldState(state.State):
 
         :return:
         """
-        pathnode = self.pathfind_r(dest,
-                                   [PathfindNode(start)],  # queue
-                                   [],  # visited
-                                   0)  # depth (not a limit, just a counter)
+        pathnode = self.pathfind_r(
+            dest,
+            [PathfindNode(start)],
+            [],
+        )
 
         if pathnode:
             # traverse the node to get the path
@@ -494,7 +495,7 @@ class WorldState(state.State):
                          str(start) + " to " + str(dest) +
                          ". Are you sure that an obstacle-free path exists?")
 
-    def pathfind_r(self, dest, queue, visited, depth):
+    def pathfind_r(self, dest, queue, visited):
         """ Recursive breadth first search algorithm
 
         :type dest: tuple
@@ -504,40 +505,33 @@ class WorldState(state.State):
 
         :rtype: list
         """
-        # some situations will trigger an infinite loop
-        # There is an infinite recursion depth risk here
-        # our maximum depth is 1000 before giving up.
-        # TODO: tune the maximum depth limit
-        if depth > 1000:
-            logger.debug('maximum depth during pathfind')
-            return None
+        while True:
+            if not queue:
+                # does reaching this case mean we exhausted the search?
+                # I think so which means there is no possible path
+                return False
 
-        if not queue:
-            # does reaching this case mean we exhausted the search?
-            # I think so which means there is no possible path
-            return False
+            elif queue[0].get_value() == dest:
+                # done
+                return queue[0]
 
-        elif queue[0].get_value() == dest:
-            # done
-            return queue[0]
+            else:
+                # sort the queue by node depth
+                # queue = sorted(queue, key=lambda x: x.get_depth())
 
-        else:
-            # sort the queue by node depth
-            queue = sorted(queue, key=lambda x: x.get_depth())
+                # pop next tile off queue
+                next_node = queue.pop(0)
+                mini_queue = []
 
-            # pop next tile off queue
-            next_node = queue.pop(0)
+                # add neighbors of current tile to queue
+                # if we haven't checked them already
+                for adj_pos in self.get_exits(next_node.get_value()):
+                    if adj_pos not in visited and adj_pos not in map(lambda x: x.get_value(), queue):
+                        mini_queue.append(PathfindNode(adj_pos, next_node))
+                        visited.append(next_node.get_value())
 
-            # add neighbors of current tile to queue
-            # if we haven't checked them already
-            for adj_pos in self.get_exits(next_node.get_value()):
-                if adj_pos not in visited and adj_pos not in map(lambda x: x.get_value(), queue):
-                    queue = [PathfindNode(adj_pos, next_node)] + queue
-                    visited = [next_node.get_value()] + visited
+                queue += sorted(mini_queue, key=lambda x: x.get_depth())
 
-            # recur
-            path = self.pathfind_r(dest, queue, visited, depth + 1)
-            return path
 
     def get_explicit_tile_exits(self, position, tile):
         """ Check for exits from tile which are defined in the map

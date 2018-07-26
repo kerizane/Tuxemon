@@ -148,6 +148,7 @@ class PathfindNode(object):
 
     def __str__(self):
         s = str(self.value)
+        print s
         if self.parent is not None:
             s += str(self.parent)
         return s
