@@ -501,10 +501,12 @@ class WorldState(state.State):
         :type dest: tuple
         :type queue: list
         :type known_node: set
-        :type depth: int
 
         :rtype: list
         """
+        # The collisions shouldn't have changed whilst we were calculating,
+        # so it saves time to reuse the map.
+        collision_map = self.get_collision_map()
         while True:
             if not queue:
                 # does reaching this case mean we exhausted the search?
@@ -520,7 +522,7 @@ class WorldState(state.State):
                 mini_queue = []
                 # add neighbors of current tile to queue
                 # if we haven't checked them already
-                for adj_pos in self.get_exits(next_node.get_value()):
+                for adj_pos in self.get_exits(next_node.get_value(), collision_map):
                     if adj_pos not in known_node:
                         new_node = PathfindNode(adj_pos, next_node)
                         mini_queue.append(new_node)
@@ -559,7 +561,7 @@ class WorldState(state.State):
         except KeyError:
             pass
 
-    def get_exits(self, position):
+    def get_exits(self, position, collision_map=None):
         """ Return list of tiles which can be moved into
 
         This checks for adjacent tiles while checking for walls,
@@ -570,7 +572,8 @@ class WorldState(state.State):
         :rtype: list
         """
         # get tile-level and npc/entity blockers
-        collision_map = self.get_collision_map()
+        if collision_map is None:
+            collision_map = self.get_collision_map()
 
         # if there are explicit way to exit this position use that
         # information only and do not check surrounding tiles.
