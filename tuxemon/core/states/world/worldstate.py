@@ -52,6 +52,14 @@ keymap = {
 
 }
 
+valid_tiles = {
+    (i, j)
+    for i in range(0, 41)
+    for j in range(0, 41)
+}
+
+invalid_x = (-1, 41)
+invalid_y = (-1, 41)
 
 class WorldState(state.State):
     """ The state responsible for the world game play
@@ -507,28 +515,22 @@ class WorldState(state.State):
         # The collisions shouldn't have changed whilst we were calculating,
         # so it saves time to reuse the map.
         collision_map = self.get_collision_map()
-        while True:
-            if not queue:
-                # does reaching this case mean we exhausted the search?
-                # I think so which means there is no possible path
-                return False
-
-            elif queue[0].get_value() == dest:
-                # done
-                return queue[0]
+        while queue:
+            next_node = queue.pop(0)
+            if next_node.get_value() == dest:
+                return next_node
 
             else:
-                next_node = queue.pop(0)
                 # add neighbors of current tile to queue
                 # if we haven't checked them already
-                for adj_pos in self.get_exits(next_node.get_value(), collision_map):
-                    if adj_pos not in known_node:
-                        new_node = PathfindNode(adj_pos, next_node)
-                        known_node.add(new_node.get_value())
-                        queue.append(new_node)
+                for adj_pos in self.get_exits(next_node.get_value(), collision_map, known_node):
+                    new_node = PathfindNode(adj_pos, next_node)
+                    known_node.add(new_node.get_value())
+                    queue.append(new_node)
 
+        return False
 
-    def get_explicit_tile_exits(self, position, tile):
+    def get_explicit_tile_exits(self, position, tile, skip_nodes):
         """ Check for exits from tile which are defined in the map
 
         This will return exits which were defined by the map creator
@@ -553,12 +555,15 @@ class WorldState(state.State):
             adjacent_tiles = list()
             for direction in tile["exit"]:
                 exit_tile = tuple(dirs2[direction] + position)
+                if exit_tile in skip_nodes:
+                    continue
+
                 adjacent_tiles.append(exit_tile)
             return adjacent_tiles
         except KeyError:
             pass
 
-    def get_exits(self, position, collision_map=None):
+    def get_exits(self, position, collision_map=None, skip_nodes={}):
         """ Return list of tiles which can be moved into
 
         This checks for adjacent tiles while checking for walls,
@@ -577,7 +582,7 @@ class WorldState(state.State):
         # handles 'continue' and 'exits'
         tile_data = collision_map.get(position)
         if tile_data:
-            exits = self.get_explicit_tile_exits(position, tile_data)
+            exits = self.get_explicit_tile_exits(position, tile_data, skip_nodes)
             if exits:
                 return exits
 
@@ -589,6 +594,11 @@ class WorldState(state.State):
                 ("up", (position[0], position[1] - 1)),
                 ("left", (position[0] - 1, position[1])),
         ):
+            if neighbor in skip_nodes:
+                continue
+
+            if position[0] in invalid_x or position[1] in invalid_y:
+                continue
 
             # check to see if this tile is separated by a wall
             if (position, direction) in self.collision_lines_map:
@@ -858,6 +868,7 @@ class WorldState(state.State):
         self.current_map = map_data["data"]
         self.collision_map = map_data["collision_map"]
         self.collision_lines_map = map_data["collision_lines_map"]
+        self.map_size = map_data["map_size"]
 
         # TODO: remove this monkey [patching!] business for the main control/game
         self.game.events = map_data["events"]
