@@ -52,15 +52,6 @@ keymap = {
 
 }
 
-valid_tiles = {
-    (i, j)
-    for i in range(0, 41)
-    for j in range(0, 41)
-}
-
-invalid_x = (-1, 41)
-invalid_y = (-1, 41)
-
 class WorldState(state.State):
     """ The state responsible for the world game play
     """
@@ -503,12 +494,12 @@ class WorldState(state.State):
                          str(start) + " to " + str(dest) +
                          ". Are you sure that an obstacle-free path exists?")
 
-    def pathfind_r(self, dest, queue, known_node):
-        """ Recursive breadth first search algorithm
+    def pathfind_r(self, dest, queue, known_nodes):
+        """ Breadth first search algorithm
 
         :type dest: tuple
         :type queue: list
-        :type known_node: set
+        :type known_nodes: set
 
         :rtype: list
         """
@@ -516,19 +507,14 @@ class WorldState(state.State):
         # so it saves time to reuse the map.
         collision_map = self.get_collision_map()
         while queue:
-            next_node = queue.pop(0)
-            if next_node.get_value() == dest:
-                return next_node
-
+            node = queue.pop(0)
+            if node.get_value() == dest:
+                return node
             else:
-                # add neighbors of current tile to queue
-                # if we haven't checked them already
-                for adj_pos in self.get_exits(next_node.get_value(), collision_map, known_node):
-                    new_node = PathfindNode(adj_pos, next_node)
-                    known_node.add(new_node.get_value())
+                for adj_pos in self.get_exits(node.get_value(), collision_map, known_nodes):
+                    new_node = PathfindNode(adj_pos, node)
+                    known_nodes.add(new_node.get_value())
                     queue.append(new_node)
-
-        return False
 
     def get_explicit_tile_exits(self, position, tile, skip_nodes):
         """ Check for exits from tile which are defined in the map
@@ -537,7 +523,9 @@ class WorldState(state.State):
 
         Checks "continue" and "exits" properties of the tile
 
-        :param position:
+        :param position: tuple
+        :param tile:
+        :param skip_nodes: set
         :return: list
         """
         # Check if the players current position has any exit limitations.
@@ -563,19 +551,24 @@ class WorldState(state.State):
         except KeyError:
             pass
 
-    def get_exits(self, position, collision_map=None, skip_nodes={}):
+    def get_exits(self, position, collision_map=None, skip_nodes=None):
         """ Return list of tiles which can be moved into
 
         This checks for adjacent tiles while checking for walls,
         npcs, and collision lines, one-way tiles, etc
 
         :param position: tuple
+        :param collision_map: dict
+        :param skip_nodes: set
 
         :rtype: list
         """
         # get tile-level and npc/entity blockers
         if collision_map is None:
             collision_map = self.get_collision_map()
+
+        if skip_nodes is None:
+            skip_nodes = set()
 
         # if there are explicit way to exit this position use that
         # information only and do not check surrounding tiles.
@@ -597,7 +590,9 @@ class WorldState(state.State):
             if neighbor in skip_nodes:
                 continue
 
-            if position[0] in invalid_x or position[1] in invalid_y:
+            # We only need to check the perimeter,
+            # as there is no way to get further out of bounds
+            if position[0] in self.invalid_x or position[1] in self.invalid_y:
                 continue
 
             # check to see if this tile is separated by a wall
@@ -869,6 +864,10 @@ class WorldState(state.State):
         self.collision_map = map_data["collision_map"]
         self.collision_lines_map = map_data["collision_lines_map"]
         self.map_size = map_data["map_size"]
+
+        # The first coordinates that are out of bounds.
+        self.invalid_x = (-1, self.map_size[0] + 1)
+        self.invalid_y = (-1, self.map_size[1] + 1)
 
         # TODO: remove this monkey [patching!] business for the main control/game
         self.game.events = map_data["events"]
