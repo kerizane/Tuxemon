@@ -583,10 +583,12 @@ class WorldState(state.State):
 
         # get exits by checking surrounding tiles
         adjacent_tiles = list()
-        for direction, offset in dirs2.items():
-
-            # tile coords of this neighbor
-            neighbor = tuple(position + offset)
+        for direction, neighbor in (
+                ("down", (position[0], position[1] + 1)),
+                ("right", (position[0] + 1, position[1])),
+                ("up", (position[0], position[1] - 1)),
+                ("left", (position[0] - 1, position[1])),
+        ):
 
             # check to see if this tile is separated by a wall
             if (position, direction) in self.collision_lines_map:
