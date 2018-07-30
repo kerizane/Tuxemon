@@ -68,6 +68,8 @@ def main(load_slot=None):
 
     # basically the main menu
     control.push_state("StartState")
+    if load_slot:
+        control.push_state("LoadMenuState", load_slot=load_slot)
 
     # Show the splash screen if it is enabled in the game configuration
     if prepare.CONFIG.splash:
