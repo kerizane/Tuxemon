@@ -84,7 +84,7 @@ class TranslatorPo(object):
             return
 
         trans = gettext.translation("base", localedir=L18N_DIR, languages=[locale_name])
-        trans.install(unicode=True)
+        trans.install()
 
         self.translate = trans.gettext
 
