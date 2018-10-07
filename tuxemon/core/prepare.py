@@ -34,52 +34,65 @@ from __future__ import absolute_import
 
 import logging
 import os
+import os.path
 
 import pygame as pg
 
 from .components import config
-from .platform import get_config_path
+from .platform import get_config_dir
 
 logger = logging.getLogger(__name__)
 
-# Get the tuxemon base directory
-BASEDIR = os.path.abspath(os.path.join(os.path.dirname(os.path.realpath(__file__)), "..")) + os.sep
-if "library.zip" in BASEDIR:
-    BASEDIR = os.path.abspath(os.path.join(BASEDIR, "..")) + os.sep
 
-# Set up our config directory
-CONFIG_PATH = get_config_path() + "/.tuxemon/"
-try:
-    os.makedirs(CONFIG_PATH)
-except OSError:
-    if not os.path.isdir(CONFIG_PATH):
-        raise
+class PATHS:
+    """Enum-like container for project paths."""
 
-# Create a copy of our default config if one does not exist in the home dir.
-DEFAULT_FILE_PATH = BASEDIR + "tuxemon.cfg"
-CONFIG_FILE_PATH = CONFIG_PATH + "tuxemon.cfg"
+    # tuxemon base dir
+    BASEDIR = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
-config.generate_default_config()
+    # config dir (create if missing)
+    USER_CONFIG_DIR = get_config_dir()
 
-# Set up our custom campaign data directory.
-USER_DATA_PATH = CONFIG_PATH + "data/"
-if not os.path.isdir(USER_DATA_PATH):
     try:
-        os.makedirs(USER_DATA_PATH)
+        os.makedirs(USER_CONFIG_DIR, exist_ok=True)
     except OSError:
-        if not os.path.isdir(USER_DATA_PATH):
+        if not os.path.isdir(USER_CONFIG_DIR):
             raise
 
-# Read the "tuxemon.cfg" configuration file
-CONFIG = config.TuxemonConfig(CONFIG_FILE_PATH)
+    # config file path (user-wide and default)
+    CONFIG_FILE = "tuxemon.cfg"
+    USER_CONFIG_PATH = os.path.join(USER_CONFIG_DIR, CONFIG_FILE)
+    DEFAULT_CONFIG_PATH = os.path.join(BASEDIR, CONFIG_FILE)
 
-# write it back to disk, updating it with new defaults
-with open(CONFIG_FILE_PATH, 'w') as fp:
+    # user custom campaign data dir (create if missing)
+    USER_DATA_DIR = os.path.join(USER_CONFIG_DIR, "data")
+
+    try:
+        os.makedirs(USER_DATA_DIR, exist_ok=True)
+    except OSError:
+        if not os.path.isdir(USER_DATA_DIR):
+            raise
+
+    # user savegame dir (create if missing)
+    USER_SAVE_DIR = os.path.join(USER_CONFIG_DIR, "saves")
+
+    try:
+        os.makedirs(USER_SAVE_DIR, exist_ok=True)
+    except OSError:
+        if not os.path.isdir(USER_SAVE_DIR):
+            raise
+
+
+# Generate default config
+config.generate_default_config()
+
+# Read "tuxemon.cfg" config from disk, update and write back
+CONFIG = config.TuxemonConfig(PATHS.USER_CONFIG_PATH)
+
+with open(PATHS.USER_CONFIG_PATH, "w") as fp:
     CONFIG.cfg.write(fp)
 
-# HEADLESSCONFIG = config.HeadlessConfig(CONFIG_FILE_PATH)
-
-# Set up our data directory.
+# Reference data dir
 DATADIR = CONFIG.data
 
 # Set up the screen size and caption
@@ -103,8 +116,6 @@ XP_COLOR = (248, 245, 71)
 NATIVE_RESOLUTION = [240, 160]
 
 # If scaling is enabled, scale the tiles based on the resolution
-
-
 if CONFIG.large_gui:
     SCALE = 2
     TILE_SIZE[0] *= SCALE
@@ -116,13 +127,8 @@ elif CONFIG.scaling:
 else:
     SCALE = 1
 
-# Set up the saves directory
-try:
-    os.makedirs(CONFIG_PATH + "saves/")
-except OSError:
-    if not os.path.isdir(CONFIG_PATH + "saves/"):
-        raise
-SAVE_PATH = CONFIG_PATH + "saves/slot"
+# Reference user save dir
+SAVE_PATH = os.path.join(PATHS.USER_SAVE_DIR, "slot")
 SAVE_METHOD = "JSON"
 # SAVE_METHOD = "CBOR"
 
