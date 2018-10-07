@@ -26,57 +26,116 @@
 # core.components.locale Component for handling in-game translations.
 #
 
-import logging
-import json
-import os
+import gettext
 import io
-from tuxemon.core import prepare
+import json
+import logging
+import os
+import os.path
+import subprocess
+
+
+from tuxemon.core.prepare import CONFIG, DATADIR, PATHS
 
 # Create a logger for optional handling of debug messages.
 logger = logging.getLogger(__name__)
 
-LOCALE_PATH = prepare.DATADIR + "/db/locale"
+# TODO: move to main constants store?
+L18N_DIR = os.path.join("tuxemon", DATADIR, "l18n")
+LOCALE_PATH = os.path.join(DATADIR, "db", "locale")
 FALLBACK_LOCALE = "en_US"
+
+
+class TranslatorPo(object):
+    def __init__(self):
+        self.locale = CONFIG.locale
+        self.languages = self.collect_languages()
+        self.build_translations()
+        self.translate = self.load_locale(CONFIG.locale)
+
+    def collect_languages(self):
+        """Collect languages/locales with available translation files."""
+        languages = []
+
+        for ld in os.listdir(L18N_DIR):
+            ld_full_path = os.path.join(L18N_DIR, ld)
+
+            if os.path.isdir(ld_full_path):
+                languages.append(ld)
+
+        return languages
+
+    def build_translations(self):
+        """Create MO files for existing PO translation files"""
+
+        for ld in self.languages:
+            infile = os.path.join(L18N_DIR, ld, "LC_MESSAGES", "base.po")
+            outfile = os.path.join(os.path.dirname(infile), "base.mo")
+
+            subprocess.run(["msgfmt", "-o", outfile, infile], check=True)
+
+    def load_locale(self, locale_name="en_US"):
+        """Load a selected locale for translation.
+
+        :param locale_name: name of the chosen locale
+        """
+        if locale_name not in self.languages:
+            logger.warning("Selected locale {} not found.".format(locale_name))
+            return
+
+        trans = gettext.translation("base", localedir=L18N_DIR, languages=[locale_name])
+        trans.install(unicode=True)
+
+        self.translate = trans.gettext
+
 
 class Translator(object):
 
     def __init__(self):
-        self.locale = prepare.CONFIG.locale
-        self.directories = self.discover()
+        # immediately grab fallback if 'locale' missing in config
+        self.locale = CONFIG.locale or FALLBACK_LOCALE
+
+        self.directories = self.discover_locale_dirs()
         self.locale_files = self.get_locales(self.directories)
         self.translations = self.load_locale(self.locale, self.locale_files)
+
         self.fallback = self.load_locale(FALLBACK_LOCALE, self.locale_files)
 
-    def discover(self):
+    def discover_locale_dirs(self):
         """Returns locale directories discovered in the base & user data directory
-
-        :param: None
 
         :returns: List of discovered locale directories
 
         """
-        directories = [prepare.BASEDIR + LOCALE_PATH]
-        for item in os.listdir(prepare.USER_DATA_PATH):
-            item = prepare.USER_DATA_PATH + "/" + item
+        directories = [os.path.join(PATHS.BASEDIR, LOCALE_PATH)]
+
+        # TODO: use os.walk if second level directories are needed?
+        for item in os.listdir(PATHS.USER_DATA_DIR):
+            item = os.path.join(PATHS.USER_DATA_DIR, item)
+
+            # TODO: filter also by directory name?
             if os.path.isdir(item):
-                locale_directory = item + LOCALE_PATH
+                locale_directory = os.path.join(item, LOCALE_PATH)
+
                 directories.append(locale_directory)
 
         return directories
 
     def get_locales(self, directories):
-        """Discovers translation files found from locale directories.
+        """Discovers translation files found in locale directories.
 
-        :param: None
+        :param directories: list of directories containing locale JSON data
 
-        :returns: List of locale files
+        :returns: list of locale file paths
 
         """
         locale_files = []
+
         for d in directories:
             for locale_file in os.listdir(d):
-                locale_file_path = d + "/" + locale_file
-                if locale_file_path.endswith(".json") and os.path.isfile(locale_file_path):
+                locale_file_path = os.path.join(d, locale_file)
+
+                if os.path.isfile(locale_file_path) and locale_file_path.endswith(".json"):
                     locale_files.append(locale_file_path)
 
         return locale_files
@@ -84,19 +143,22 @@ class Translator(object):
     def load_locale(self, locale_name, locale_files):
         """Loads a language locale into the translator object
 
-        :param locale_name: Name of the locale to load (E.g. "en_US")
+        :param locale_name: name of the locale to load (E.g. "en_US")
 
         """
         translations = {}
+
         for locale_file in locale_files:
-            filename = locale_file.split("/")[-1]
-            if not filename.startswith(locale_name):
+            filename = os.path.splitext(os.path.basename(locale_file))[0]
+
+            if filename != locale_name:
                 continue
+
             try:
-                f = io.open(locale_file, "r", encoding='utf-8')
-                data = json.load(f)
-                f.close()
-                translations = dict(data, **translations)
+                with io.open(locale_file, "r", encoding="UTF-8") as f:
+                    data = json.load(f)
+
+                translations.update(data)
             except Exception as e:
                 logger.error("Unable to load translation:", e)
 
@@ -125,7 +187,7 @@ class Translator(object):
 
         """
         self.locale = locale_name
-        self.directories = self.discover()
+        self.directories = self.discover_locale_dirs()
         self.locale_files = self.get_locales(self.directories)
         self.translations = self.load_locale(self.locale, self.locale_files)
 
@@ -165,3 +227,5 @@ class Translator(object):
         return self.format(translation_text, parameters)
 
 translator = Translator()
+
+T = TranslatorPo()
