@@ -39,57 +39,40 @@ import os.path
 import pygame as pg
 
 from .components import config
-from .platform import get_config_dir
+from tuxemon.constants import paths
 
 logger = logging.getLogger(__name__)
 
 
-class PATHS:
-    """Enum-like container for project paths."""
+# Create game dir if missing
+try:
+    os.makedirs(paths.USER_GAME_DIR, exist_ok=True)
+except OSError:
+    if not os.path.isdir(paths.USER_GAME_DIR):
+        raise
 
-    # tuxemon base dir
-    BASEDIR = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
-    # config dir (create if missing)
-    USER_CONFIG_DIR = get_config_dir()
+# Create game data dir if missing
+try:
+    os.makedirs(paths.USER_GAME_DATA_DIR, exist_ok=True)
+except OSError:
+    if not os.path.isdir(paths.USER_GAME_DATA_DIR):
+        raise
 
-    try:
-        os.makedirs(USER_CONFIG_DIR, exist_ok=True)
-    except OSError:
-        if not os.path.isdir(USER_CONFIG_DIR):
-            raise
-
-    # config file path (user-wide and default)
-    CONFIG_FILE = "tuxemon.cfg"
-    USER_CONFIG_PATH = os.path.join(USER_CONFIG_DIR, CONFIG_FILE)
-    DEFAULT_CONFIG_PATH = os.path.join(BASEDIR, CONFIG_FILE)
-
-    # user custom campaign data dir (create if missing)
-    USER_DATA_DIR = os.path.join(USER_CONFIG_DIR, "data")
-
-    try:
-        os.makedirs(USER_DATA_DIR, exist_ok=True)
-    except OSError:
-        if not os.path.isdir(USER_DATA_DIR):
-            raise
-
-    # user savegame dir (create if missing)
-    USER_SAVE_DIR = os.path.join(USER_CONFIG_DIR, "saves")
-
-    try:
-        os.makedirs(USER_SAVE_DIR, exist_ok=True)
-    except OSError:
-        if not os.path.isdir(USER_SAVE_DIR):
-            raise
-
+# Create game savegame dir if missing
+try:
+    os.makedirs(paths.USER_GAME_SAVE_DIR, exist_ok=True)
+except OSError:
+    if not os.path.isdir(paths.USER_GAME_SAVE_DIR):
+        raise
 
 # Generate default config
 config.generate_default_config()
 
 # Read "tuxemon.cfg" config from disk, update and write back
-CONFIG = config.TuxemonConfig(PATHS.USER_CONFIG_PATH)
+CONFIG = config.TuxemonConfig(paths.USER_CONFIG_PATH)
 
-with open(PATHS.USER_CONFIG_PATH, "w") as fp:
+with open(paths.USER_CONFIG_PATH, "w") as fp:
     CONFIG.cfg.write(fp)
 
 # Reference data dir
@@ -128,7 +111,7 @@ else:
     SCALE = 1
 
 # Reference user save dir
-SAVE_PATH = os.path.join(PATHS.USER_SAVE_DIR, "slot")
+SAVE_PATH = os.path.join(paths.USER_GAME_SAVE_DIR, "slot")
 SAVE_METHOD = "JSON"
 # SAVE_METHOD = "CBOR"
 

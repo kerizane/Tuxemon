@@ -35,14 +35,12 @@ import os.path
 import subprocess
 
 
-from tuxemon.core.prepare import CONFIG, DATADIR, PATHS
+from tuxemon.constants import paths
+from tuxemon.core.prepare import CONFIG
 
 # Create a logger for optional handling of debug messages.
 logger = logging.getLogger(__name__)
 
-# TODO: move to main constants store?
-L18N_DIR = os.path.join("tuxemon", DATADIR, "l18n")
-LOCALE_PATH = os.path.join(DATADIR, "db", "locale")
 FALLBACK_LOCALE = "en_US"
 
 
@@ -57,8 +55,8 @@ class TranslatorPo(object):
         """Collect languages/locales with available translation files."""
         languages = []
 
-        for ld in os.listdir(L18N_DIR):
-            ld_full_path = os.path.join(L18N_DIR, ld)
+        for ld in os.listdir(paths.L18N_DIR):
+            ld_full_path = os.path.join(paths.L18N_DIR, ld)
 
             if os.path.isdir(ld_full_path):
                 languages.append(ld)
@@ -66,10 +64,10 @@ class TranslatorPo(object):
         return languages
 
     def build_translations(self):
-        """Create MO files for existing PO translation files"""
+        """Create MO files for existing PO translation files."""
 
         for ld in self.languages:
-            infile = os.path.join(L18N_DIR, ld, "LC_MESSAGES", "base.po")
+            infile = os.path.join(paths.L18N_DIR, ld, "LC_MESSAGES", "base.po")
             outfile = os.path.join(os.path.dirname(infile), "base.mo")
 
             subprocess.run(["msgfmt", "-o", outfile, infile], check=True)
@@ -83,7 +81,7 @@ class TranslatorPo(object):
             logger.warning("Selected locale {} not found.".format(locale_name))
             return
 
-        trans = gettext.translation("base", localedir=L18N_DIR, languages=[locale_name])
+        trans = gettext.translation("base", localedir=paths.L18N_DIR, languages=[locale_name])
         trans.install()
 
         self.translate = trans.gettext
@@ -107,15 +105,15 @@ class Translator(object):
         :returns: List of discovered locale directories
 
         """
-        directories = [os.path.join(PATHS.BASEDIR, LOCALE_PATH)]
+        directories = [os.path.join(paths.BASEDIR, paths.LOCALE_PATH)]
 
         # TODO: use os.walk if second level directories are needed?
-        for item in os.listdir(PATHS.USER_DATA_DIR):
-            item = os.path.join(PATHS.USER_DATA_DIR, item)
+        for item in os.listdir(paths.USER_GAME_DATA_DIR):
+            item = os.path.join(paths.USER_GAME_DATA_DIR, item)
 
             # TODO: filter also by directory name?
             if os.path.isdir(item):
-                locale_directory = os.path.join(item, LOCALE_PATH)
+                locale_directory = os.path.join(item, paths.LOCALE_PATH)
 
                 directories.append(locale_directory)
 
