@@ -71,7 +71,9 @@ class TranslatorPo(object):
             infile = os.path.join(paths.L18N_DIR, ld, "LC_MESSAGES", "base.po")
             outfile = os.path.join(os.path.dirname(infile), "base.mo")
 
-            subprocess.run(["msgfmt", "-o", outfile, infile], check=True)
+            # build only complete translations
+            if os.path.exists(infile):
+                subprocess.run(["msgfmt", "-o", outfile, infile], check=True)
 
     def load_locale(self, locale_name="en_US"):
         """Load a selected locale for translation.
