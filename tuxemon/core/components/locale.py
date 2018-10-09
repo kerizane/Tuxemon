@@ -80,12 +80,15 @@ class TranslatorPo(object):
 
         :param locale_name: name of the chosen locale
         """
-        if locale_name not in self.languages:
-            logger.warning("Selected locale {} not found.".format(locale_name))
-            return
 
-        # init and load requested language translation
-        trans = gettext.translation("base", localedir=paths.L18N_DIR, languages=[locale_name])
+        # init and load requested language translation (if exists)
+        if locale_name not in self.languages:
+            logger.warning("Selected locale {} not found. Using fallback.".format(locale_name))
+            trans = gettext.translation("base", localedir=paths.L18N_DIR, languages=[FALLBACK_LOCALE])
+
+        else:
+            trans = gettext.translation("base", localedir=paths.L18N_DIR, languages=[locale_name])
+
         trans.install()
 
         self.translate = trans.gettext
