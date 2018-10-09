@@ -34,7 +34,6 @@ import os
 import os.path
 import subprocess
 
-
 from tuxemon.constants import paths
 from tuxemon.core.prepare import CONFIG
 
@@ -45,6 +44,8 @@ FALLBACK_LOCALE = "en_US"
 
 
 class TranslatorPo(object):
+    """gettext-based translator class."""
+
     def __init__(self):
         self.locale = CONFIG.locale
         self.languages = self.collect_languages()
@@ -81,6 +82,7 @@ class TranslatorPo(object):
             logger.warning("Selected locale {} not found.".format(locale_name))
             return
 
+        # init and load requested language translation
         trans = gettext.translation("base", localedir=paths.L18N_DIR, languages=[locale_name])
         trans.install()
 

@@ -34,6 +34,7 @@ from tuxemon.core.platform import get_config_dir
 BASEDIR = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 # main game and config dir
+# TODO: this imports pygame from core.prepare - refactor to avoid this?
 USER_GAME_DIR = get_config_dir()
 
 CONFIG_FILE = "tuxemon.cfg"
@@ -49,6 +50,6 @@ USER_GAME_DATA_DIR = os.path.join(USER_GAME_DIR, "data")
 USER_GAME_SAVE_DIR = os.path.join(USER_GAME_DIR, "saves")
 
 # game locale and translation dirs
-L18N_DIR = os.path.join("tuxemon", "resources", "l18n")
-LOCALE_PATH = os.path.join("resources", "db", "locale")
+L18N_DIR = os.path.join(BASEDIR, "resources", "l18n")
+LOCALE_PATH = os.path.join(BASEDIR, "resources", "db", "locale")
 
