@@ -34,7 +34,8 @@ import os
 
 from operator import itemgetter
 
-from tuxemon.core import prepare
+from tuxemon.constants import paths
+from tuxemon.core.components.locale import T
 
 # Create a logger for optional handling of debug messages.
 logger = logging.getLogger(__name__)
@@ -59,7 +60,7 @@ class JSONDatabase(object):
     """
 
     def __init__(self, dir=None):
-        self.path = prepare.BASEDIR + prepare.DATADIR + "/db/"
+        self.path = os.path.join(paths.BASEDIR, "resources", "db")
         self.database = {
             "item": {},
             "monster": {},
@@ -103,25 +104,25 @@ class JSONDatabase(object):
 
         """
 
-        for json_item in os.listdir(self.path + directory):
+        for json_item in os.listdir(os.path.join(self.path, directory)):
 
             # Only load .json files.
             if not json_item.endswith(".json"):
                 continue
 
             # Load our json as a dictionary.
-            with open(self.path + directory + "/" + json_item) as fp:
+            with open(os.path.join(self.path, directory, json_item)) as fp:
                 try:
                     item = json.load(fp)
                 except ValueError:
-                    logger.error("invalid JSON {}".format(json_item))
+                    logger.error(T.translate("invalid JSON ") + json_item)
                     raise
 
             if item['slug'] not in self.database[directory]:
                 self.database[directory][item['slug']] = item
             else:
                 logger.error(item, json)
-                raise Exception("Error: Item with this slug was already loaded.")
+                raise Exception(T.translate("Error: Item with this slug was already loaded."))
 
 
     def lookup(self, slug, table="monster"):
@@ -157,7 +158,7 @@ class JSONDatabase(object):
 
         """
 
-        logger.warning("lookup_sprite is deprecated. Use JSONDatabase.database")
+        logger.warning(T.translate("lookup_sprite is deprecated. Use JSONDatabase.database"))
         results = {'sprite_battle1': self.database['monster'][slug]['sprites']['battle1'],
                    'sprite_battle2': self.database['monster'][slug]['sprites']['battle2'],
                    'sprite_menu1': self.database['monster'][slug]['sprites']['menu1']}

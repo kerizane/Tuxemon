@@ -53,3 +53,6 @@ USER_GAME_SAVE_DIR = os.path.join(USER_GAME_DIR, "saves")
 L18N_DIR = os.path.join(BASEDIR, "resources", "l18n")
 LOCALE_PATH = os.path.join(BASEDIR, "resources", "db", "locale")
 
+# resource and database dirs
+DB_DIR = os.path.join(BASEDIR, "resources", "db")
+
