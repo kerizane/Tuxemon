@@ -50,7 +50,7 @@ class TranslatorPo(object):
         self.locale = CONFIG.locale
         self.languages = self.collect_languages()
         self.build_translations()
-        self.translate = self.load_locale(CONFIG.locale)
+        self.load_locale(CONFIG.locale)
 
     def collect_languages(self):
         """Collect languages/locales with available translation files."""
@@ -148,7 +148,7 @@ class Translator(object):
     def load_locale(self, locale_name, locale_files):
         """Loads a language locale into the translator object
 
-        :param locale_name: name of the locale to load (E.g. "en_US")
+        :param locale_name: name of the locale to load (E.g. "en_GB")
 
         """
         translations = {}
@@ -188,7 +188,7 @@ class Translator(object):
     def change_locale(self, locale_name):
         """Changes the translator object to the given locale
 
-        :param locale_name: Name of the locale to load (E.g. "en_US")
+        :param locale_name: Name of the locale to load (E.g. "en_GB")
 
         """
         self.locale = locale_name
