@@ -36,8 +36,6 @@ import pprint
 
 from threading import Thread
 
-from tuxemon.core.components.locale import T
-
 logger = logging.getLogger(__name__)
 
 
@@ -62,8 +60,8 @@ class CommandLine(cmd.Cmd):
 
         # Set up the command line prompt itself
         self.prompt = "Tuxemon>> "
-        self.intro = T.translate('Tuxemon CLI\nType "help", "copyright",'
-                                 ' "credits" or "license" for more information.')
+        self.intro = ('Tuxemon CLI\nType "help", "copyright", "credits"'
+                      ' or "license" for more information.')
 
         # set up a  pretty printer so that shit is formatted nicely
         self.pp = pprint.PrettyPrinter(indent=4)
@@ -155,7 +153,7 @@ class CommandLine(cmd.Cmd):
         :returns: None
 
         """
-        print(T.translate("Available variables:"))
+        print("Available variables:")
         print("self.pp.pprint(self.__dict__)")
         self.pp.pprint(self.__dict__)
         code.interact(local=locals())
