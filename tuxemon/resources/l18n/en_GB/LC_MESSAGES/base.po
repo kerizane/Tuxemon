@@ -16,14 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: main.py:10
-msgid "Hello world."
-msgstr "Greetings world."
-
-#: main.py:11
-msgid "This is a translatable string"
-msgstr ""
-
 #: Potion item description
 # msgid "Heals a monster by 50 HP."
 # msgstr "Restores 50 HP to the monster."
