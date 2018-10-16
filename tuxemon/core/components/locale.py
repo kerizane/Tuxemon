@@ -85,9 +85,15 @@ class TranslatorPo(object):
         if locale_name in self.languages:
             trans = gettext.translation("base", localedir=paths.L18N_DIR, languages=[locale_name])
 
+            # update locale
+            self.locale = locale_name
+
         else:
             logger.warning("Locale {} not found. Using fallback.".format(locale_name))
             trans = gettext.translation("base", localedir=paths.L18N_DIR, languages=[FALLBACK_LOCALE])
+
+            # fall back to default locale
+            self.locale = FALLBACK_LOCALE
 
         trans.install()
 
