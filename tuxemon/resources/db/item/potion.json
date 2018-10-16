@@ -1,5 +1,7 @@
 {
-  "slug": "item_potion",
+  "slug": "potion",
+  "name": "Potion",
+  "description": "Heals a monster by 50 HP.",
   "name_trans": "item_potion_name",
   "description_trans": "item_potion_descr",
   "execute_trans": "combat_used_x",
