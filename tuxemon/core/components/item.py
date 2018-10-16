@@ -34,7 +34,9 @@ import pprint
 import random
 
 from tuxemon.core import tools
+from tuxemon.core.components.locale import T
 from . import db
+
 from .locale import translator
 
 trans = translator.translate
@@ -43,12 +45,11 @@ trans = translator.translate
 logger = logging.getLogger(__name__)
 
 # Load the monster database
-items = db.JSONDatabase()
-items.load("item")
+items_db = db.JSONDatabase()
+items_db.load("item")
 
 inventory_db = db.JSONDatabase()
 inventory_db.load("inventory")
-
 
 
 class Item(object):
@@ -111,10 +112,10 @@ class Item(object):
 
         """
 
-        results = items.lookup(slug, table="item")
+        results = items_db.lookup(slug, table="item")
         self.slug = results["slug"]               # short English identifier
-        self.name = trans(results["name_trans"])  # will be locale string
-        self.description = trans(results["description_trans"])  # will be locale string
+        self.name = T.translate(results["name"])  # will be locale string
+        self.description = T.translate(results["description"])  # will be locale string
 
         # must be translated before displaying
         self.execute_trans = results['execute_trans']
