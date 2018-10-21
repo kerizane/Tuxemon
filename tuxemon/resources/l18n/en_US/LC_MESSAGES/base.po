@@ -18,81 +18,251 @@ msgstr ""
 
 ## ITEM TRANSLATIONS ##
 
-# Apple item slug and name
+# Apple
 msgid "apple"
 msgstr "Apple"
 
-# Apple item description
 msgid "apple_description"
 msgstr "Heals a monster by 10 HP."
 
-# Berry item slug and name
+# Berry
 msgid "berry"
 msgstr "Berry"
 
-# Berry item description
 msgid "berry_description"
 msgstr "Heals a monster by 10 HP."
 
-# Cherry item slug and name
+# Cherry
 msgid "cherry"
 msgstr "Cherry"
 
-# Cherry item description
 msgid "cherry_description"
 msgstr "Heals a monster by 10 HP."
 
-# Orange item slug and name
+# Orange
 msgid "orange"
 msgstr "Orange"
 
-# Orange item descrption
 msgid "orange_description"
 msgstr "Heals a monster by 20 HP."
 
-# Potion item slug and name
+# Potion
 msgid "potion"
 msgstr "Potion"
 
-# Potion item description
 msgid "potion_description"
 msgstr "Heals a monster by 50 HP."
 
-# Super Potion item slug and name
+# Super Potion
 msgid "super_potion"
 msgstr "Super Potion"
 
-# Super Potion item description
 msgid "super_potion_description"
 msgstr "Heals a monster by 150 HP."
 
-# Imperial Potion item slug and name
+# Imperial Potion
 msgid "imperial_potion"
 msgstr "Imperial Potion"
 
-# Imperial Potion item description
 msgid "imperial_potion_description"
 msgstr "Heals a monster by 350 HP."
 
-# Capture Device item slug and name
+# Capture Device
 msgid "capture_device"
 msgstr "Capture Device"
 
-# Capture Device item description
 msgid "capture_device_description"
 msgstr "Captures a monster."
 
 
-## DIALOG TRANSLATIONS ##
+## NOTIFICATION TRANSLATIONS ##
 
-# Use item X in combat notification
+# Combat notifications
 msgid "combat_used_x"
 msgstr "{user} used {name}!"
 
-# Generic success notification
+msgid "combat_run"
+msgstr "{user} ran away!",
+
+msgid "combat_player_run"
+msgstr "You have run away!"
+
+msgid "combat_used_x_on_y"
+msgstr "{user} used {name} on {target}!"
+
+msgid "combat_swap"
+msgstr "{user} sent out {target}!"
+
+msgid "combat_call_tuxemon"
+msgstr "Go {name}!"
+
+# TODO: similar to combat_swap - refactor!
+msgid "combat_opponent_call_tuxemon"
+msgstr "{user} sent out {name}!"
+
+msgid "combat_state_poison_damage"
+msgstr "{name} took poison damage!"
+
+msgid "combat_status_damage"
+msgstr "{name} took {status} damage!"
+
+msgid "combat_victory"
+msgstr "You have won!"
+
+msgid "combat_defeat"
+msgstr "You've been defeated!"
+
+msgid "combat_draw"
+msgstr "All parties have fainted!"
+
+msgid "combat_capturing success"
+msgstr "You captured {name}!"
+
+msgid "combat_capturing_fail"
+msgstr "{name} broke free!"
+
+msgid "combat_replacement"
+msgstr "Choose a replacement!"
+
+msgid "combat_replacement_is_fainted"
+msgstr "That monster has fainted already!"
+
+msgid "combat_wild_appeared"
+msgstr "A wild {name} appeared!"
+
+msgid "combat_monster_choice"
+msgstr "What will {name} do?"
+
+msgid "combat_fainted"
+msgstr "{name} fainted!"
+
+msgid "combat_isactive"
+msgstr "{name} is already in play."
+
+# Generic notifications
+msgid "not_implemented"
+msgstr "This feature is not yet implemented."
+
 msgid "generic_success"
 msgstr "It worked!"
 
-# Generic failure notification
 msgid "generic_failure"
 msgstr "It failed!"
+
+msgid "empty_slot"
+msgstr "Empty Slot"
+
+msgid "exit"
+msgstr "Exit"
+
+msgid "item_confirm_use"
+msgstr "Use"
+
+msgid "item_confirm_cancel"
+msgstr "Cancel"
+
+# TODO same as generic_success and generic_failure - refactor!
+msgid "item_success"
+msgstr "It worked!"
+
+msgid "item_failure"
+msgstr "It failed!"
+
+msgid "attempting_capture"
+msgstr "Attempting capture..."
+
+msgid "gotcha"
+msgstr "Gotcha!"
+
+msgid "item_cannot_use_here"
+msgstr "{name} cannot be used here!"
+
+msgid "receive_happiness"
+msgstr "Received 5 Capture Devices!"
+
+
+## MENU TRANSLATIONS ##
+
+# Monster Menu notifications
+msgid "monster_menu_info"
+msgstr "Info"
+
+msgid "monster_menu_move"
+msgstr "Move"
+
+# Menu notifications
+msgid "log_off"
+msgstr "Log Off"
+
+msgid "menu_bag"
+msgstr "Bag"
+
+msgid "menu_fight"
+msgstr "Fight"
+
+msgid "menu_item"
+msgstr "Item"
+
+msgid "menu_items"
+msgstr "Items"
+
+msgid "menu_journal"
+msgstr "Journal"
+
+msgid "menu_load"
+msgstr "Load"
+
+msgid "menu_monster"
+msgstr "Tuxemon"
+
+# TODO: duplicate of menu_monster?
+msgid "menu_monsters"
+msgstr "Monsters"
+
+msgid "menu_multiplayer"
+msgstr "Multiplayer"
+
+msgid "menu_new_game"
+msgstr "New Game"
+
+msgid "menu_options"
+msgstr "Options"
+
+msgid "menu_player"
+msgstr "Player"
+
+msgid "menu_run"
+msgstr "Run"
+
+msgid "menu_save"
+msgstr "Save"
+
+# Multiplayer notifications
+msgid "multiplayer_accept"
+msgstr "Accept"
+msgid "multiplayer_decline"
+msgstr "Decline"
+
+msgid "multiplayer_duel"
+msgstr "{name} would like to Duel!"
+
+msgid "multiplayer_host_game"
+msgstr "Host Game"
+
+msgid "multiplayer_scan_games"
+msgstr "Scan for Games"
+
+msgid "multiplayer_join_game"
+msgstr "Join Game"
+
+msgid "multiplayer_hosting_ready"
+msgstr "Ready to accept clients!"
+
+msgid "multiplayer_already_hosting"
+msgstr "Already hosting!"
+
+msgid "multiplayer_no_servers"
+msgstr "No servers found..."
+
+msgid "multiplayer_join_prompt"
+msgstr "Hostname or IP?"
