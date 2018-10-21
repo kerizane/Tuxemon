@@ -1,12 +1,9 @@
 {
   "slug": "potion",
-  "name": "Potion",
-  "description": "Heals a monster by 50 HP.",
-  "name_trans": "item_potion_name",
-  "description_trans": "item_potion_descr",
-  "execute_trans": "combat_used_x",
-  "success_trans": "generic_thing_success",
-  "failure_trans": "generic_thing_failure",
+  "description": "potion_description",
+  "use_item": "combat_used_x",
+  "use_success": "generic_success",
+  "use_failure": "generic_failure",
   "effects": [
     "heal"
   ],
