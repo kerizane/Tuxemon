@@ -59,7 +59,7 @@ msgid "potion_description"
 msgstr "Heals a monster by 50 HP."
 
 # Super Potion item slug and name
-msgid "super potion"
+msgid "super_potion"
 msgstr "Super Potion"
 
 # Super Potion item description
@@ -67,7 +67,7 @@ msgid "super_potion_description"
 msgstr "Heals a monster by 150 HP."
 
 # Imperial Potion item slug and name
-msgid "imperial potion"
+msgid "imperial_potion"
 msgstr "Imperial Potion"
 
 # Imperial Potion item description
@@ -75,7 +75,7 @@ msgid "imperial_potion_description"
 msgstr "Heals a monster by 350 HP."
 
 # Capture Device item slug and name
-msgid "capture device"
+msgid "capture_device"
 msgstr "Capture Device"
 
 # Capture Device item description
