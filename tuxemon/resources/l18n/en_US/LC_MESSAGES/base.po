@@ -16,6 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
+## ITEM TRANSLATIONS ##
+
 # Apple item slug and name
 msgid "apple"
 msgstr "Apple"
@@ -79,3 +81,18 @@ msgstr "Capture Device"
 # Capture Device item description
 msgid "capture_device_description"
 msgstr "Captures a monster."
+
+
+## DIALOG TRANSLATIONS ##
+
+# Use item X in combat notification
+msgid "combat_used_x"
+msgstr "{user} used {name}!"
+
+# Generic success notification
+msgid "generic_success"
+msgstr "It worked!"
+
+# Generic failure notification
+msgid "generic_failure"
+msgstr "It failed!"
