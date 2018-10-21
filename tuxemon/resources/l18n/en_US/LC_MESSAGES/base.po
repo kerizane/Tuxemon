@@ -2,7 +2,7 @@
 # Copyright (C) YEAR The Unknown Horizons Team
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-msgid ""
+msgid "PROJECT DESCRIPTION\n"
 msgstr ""
 "Project-Id-Version: Insert package version from somewhere\n"
 "Report-Msgid-Bugs-To: andymenderunix@gmail.com\n"
@@ -82,7 +82,7 @@ msgid "combat_used_x"
 msgstr "{user} used {name}!"
 
 msgid "combat_run"
-msgstr "{user} ran away!",
+msgstr "{user} ran away!"
 
 msgid "combat_player_run"
 msgstr "You have run away!"
@@ -266,3 +266,276 @@ msgstr "No servers found..."
 
 msgid "multiplayer_join_prompt"
 msgstr "Hostname or IP?"
+
+
+## MONSTER TRANSLATIONS ##
+
+# Monster details
+msgid "aardart"
+msgstr "Aardart"
+
+msgid "aardart_description"
+msgstr "It keeps count of every ant it has eaten, and celebrates significant numbers."
+
+msgid "aardorn"
+msgstr "Aardorn"
+
+msgid "aardorn_description"
+msgstr "When born it is placed in an anthill and left to eat its way out."
+
+msgid "agnidon"
+msgstr "Agnidon"
+
+msgid "agnidon_description"
+msgstr "It prefers four legs, but can stand on two to open doors, push over trees or hold things."
+
+msgid "agnigon"
+msgstr "Agnigon"
+
+msgid "agnigon_description"
+msgstr "It is called a 'false dragon', because it appears to be a dragon, but actually evolved from a different line of ancient reptiles."
+
+msgid "agnite"
+msgstr "Agnite"
+
+msgid "agnite_description"
+msgstr "It is playful, but must be taught early on to keep its fire in check."
+
+msgid "allagon"
+msgstr "Allagon"
+
+msgid "allagon_description"
+msgstr "Allagon are drawn to relics made from the metals left behind by their ancestors, and will be violent to retrieve them."
+
+msgid "anoleaf"
+msgstr "Anoleaf"
+
+msgid "anoleaf_description"
+msgstr "It considers the plants growing near it to be its brothers and sisters."
+
+msgid "axylightl"
+msgstr "Axylightl"
+
+msgid "axylightl_description"
+msgstr "It lights the deep waters with its tail, marking a safe shelter for fish."
+
+msgid "bamboon"
+msgstr "Bamboon"
+
+msgid "bamboon_description"
+msgstr "It fights with its bamboo staff, which it also uses for balance."
+
+msgid "bigfin"
+msgstr "Bigfin"
+
+msgid "bigfin_description"
+msgstr "A whole ecosystem exists on its back, so it tries not to go underwater."
+
+msgid "bolt"
+msgstr "Bolt"
+
+# TODO: add description for tuxemon Bolt
+msgid "bolt_description"
+msgstr " "
+
+msgid "cairfrey"
+msgstr "Cairfrey"
+
+msgid "cairfrey_description"
+msgstr "A jolly piece of furniture who awoke one morning and decided to explore."
+
+msgid "capiti"
+msgstr "Capiti"
+
+msgid "capiti_description"
+msgstr "It looks like a baby, but some specimens have been found that are hundreds of years old."
+
+msgid "cardiling"
+msgstr "Cardiling"
+
+msgid "cardiling_description"
+msgstr "One wouldn't expect it to breathe fire, until it does."
+
+msgid "cardinale"
+msgstr "Cardinale"
+
+msgid "cardinale_description"
+msgstr "It hates all predators with a passion, and makes war with them and their young when it can."
+
+msgid "cardiwing"
+msgstr "Cardiwing"
+
+msgid "cardiwing_description"
+msgstr "Its song is remarkable, but few dare keep an explosive songbird."
+
+msgid "chillimp"
+msgstr "Chillimp"
+
+msgid "chillimp_description"
+msgstr "It is rumoured to live atop snowy mountains, but no clear photo of it has ever been taken."
+
+msgid "chloragon"
+msgstr "Chloragon"
+
+msgid "chloragon_description"
+msgstr "It hatches when an ancient egg is planted in fertile soil. When the eggs run out, there will be no more Chloragon."
+
+msgid "conifrost"
+msgstr "Conifrost"
+
+msgid "conifrost_description"
+msgstr "If it sneezes, an avalanche occurs. It has a permanent sniffle."
+
+msgid "corvix"
+msgstr "Corvix"
+
+msgid "corvix_description"
+msgstr "It arms its wings with bone shards from its victims."
+
+msgid "dandylion"
+msgstr "Dandylion"
+
+msgid "dandylion_description"
+msgstr "It gives birth to one litter in its life. Then it wanders the world trying to find them."
+
+msgid "djinnbo"
+msgstr "Djinnbo"
+
+msgid "djinnbo_description"
+msgstr "It is mistakenly believed that it is a human who died in a fire. Actually, its relatives did."
+
+msgid "dollfin"
+msgstr "Dollfin"
+
+msgid "dollfin_description"
+msgstr "Each one follows a ship from place to place, exploring the world."
+
+msgid "dracune"
+msgstr "Dracune"
+
+msgid "dracune_description"
+msgstr "It is immobile during the day, but can wriggle and bite at night."
+
+msgid "dragarbor"
+msgstr "Dragarbor"
+
+msgid "dragarbor_description"
+msgstr "When it feels it is coming to the end of its life, it travels to a graveyard where it plants itself. Its tail flower grows forever."
+
+msgid "dune_pincher"
+msgstr "Dune Pincher"
+
+msgid "dune_pincher_description"
+msgstr " "
+
+msgid "eaglace"
+msgstr "Eaglace"
+
+msgid "eaglace_description"
+msgstr "When it takes flight, clouds form. When it claps its wings, hail falls."
+
+msgid "eyenemy"
+msgstr "Eyenemy"
+
+msgid "eyenemy_description"
+msgstr "It feeds on beautiful views and other spectacular sights."
+
+msgid "falcono"
+msgstr "Falcono"
+
+msgid "falcono_description"
+msgstr "It is totally unafraid of adversaries, and will attack an enemy of any size without hesitation."
+
+msgid "ferricran"
+msgstr "Ferricran"
+
+msgid "ferricran_description"
+msgstr "Once, the Ferricran were covered all over with adamantine scales, and had wings of mithril."
+
+msgid "firomenis"
+msgstr "Firomenis"
+
+msgid "firomenis_description"
+msgstr " "
+
+msgid "fluttaflap"
+msgstr "Fluttaflap"
+
+msgid "fluttaflap_description"
+msgstr "It feeds on impurities, so it returns purified blood to those it sucks on."
+
+msgid "fruitera"
+msgstr "Fruitera"
+
+msgid "fruitera_description"
+msgstr " "
+
+# Monster categories
+msgid "anteater"
+msgstr "Anteater"
+
+msgid "snout"
+msgstr "Snout"
+
+msgid "false_dragon"
+msgstr "False Dragon"
+
+msgid "dragon"
+msgstr "Dragon"
+
+msgid "sprout"
+msgstr "Sprout"
+
+msgid "inchoate"
+msgstr "Inchoate"
+
+msgid "prehensile"
+msgstr "Prehensile"
+
+msgid "island"
+msgstr "Island"
+
+msgid "host"
+msgstr "Host"
+
+msgid "woodwose"
+msgstr "Woodwose"
+
+msgid "firebird"
+msgstr "Firebird"
+
+msgid "frost_ape"
+msgstr "Frost Ape"
+
+msgid "taiga"
+msgstr "Taiga"
+
+msgid "horned_raptor"
+msgstr "Horned Raptor"
+
+msgid "lions_tooth"
+msgstr "Lion's Tooth"
+
+msgid "vengeance"
+msgstr "Vengeance"
+
+msgid "joyful"
+msgstr "Joyful"
+
+msgid "cloaked"
+msgstr "Cloaked"
+
+msgid "cirrus"
+msgstr "Cirrus"
+
+msgid "pupil"
+msgstr "Pupil"
+
+msgid "fire"
+msgstr "Fire"
+
+msgid "sanguine"
+msgstr "Sanguine"
+
+msgid "wood"
+msgstr "Wood"

@@ -1,7 +1,7 @@
 {
-  "slug": "corvix",
+  "slug": "falcono",
   "category": "horned_raptor",
-  "description": "corvix_description",
+  "description": "falcono_description",
 
   "attack_base":            60,
   "defense_base":           7,
@@ -32,10 +32,10 @@
     }
   ],
   "sprites": {
-    "battle1": "gfx/sprites/battle/corvix-front.png",
-    "battle2": "gfx/sprites/battle/corvix-back.png",
-    "menu1": "gfx/sprites/battle/corvix-menu01.png",
-    "menu2": "gfx/sprites/battle/corvix-menu02.png"
+    "battle1": "gfx/sprites/battle/falcono-front.png",
+    "battle2": "gfx/sprites/battle/falcono-back.png",
+    "menu1": "gfx/sprites/battle/falcono-menu01.png",
+    "menu2": "gfx/sprites/battle/falcono-menu02.png"
   },
   "types": [
     "metal"

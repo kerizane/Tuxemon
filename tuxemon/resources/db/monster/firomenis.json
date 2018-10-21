@@ -1,7 +1,7 @@
 {
-  "slug": "corvix",
-  "category": "horned_raptor",
-  "description": "corvix_description",
+  "slug": "firomenis",
+  "category": "fire",
+  "description": "firomenis_description",
 
   "attack_base":            60,
   "defense_base":           7,
@@ -28,17 +28,17 @@
     },
     {
       "level_learned": 2,
-      "technique": "technique_whirlwind"
+      "technique": "technique_fire_explosion"
     }
   ],
   "sprites": {
-    "battle1": "gfx/sprites/battle/corvix-front.png",
-    "battle2": "gfx/sprites/battle/corvix-back.png",
-    "menu1": "gfx/sprites/battle/corvix-menu01.png",
-    "menu2": "gfx/sprites/battle/corvix-menu02.png"
+    "battle1": "gfx/sprites/battle/firomenis-front.png",
+    "battle2": "gfx/sprites/battle/firomenis-back.png",
+    "menu1": "gfx/sprites/battle/firomenis-menu01.png",
+    "menu2": "gfx/sprites/battle/firomenis-menu02.png"
   },
   "types": [
-    "metal"
+    "fire"
   ],
   "weight": 25
 }

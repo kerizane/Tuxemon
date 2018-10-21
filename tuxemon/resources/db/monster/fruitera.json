@@ -1,7 +1,7 @@
 {
-  "slug": "corvix",
-  "category": "horned_raptor",
-  "description": "corvix_description",
+  "slug": "fruitera",
+  "category": "wood",
+  "description": "fruitera_description",
 
   "attack_base":            60,
   "defense_base":           7,
@@ -17,28 +17,28 @@
   "special_defense_mod":    1,
   "speed_mod":              1,
 
-  "exp_give_mod":           3,
-  "exp_req_mod":            27,
+  "exp_give_mod": 3,
+  "exp_req_mod": 27,
 
   "ai": "RandomAI",
   "moveset": [
     {
       "level_learned": 2,
-      "technique": "technique_pound"
+      "technique": "technique_bite"
     },
     {
       "level_learned": 2,
-      "technique": "technique_whirlwind"
+      "technique": "technique_poison_sting"
     }
   ],
   "sprites": {
-    "battle1": "gfx/sprites/battle/corvix-front.png",
-    "battle2": "gfx/sprites/battle/corvix-back.png",
-    "menu1": "gfx/sprites/battle/corvix-menu01.png",
-    "menu2": "gfx/sprites/battle/corvix-menu02.png"
+    "battle1": "gfx/sprites/battle/fruitera-front.png",
+    "battle2": "gfx/sprites/battle/fruitera-back.png",
+    "menu1": "gfx/sprites/battle/fruitera-menu01.png",
+    "menu2": "gfx/sprites/battle/fruitera-menu02.png"
   },
   "types": [
-    "metal"
+    "wood"
   ],
   "weight": 25
 }
