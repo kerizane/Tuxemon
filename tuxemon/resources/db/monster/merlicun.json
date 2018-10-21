@@ -1,7 +1,7 @@
 {
-  "slug": "nut",
-  "category": "metal",
-  "description": "nut_description",
+  "slug": "merlicun",
+  "category": "fire",
+  "description": "merlicun_description",
 
   "attack_base":            60,
   "defense_base":           7,
@@ -25,16 +25,20 @@
     {
       "level_learned": 2,
       "technique": "technique_pound"
+    },
+    {
+      "level_learned": 2,
+      "technique": "technique_fire_explosion"
     }
   ],
   "sprites": {
-    "battle1": "gfx/sprites/battle/nut-front.png",
-    "battle2": "gfx/sprites/battle/nut-back.png",
-    "menu1": "gfx/sprites/battle/nut-menu01.png",
-    "menu2": "gfx/sprites/battle/nut-menu02.png"
+    "battle1": "gfx/sprites/battle/merlicun-front.png",
+    "battle2": "gfx/sprites/battle/merlicun-back.png",
+    "menu1": "gfx/sprites/battle/merlicun-menu01.png",
+    "menu2": "gfx/sprites/battle/merlicun-menu02.png"
   },
   "types": [
-    "metal"
+    "fire"
   ],
   "weight": 25
 }

@@ -1,14 +1,14 @@
 {
-  "slug": "hydrone",
-  "category": "metal_water",
-  "description": "hydrone_description",
+  "slug": "onaclov",
+  "category": "",
+  "description": "onaclov_description",
 
-  "attack_base":            59,
-  "defense_base":           9,
-  "hp_base":                60,
+  "attack_base":            57,
+  "defense_base":           8,
+  "hp_base":                67,
   "special_attack_base":    8,
   "special_defense_base":   10,
-  "speed_base":             9,
+  "speed_base":             7,
 
   "attack_mod":             1,
   "defense_mod":            1,
@@ -28,18 +28,18 @@
     },
     {
       "level_learned": 2,
-      "technique": "technique_water_shot"
+      "technique": "technique_bite"
     }
   ],
   "sprites": {
-    "battle1": "gfx/sprites/battle/hydrone-front.png",
-    "battle2": "gfx/sprites/battle/hydrone-back.png",
-    "menu1": "gfx/sprites/battle/hydrone-menu01.png",
-    "menu2": "gfx/sprites/battle/hydrone-menu02.png"
+    "battle1": "gfx/sprites/battle/onaclov-front.png",
+    "battle2": "gfx/sprites/battle/onaclov-back.png",
+    "menu1": "gfx/sprites/battle/onaclov-menu01.png",
+    "menu2": "gfx/sprites/battle/onaclov-menu02.png"
   },
   "types": [
     "metal",
-    "water"
+    "fire"
   ],
-  "weight": 70
+  "weight": 75
 }

@@ -1,7 +1,7 @@
 {
-  "slug": "nut",
-  "category": "metal",
-  "description": "nut_description",
+  "slug": "magmaturtle",
+  "category": "earth_fire",
+  "description": "magmaturtle_description",
 
   "attack_base":            60,
   "defense_base":           7,
@@ -25,16 +25,20 @@
     {
       "level_learned": 2,
       "technique": "technique_pound"
+    },
+    {
+      "level_learned": 2,
+      "technique": "technique_poison_sting"
     }
   ],
   "sprites": {
-    "battle1": "gfx/sprites/battle/nut-front.png",
-    "battle2": "gfx/sprites/battle/nut-back.png",
-    "menu1": "gfx/sprites/battle/nut-menu01.png",
-    "menu2": "gfx/sprites/battle/nut-menu02.png"
+    "battle1": "gfx/sprites/battle/magmaturtle-front.png",
+    "battle2": "gfx/sprites/battle/magmaturtle-back.png",
+    "menu1": "gfx/sprites/battle/magmaturtle-menu01.png",
+    "menu2": "gfx/sprites/battle/magmaturtle-menu02.png"
   },
   "types": [
-    "metal"
+    "fire"
   ],
   "weight": 25
 }

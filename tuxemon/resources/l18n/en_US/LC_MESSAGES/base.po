@@ -470,6 +470,120 @@ msgstr "Fruitera"
 msgid "fruitera_description"
 msgstr " "
 
+msgid "gectile"
+msgstr "Gectile"
+
+msgid "gectile_description"
+msgstr "It is so quick and light that it can walk on leaves."
+
+msgid "heronquak"
+msgstr "Heronquak"
+
+msgid "heronquak_description"
+msgstr "The crystal on its chest is mistaken for a diamond by poachers. It melts when it is removed from HERONQUAK's body."
+
+msgid "hydrone"
+msgstr "Hydrone"
+
+msgid "hydrone_description"
+msgstr " "
+
+msgid "lambert"
+msgstr "Lambert"
+
+msgid "lambert_description"
+msgstr "It is placed in its nut by its parent, who then sends it into the world."
+
+msgid "legko"
+msgstr "Legko"
+
+msgid "legko_description"
+msgstr "Long thought to be legless, its leaves are actually vestigial limbs."
+
+msgid "magmaturtle"
+msgstr "Magmaturtle"
+
+msgid "magmaturtle_description"
+msgstr " "
+
+msgid "merlicun"
+msgstr "Merlicun"
+
+msgid "merlicun_description"
+msgstr " "
+
+msgid "moloch"
+msgstr "Moloch"
+
+msgid "moloch_description"
+msgstr "It can stiffen or soften its skin to respond to friends and foes."
+
+msgid "noctalo"
+msgstr "Noctalo"
+
+msgid "noctalo_description"
+msgstr "It inhabits only places abandoned by humans - castles, graveyards and sewers."
+
+msgid "noctula"
+msgstr "Noctula"
+
+msgid "noctula_description"
+msgstr "It eats bugs and PIPIS eat fruit, so despite living in close proximity they do not compete."
+
+msgid "nostray"
+msgstr "Nostray"
+
+msgid "nostray_description"
+msgstr "It can smell anything in the ocean, no matter how far away."
+
+msgid "nudiflot"
+msgstr "Nudiflot"
+
+msgid "nudiflot_description"
+msgstr "It eats and stores the poison of the sea creatures that it feeds upon."
+
+msgid "nut"
+msgstr "Nut"
+
+msgid "nut_description"
+msgstr " "
+
+msgid "onaclov"
+msgstr "Onaclov"
+
+msgid "onaclov_description"
+msgstr " "
+
+msgid "pigabyte"
+msgstr "Pigabyte"
+
+msgid "pigabyte_description"
+msgstr " "
+
+msgid "possessun"
+msgstr "Possessun"
+
+msgid "possessun_description"
+msgstr "It is a ghost that inhabits a dead cairfrey."
+
+msgid "propellercat"
+msgstr "Propellercat"
+
+msgid "propellercat_description"
+msgstr " "
+
+msgid "rockat"
+msgstr "Rockat"
+
+msgid "rockat_description"
+msgstr " "
+
+msgid "rockitten"
+msgstr "Rockitten"
+
+msgid "rockitten_description"
+msgstr " "
+
 # Monster categories
 msgid "anteater"
 msgstr "Anteater"
@@ -539,3 +653,42 @@ msgstr "Sanguine"
 
 msgid "wood"
 msgstr "Wood"
+
+msgid "climbing"
+msgstr "Climbing"
+
+msgid "crested"
+msgstr "Crested"
+
+msgid "metal_water"
+msgstr "Metal, Water"
+
+msgid "gumnut"
+msgstr "Gumnut"
+
+msgid "lizard"
+msgstr "Lizard"
+
+msgid "earth_fire"
+msgstr "Earth, Fire"
+
+msgid "devil"
+msgstr "Devil"
+
+msgid "nightcrawler"
+msgstr "Nightcrawler"
+
+msgid "probiscus"
+msgstr "Probiscus"
+
+msgid "flopped"
+msgstr "Flopped"
+
+msgid "metal"
+msgstr "Metal"
+
+msgid "visitor"
+msgstr "Visitor"
+
+msgid "earth"
+msgstr "Earth"

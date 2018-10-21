@@ -1,14 +1,14 @@
 {
-  "slug": "hydrone",
-  "category": "metal_water",
-  "description": "hydrone_description",
+  "slug": "nudiflot",
+  "category": "flopped",
+  "description": "nudiflot_description",
 
-  "attack_base":            59,
-  "defense_base":           9,
+  "attack_base":            53,
+  "defense_base":           8.7,
   "hp_base":                60,
-  "special_attack_base":    8,
-  "special_defense_base":   10,
-  "speed_base":             9,
+  "special_attack_base":    7.8,
+  "special_defense_base":   9.1,
+  "speed_base":             7,
 
   "attack_mod":             1,
   "defense_mod":            1,
@@ -32,14 +32,13 @@
     }
   ],
   "sprites": {
-    "battle1": "gfx/sprites/battle/hydrone-front.png",
-    "battle2": "gfx/sprites/battle/hydrone-back.png",
-    "menu1": "gfx/sprites/battle/hydrone-menu01.png",
-    "menu2": "gfx/sprites/battle/hydrone-menu02.png"
+    "battle1": "gfx/sprites/battle/nudiflot-front.png",
+    "battle2": "gfx/sprites/battle/nudiflot-back.png",
+    "menu1": "gfx/sprites/battle/nudiflot-menu01.png",
+    "menu2": "gfx/sprites/battle/nudiflot-menu02.png"
   },
   "types": [
-    "metal",
     "water"
   ],
-  "weight": 70
+  "weight": 65
 }
