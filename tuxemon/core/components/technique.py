@@ -29,9 +29,11 @@
 #
 import logging
 import os
+import os.path
 import random
 from collections import namedtuple
 
+from tuxemon.constants import paths
 from tuxemon.core import prepare
 from tuxemon.core.components import db
 from tuxemon.core.components.locale import translator
@@ -177,15 +179,15 @@ class Technique(object):
         self.animation = results["animation"]
         if self.animation:
             self.images = []
-            animation_dir = prepare.BASEDIR + prepare.DATADIR + "/animations/technique/"
+            animation_dir = os.path.join(paths.BASEDIR, prepare.DATADIR, "animations/technique")
             directory = sorted(os.listdir(animation_dir))
             for image in directory:
                 if self.animation and image.startswith(self.animation):
-                    self.images.append("animations/technique/" + image)
+                    self.images.append(os.path.join("animations/technique", image))
 
         # Load the sound effect for this technique
-        sfx_directory = "sounds/technique/"
-        self.sfx = sfx_directory + results["sfx"]
+        sfx_directory = "sounds/technique"
+        self.sfx = os.path.join(sfx_directory, results["sfx"])
 
     def advance_round(self, number=1):
         """ Advance the turn counters for this technique
