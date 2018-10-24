@@ -1,6 +1,5 @@
 {
-    "slug": "npc_maple",
-    "name_trans": "npc_maple_name",
+    "slug": "maple_girl",
     "sprite_name": "girl1",
     "monsters": [
         {

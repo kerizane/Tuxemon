@@ -1,6 +1,5 @@
 {
-    "slug": "npc_karrianna",
-    "name_trans": "npc_karrianna",
+    "slug": "karrianna",
     "sprite_name": "maple",
     "monsters": [
         {

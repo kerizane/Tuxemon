@@ -44,6 +44,7 @@ logger = logging.getLogger(__name__)
 items_db = db.JSONDatabase()
 items_db.load("item")
 
+# Load the inventory database
 inventory_db = db.JSONDatabase()
 inventory_db.load("inventory")
 

@@ -1,6 +1,5 @@
 {
-    "slug": "npc_liela",
-    "name_trans": "npc_liela",
+    "slug": "liela",
     "sprite_name": "femaletrainer",
     "monsters": [
         {
