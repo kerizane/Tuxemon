@@ -1,7 +1,6 @@
 {
   "slug": "ferricran",
   "category": "dragon",
-  "description": "ferricran_description",
 
   "attack_base":            60,
   "defense_base":           7,

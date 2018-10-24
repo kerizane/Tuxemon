@@ -1,7 +1,6 @@
 {
   "slug": "capiti",
   "category": "woodwose",
-  "description": "capiti_description",
 
   "attack_base":            60,
   "defense_base":           7,

@@ -1,7 +1,6 @@
 {
   "slug": "hydrone",
   "category": "metal_water",
-  "description": "hydrone_description",
 
   "attack_base":            59,
   "defense_base":           9,

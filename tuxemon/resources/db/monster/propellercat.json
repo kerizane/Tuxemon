@@ -1,7 +1,6 @@
 {
   "slug": "propellercat",
   "category": "metal",
-  "description": "propellercat_description",
 
   "attack_base":            60,
   "defense_base":           7,

@@ -1,7 +1,6 @@
 {
   "slug": "magmaturtle",
   "category": "earth_fire",
-  "description": "magmaturtle_description",
 
   "attack_base":            60,
   "defense_base":           7,

@@ -1,7 +1,6 @@
 {
   "slug": "dune_pincher",
   "category": "",
-  "description": "dune_pincher_description",
 
   "attack_base":            60,
   "defense_base":           7,

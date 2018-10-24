@@ -1,7 +1,6 @@
 {
   "slug": "aardart",
   "category": "anteater",
-  "description": "aardart_description",
 
   "attack_base":            60,
   "defense_base":           7,

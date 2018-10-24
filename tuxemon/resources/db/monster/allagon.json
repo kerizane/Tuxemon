@@ -1,7 +1,6 @@
 {
   "slug": "allagon",
   "category": "dragon",
-  "description": "allagon_description",
 
   "attack_base":            60,
   "defense_base":           7,

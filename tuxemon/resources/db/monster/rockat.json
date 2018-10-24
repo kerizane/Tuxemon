@@ -1,7 +1,6 @@
 {
   "slug": "rockat",
   "category": "earth",
-  "description": "rockat_description",
 
   "attack_base":            65,
   "defense_base":           8,

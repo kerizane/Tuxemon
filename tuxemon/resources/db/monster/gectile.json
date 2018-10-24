@@ -1,7 +1,6 @@
 {
   "slug": "gectile",
   "category": "climbing",
-  "description": "gectile_description",
 
   "attack_base":            60,
   "defense_base":           7,

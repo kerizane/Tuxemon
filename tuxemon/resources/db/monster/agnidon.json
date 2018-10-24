@@ -1,7 +1,6 @@
 {
   "slug": "agnidon",
   "category": "false_dragon",
-  "description": "agnidon_description",
 
   "attack_base":            60,
   "defense_base":           7,

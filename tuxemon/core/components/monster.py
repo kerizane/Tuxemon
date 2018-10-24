@@ -285,7 +285,7 @@ class Monster(object):
 
         self.slug = results["slug"]                             # short English identifier
         self.name = T.translate(results["slug"])                # translated name
-        self.description = T.translate(results["description"])  # translated description
+        self.description = T.translate("{}_description".format(results["slug"]))  # translated description
         self.category = T.translate(results["category"])        # translated category
 
         self.hp = results["hp_base"]

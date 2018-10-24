@@ -1,7 +1,6 @@
 {
   "slug": "nudiflot",
   "category": "flopped",
-  "description": "nudiflot_description",
 
   "attack_base":            53,
   "defense_base":           8.7,
