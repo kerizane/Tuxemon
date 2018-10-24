@@ -1,18 +1,18 @@
 {
-  "slug": "wrougon",
-  "category": "dragon",
+  "slug": "tumblecoon",
+  "category": "",
 
-  "attack_base":            60,
-  "defense_base":           7,
-  "hp_base":                50,
-  "special_attack_base":    6,
+  "attack_base":            50,
+  "defense_base":           6,
+  "hp_base":                60,
+  "special_attack_base":    8,
   "special_defense_base":   10,
   "speed_base":             7,
 
   "attack_mod":             1,
   "defense_mod":            1,
   "hp_mod":                 1,
-  "special_attack_mod":     1,
+  "special_attack_mod":     1.1,
   "special_defense_mod":    1,
   "speed_mod":              1,
 
@@ -22,7 +22,7 @@
   "ai": "RandomAI",
   "moveset": [
     {
-      "level_learned": 2,
+      "level_learned": 1,
       "technique": "technique_pound"
     },
     {
@@ -31,13 +31,13 @@
     }
   ],
   "sprites": {
-    "battle1": "gfx/sprites/battle/wrougon-front.png",
-    "battle2": "gfx/sprites/battle/wrougon-back.png",
-    "menu1": "gfx/sprites/battle/wrougon-menu01.png",
-    "menu2": "gfx/sprites/battle/wrougon-menu02.png"
+    "battle1": "gfx/sprites/battle/tumblecoon-front.png",
+    "battle2": "gfx/sprites/battle/tumblecoon-back.png",
+    "menu1": "gfx/sprites/battle/tumblecoon-menu01.png",
+    "menu2": "gfx/sprites/battle/tumblecoon-menu02.png"
   },
   "types": [
-    "metal"
+    "poison"
   ],
-  "weight": 25
+  "weight": 55
 }

@@ -584,6 +584,114 @@ msgstr "Rockitten"
 msgid "rockitten_description"
 msgstr " "
 
+msgid "sapragon"
+msgstr "Sapragon"
+
+msgid "sapragon_description"
+msgstr "In olden times, each element had a mighty dragon - but those creatures have diminished and are rare in these days."
+
+msgid "selket"
+msgstr "Selket"
+
+msgid "selket_description"
+msgstr " "
+
+msgid "selmatek"
+msgstr "Selmatek"
+
+msgid "selmatek_description"
+msgstr " "
+
+msgid "simba"
+msgstr "Simba"
+
+msgid "simba_description"
+msgstr " "
+
+msgid "sludgehog"
+msgstr "Sludgehog"
+
+msgid "sludgehog_description"
+msgstr " "
+
+msgid "sharpfin"
+msgstr "Sharpfin"
+
+msgid "sharpfin_description"
+msgstr "It is invisible in the water, being visible only when it leaps out of the water to drag animals on the shore back into the deep."
+
+msgid "snowrilla"
+msgstr "Snowrilla"
+
+msgid "snowrilla_description"
+msgstr "It delights in playing tag with skiers on desolate slopes."
+
+msgid "spycozeus"
+msgstr "Spycozeus"
+
+msgid "spycozeus_description"
+msgstr " "
+
+msgid "sumobug"
+msgstr "Sumobug"
+
+msgid "sumobug_description"
+msgstr "It uses its weight to trip much larger enemies. It is as dense as a star."
+
+msgid "tigrock"
+msgstr "Tigrock"
+
+msgid "tigrock_description"
+msgstr "It is said that it had to invent itself because an evolution was not designed."
+
+msgid "tumblecoon"
+msgstr "Tumblecoon"
+
+msgid "tumblecoon_description"
+msgstr " "
+
+msgid "tumbleworm"
+msgstr "Tumbleworm"
+
+msgid "tumbleworm_description"
+msgstr " "
+
+msgid "tux"
+msgstr "Tux"
+
+msgid "tux_description"
+msgstr " "
+
+msgid "tweesher"
+msgstr "Tweesher"
+
+msgid "tweesher_description"
+msgstr "The colder the weather, the harder its beak. At below 0 degrees, it is harder than diamond."
+
+msgid "vamporm"
+msgstr "Vamporm"
+
+msgid "vamporm_description"
+msgstr "It thirsts for blood, but must make do with tree sap."
+
+msgid "velocitile"
+msgstr "Velocitile"
+
+msgid "velocitile_description"
+msgstr "It can outrun a bullet, but only when it has warmed up."
+
+msgid "wrougon"
+msgstr "Wrougon"
+
+msgid "wrougon_description"
+msgstr "Each Wrougon is born with a patch of rust larger than the patch of its parents."
+
+msgid "zunna"
+msgstr "Zunna"
+
+msgid "zunna_description"
+msgstr "Cheerful ZUNNA sucks up all the food it can find into its stomach."
+
 # Monster categories
 msgid "anteater"
 msgstr "Anteater"
@@ -692,3 +800,24 @@ msgstr "Visitor"
 
 msgid "earth"
 msgstr "Earth"
+
+msgid "rip"
+msgstr "Rip"
+
+msgid "yeti"
+msgstr "Yeti"
+
+msgid "ex_machina"
+msgstr "Ex Machina"
+
+msgid "water"
+msgstr "Water"
+
+msgid "clot"
+msgstr "Clot"
+
+msgid "restless"
+msgstr "Restless"
+
+msgid "slurpy"
+msgstr "Slurpy"

@@ -1,6 +1,6 @@
 {
-  "slug": "wrougon",
-  "category": "dragon",
+  "slug": "spycozeus",
+  "category": "",
 
   "attack_base":            60,
   "defense_base":           7,
@@ -31,13 +31,13 @@
     }
   ],
   "sprites": {
-    "battle1": "gfx/sprites/battle/wrougon-front.png",
-    "battle2": "gfx/sprites/battle/wrougon-back.png",
-    "menu1": "gfx/sprites/battle/wrougon-menu01.png",
-    "menu2": "gfx/sprites/battle/wrougon-menu02.png"
+    "battle1": "gfx/sprites/battle/spycozeus-front.png",
+    "battle2": "gfx/sprites/battle/spycozeus-back.png",
+    "menu1": "gfx/sprites/battle/spycozeus-menu01.png",
+    "menu2": "gfx/sprites/battle/spycozeus-menu02.png"
   },
   "types": [
-    "metal"
+    "none"
   ],
   "weight": 25
 }

@@ -1,6 +1,6 @@
 {
-  "slug": "wrougon",
-  "category": "dragon",
+  "slug": "selket",
+  "category": "",
 
   "attack_base":            60,
   "defense_base":           7,
@@ -31,13 +31,13 @@
     }
   ],
   "sprites": {
-    "battle1": "gfx/sprites/battle/wrougon-front.png",
-    "battle2": "gfx/sprites/battle/wrougon-back.png",
-    "menu1": "gfx/sprites/battle/wrougon-menu01.png",
-    "menu2": "gfx/sprites/battle/wrougon-menu02.png"
+    "battle1": "gfx/sprites/battle/selket-front.png",
+    "battle2": "gfx/sprites/battle/selket-back.png",
+    "menu1": "gfx/sprites/battle/selket-menu01.png",
+    "menu2": "gfx/sprites/battle/selket-menu02.png"
   },
   "types": [
-    "metal"
+    "earth"
   ],
   "weight": 25
 }

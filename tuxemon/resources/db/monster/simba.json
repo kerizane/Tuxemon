@@ -1,13 +1,13 @@
 {
-  "slug": "sludgehog",
-  "category": "earth",
+  "slug": "simba",
+  "category": "",
 
-  "attack_base":            57,
-  "defense_base":           7.5,
-  "hp_base":                65,
+  "attack_base":            70,
+  "defense_base":           8,
+  "hp_base":                70,
   "special_attack_base":    8,
   "special_defense_base":   10,
-  "speed_base":             7,
+  "speed_base":             8,
 
   "attack_mod":             1,
   "defense_mod":            1,
@@ -31,13 +31,13 @@
     }
   ],
   "sprites": {
-    "battle1": "gfx/sprites/battle/sludgehog-front.png",
-    "battle2": "gfx/sprites/battle/sludgehog-back.png",
-    "menu1": "gfx/sprites/battle/sludgehog-menu01.png",
-    "menu2": "gfx/sprites/battle/sludgehog-menu02.png"
+    "battle1": "gfx/sprites/battle/simba-front.png",
+    "battle2": "gfx/sprites/battle/simba-back.png",
+    "menu1": "gfx/sprites/battle/simba-menu01.png",
+    "menu2": "gfx/sprites/battle/simba-menu02.png"
   },
   "types": [
-    "wood"
+    "poison"
   ],
-  "weight": 77
+  "weight": 65
 }

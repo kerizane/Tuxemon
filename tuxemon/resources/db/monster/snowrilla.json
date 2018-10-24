@@ -1,6 +1,6 @@
 {
-  "slug": "wrougon",
-  "category": "dragon",
+  "slug": "snowrilla",
+  "category": "yeti",
 
   "attack_base":            60,
   "defense_base":           7,
@@ -23,21 +23,21 @@
   "moveset": [
     {
       "level_learned": 2,
-      "technique": "technique_pound"
+      "technique": "technique_bite"
     },
     {
       "level_learned": 2,
-      "technique": "technique_bite"
+      "technique": "technique_water_shot"
     }
   ],
   "sprites": {
-    "battle1": "gfx/sprites/battle/wrougon-front.png",
-    "battle2": "gfx/sprites/battle/wrougon-back.png",
-    "menu1": "gfx/sprites/battle/wrougon-menu01.png",
-    "menu2": "gfx/sprites/battle/wrougon-menu02.png"
+    "battle1": "gfx/sprites/battle/snowrilla-front.png",
+    "battle2": "gfx/sprites/battle/snowrilla-back.png",
+    "menu1": "gfx/sprites/battle/snowrilla-menu01.png",
+    "menu2": "gfx/sprites/battle/snowrilla-menu02.png"
   },
   "types": [
-    "metal"
+    "water"
   ],
   "weight": 25
 }
