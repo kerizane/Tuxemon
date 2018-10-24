@@ -37,10 +37,6 @@ from tuxemon.core import tools
 from tuxemon.core.components.locale import T
 from . import db
 
-from .locale import translator
-
-trans = translator.translate
-
 # Create a logger for optional handling of debug messages.
 logger = logging.getLogger(__name__)
 
