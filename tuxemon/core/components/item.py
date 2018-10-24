@@ -119,9 +119,9 @@ class Item(object):
 
         results = items_db.lookup(slug, table="item")
 
-        self.slug = results["slug"]               # short English identifier
-        self.name = T.translate(results["slug"])  # translated name
-        self.description = T.translate(results["description"])  # will be locale string
+        self.slug = results["slug"]                                         # short English identifier
+        self.name = T.translate(self.slug)                                  # translated name
+        self.description = T.translate("{}_description".format(self.slug))  # will be locale string
 
         # item use notifications (translated!)
         self.execute_trans = T.translate(results["use_item"])

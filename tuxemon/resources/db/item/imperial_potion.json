@@ -1,6 +1,5 @@
 {
   "slug": "imperial_potion",
-  "description": "imperial_potion_description",
   "use_item": "combat_used_x",
   "use_success": "generic_success",
   "use_failure": "generic_failure",

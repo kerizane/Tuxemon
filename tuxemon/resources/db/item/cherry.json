@@ -1,6 +1,5 @@
 {
   "slug": "cherry",
-  "description": "cherry_description",
   "use_item": "combat_used_x",
   "use_success": "generic_success",
   "use_failure": "generic_failure",
