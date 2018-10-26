@@ -24,6 +24,7 @@
 # William Edwards <shadowapex@gmail.com>
 # Derek Clark <derekjohn.clark@gmail.com>
 # Leif Theden <leif.theden@gmail.com>
+# Andy Mender <andymenderunix@gmail.com>
 #
 # core.components.npc
 #

@@ -21,6 +21,7 @@
 # Contributor(s):
 #
 # William Edwards <shadowapex@gmail.com>
+# Andy Mender <andymenderunix@gmail.com>
 #
 #
 # core.components.locale Component for handling in-game translations.
