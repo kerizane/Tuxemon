@@ -23,11 +23,11 @@
   "moveset": [
     {
       "level_learned": 2,
-      "technique": "technique_pound"
+      "technique": "pound"
     },
     {
       "level_learned": 2,
-      "technique": "technique_water_shot"
+      "technique": "water_shot"
     }
   ],
   "sprites": {

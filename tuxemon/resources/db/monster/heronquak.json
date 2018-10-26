@@ -23,11 +23,11 @@
   "moveset": [
     {
       "level_learned": 2,
-      "technique": "technique_water_shot"
+      "technique": "water_shot"
     },
     {
       "level_learned": 2,
-      "technique": "technique_whirlwind"
+      "technique": "whirlwind"
     }
   ],
   "sprites": {

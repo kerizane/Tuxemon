@@ -23,11 +23,11 @@
   "moveset": [
     {
       "level_learned": 2,
-      "technique": "technique_bite"
+      "technique": "bite"
     },
     {
       "level_learned": 2,
-      "technique": "technique_poison_sting"
+      "technique": "poison_sting"
     }
   ],
   "sprites": {

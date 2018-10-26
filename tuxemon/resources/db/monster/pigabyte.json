@@ -23,7 +23,7 @@
   "moveset": [
     {
       "level_learned": 1,
-      "technique": "technique_pound"
+      "technique": "pound"
     }
   ],
   "sprites": {

@@ -23,11 +23,11 @@
   "moveset": [
     {
       "level_learned": 2,
-      "technique": "technique_whirlwind"
+      "technique": "whirlwind"
     },
     {
       "level_learned": 2,
-      "technique": "technique_fire_explosion"
+      "technique": "fire_explosion"
     }
   ],
   "sprites": {
