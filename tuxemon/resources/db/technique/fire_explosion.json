@@ -1,9 +1,8 @@
 {
-  "slug": "technique_fire_explosion",
-  "name_trans": "technique_fire_explosion_name",
-  "execute_trans": "combat_used_x",
-  "success_trans": "generic_thing_success",
-  "failure_trans": "generic_thing_failure",
+  "slug": "fire_explosion",
+  "use_tech": "combat_used_x",
+  "use_success": "generic_success",
+  "use_failure": "generic_failure",
   "animation": "fire",
   "sfx": "blaster1.ogg",
   "icon": "",

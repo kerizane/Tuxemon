@@ -180,6 +180,51 @@ msgstr "{name} cannot be used here!"
 msgid "receive_happiness"
 msgstr "Received 5 Capture Devices!"
 
+msgid "received_x"
+msgstr "Received {name}!"
+
+msgid "save_success"
+msgstr "Saved!"
+
+msgid "save_failure"
+msgstr "There was a problem saving!"
+
+msgid "slot"
+msgstr "Slot"
+
+msgid "status_faint"
+msgstr "Faint"
+
+msgid "status_poison"
+msgstr "Poison"
+
+
+## TECHNIQUE TRANSLATIONS ##
+
+msgid "bite"
+msgstr "Bite"
+
+msgid "fire_explosion"
+msgstr "Fire Explosion"
+
+msgid "poison_string"
+msgstr "Poison Sting"
+
+msgid "pound"
+msgstr "Pound"
+
+msgid "swap"
+msgstr "Swap"
+
+msgid "water_shot"
+msgstr "Water Shot"
+
+msgid "whirlwind"
+msgstr "Whirlwind"
+
+msgid "run"
+msgstr "Run"
+
 
 ## MENU TRANSLATIONS ##
 

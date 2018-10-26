@@ -23,6 +23,7 @@
 #
 # William Edwards <shadowapex@gmail.com>
 # Leif Theden <leif.theden@gmail.com>
+# Andy Mender <andymenderunix@gmail.com>
 #
 #
 #
@@ -30,21 +31,21 @@
 import logging
 import os
 import os.path
+import pprint
 import random
 from collections import namedtuple
 
 from tuxemon.constants import paths
 from tuxemon.core import prepare
 from tuxemon.core.components import db
-from tuxemon.core.components.locale import translator
+from tuxemon.core.components.locale import T
 
 logger = logging.getLogger(__name__)
 
-trans = translator.translate
 
 # Load the technique database
-techniques = db.JSONDatabase()
-techniques.load("technique")
+techniques_db = db.JSONDatabase()
+techniques_db.load("technique")
 
 tech_ret_value = namedtuple("use", "name success properties")
 
@@ -140,16 +141,16 @@ class Technique(object):
 
         """
 
-        results = techniques.lookup(slug, table="technique")
-        self.slug = results["slug"]  # a short English identifier
-        self.name = trans(results["name_trans"])  # locale-specific string
+        results = techniques_db.lookup(slug, table="technique")
+        self.slug = results["slug"]                             # a short English identifier
+        self.name = T.translate(self.slug)                      # locale-specific string
 
         self.sort = results['sort']
 
-        # must be translated before displaying
-        self.execute_trans = results['execute_trans']
-        self.success_trans = results['success_trans']
-        self.failure_trans = results['failure_trans']
+        # technique use notifications (translated!)
+        self.execute_trans = T.translate(results["use_tech"])
+        self.success_trans = T.translate(results["use_success"])
+        self.failure_trans = T.translate(results["use_failure"])
 
         self.category = results["category"]
         self.icon = results["icon"]

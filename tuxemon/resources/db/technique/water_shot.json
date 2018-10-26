@@ -1,9 +1,8 @@
 {
-  "slug": "technique_water_shot",
-  "name_trans": "technique_water_shot_name",
-  "execute_trans": "combat_used_x",
-  "success_trans": "generic_thing_success",
-  "failure_trans": "generic_thing_failure",
+  "slug": "water_shot",
+  "use_tech": "combat_used_x",
+  "use_success": "generic_success",
+  "use_failure": "generic_failure",
   "animation": "watershot",
   "sfx": "blaster1.ogg",
   "icon": "",
