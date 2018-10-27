@@ -1149,18 +1149,18 @@ msgstr "Oh. It's just you {name}...\n"
 "Be more considerate the next time you push someone. The cliff goes down farther than it looks...\n"
 
 msgid "route2speech3\n"
-"Although that may not be a bad thing...\n"
+msgstr "Although that may not be a bad thing...\n"
 "I know, everyone needs me to lead, but with everything going on...\n"
 "But you don't want to listen to me... do you?\n"
 
 msgid "yestalk"
-msgstr "Really? Thanks...",
+msgstr "Really? Thanks..."
 
 msgid "notalk"
 msgstr "You insensitive person! You'll listen to me anyway!"
 
 msgid "spillit\n"
-"You know that I am the leader of the Xero institute and that I recruited you to fight them. But you don't know something else.\n"
+msgstr "You know that I am the leader of the Xero institute and that I recruited you to fight them. But you don't know something else.\n"
 "Allie, who you met before... What? I told you we would be watching, you don't have to be surprised by it.\n"
 
 msgid "spillit3"
@@ -1199,7 +1199,7 @@ msgstr "Welcome to the Cotton Town Tuxecenter!"
 
 msgid "tabanurse\n"
 msgstr "Welcome to the Taba Town Tuxecenter!\n"
-msgstr "Do you want to heal your Tuxemon?\n"
+"Do you want to heal your Tuxemon?\n"
 
 msgid "okaythen"
 msgstr "Okay! Just give me a second and I will heal your Tuxemon!"
