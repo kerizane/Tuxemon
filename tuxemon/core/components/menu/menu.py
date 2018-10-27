@@ -2,10 +2,12 @@ from __future__ import division, print_function
 
 import logging
 import math
+import os.path
 from functools import partial
 
 import pygame
 
+from tuxemon.constants import paths
 from tuxemon.core import prepare, state, tools
 from tuxemon.core.components.menu.interface import MenuCursor, MenuItem
 from tuxemon.core.components.sprite import RelativeGroup, VisualSpriteList
@@ -367,7 +369,7 @@ class Menu(state.State):
 
         """
         if font is None:
-            font = prepare.BASEDIR + self.font_filename
+            font = os.path.join(paths.BASEDIR, self.font_filename)
 
         if size < self.min_font_size:
             size = self.min_font_size
