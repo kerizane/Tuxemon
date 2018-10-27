@@ -32,9 +32,10 @@
 """
 
 import logging
-from os.path import join
+import os.path
 from functools import partial
 
+from tuxemon.constants import paths
 from tuxemon.core import prepare
 from tuxemon.core.state import State
 from tuxemon.core.components.menu.interface import MenuItem
@@ -73,7 +74,8 @@ class StartState(PopUpMenu):
         def new_game():
             # load the starting map
             state = self.game.replace_state("WorldState")
-            map_name = join(prepare.BASEDIR, prepare.DATADIR, 'maps', prepare.CONFIG.starting_map)
+            map_name = os.path.join(paths.BASEDIR, prepare.DATADIR, "maps",
+                                    prepare.CONFIG.starting_map)
             state.change_map(map_name)
             self.game.push_state("InputMenu", prompt=translator.translate("input_name"))
             self.game.push_state("FadeInTransition")
