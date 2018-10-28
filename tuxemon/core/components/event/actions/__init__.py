@@ -32,6 +32,7 @@ logger = logging.getLogger(__name__)
 def process_translate_text(game, text_slug, parameters):
     replace_values = {}
 
+    # extract INI-style params
     for param in parameters:
         key, value = param.split("=")
 
@@ -41,6 +42,7 @@ def process_translate_text(game, text_slug, parameters):
         if value in translator:
             value = trans(value)
         """
+        # match special placeholders like ${{name}}
         replace_values[key] = replace_text(game, value)
 
     # 'text_slug' can be a collection
