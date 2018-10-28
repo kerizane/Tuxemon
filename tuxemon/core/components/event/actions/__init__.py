@@ -23,28 +23,32 @@ from __future__ import absolute_import
 
 import logging
 
-from tuxemon.core.components.locale import translator
+from tuxemon.core.components.locale import T
 from tuxemon.core.states.combat.combat import fainted_party
 
 logger = logging.getLogger(__name__)
 
 
 def process_translate_text(game, text_slug, parameters):
-    trans = translator.translate
     replace_values = {}
 
     for param in parameters:
         key, value = param.split("=")
 
+        # TODO: is this code still valid? Translator class is NOT iterable
+        """
         # Check to see if param_value is translatable
         if value in translator:
             value = trans(value)
-
+        """
         replace_values[key] = replace_text(game, value)
 
-    text = trans(text_slug)
-    pages = text if isinstance(text, list) else (text,)
-    pages = (translator.format(page, replace_values) for page in pages)
+    # 'text_slug' can be a collection
+    pages = text_slug if isinstance(text_slug, list) else (text_slug,)
+
+    # translate all text slugs with possible formatting
+    pages = (T.format(page, replace_values) for page in pages)
+
     return [replace_text(game, page) for page in pages]
 
 
