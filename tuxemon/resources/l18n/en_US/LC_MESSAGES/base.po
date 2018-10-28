@@ -998,7 +998,6 @@ msgid "not_really"
 msgstr "Not really"
 
 # NPC dialogs
-
 msgid "professor_dialog\n"
 msgstr "Professor:\n"
 "Ah, yes. The very person I've been wanting to meet.\n"
