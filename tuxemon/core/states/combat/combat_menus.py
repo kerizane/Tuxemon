@@ -7,7 +7,7 @@ from functools import partial
 import pygame
 
 from tuxemon.core import tools
-from tuxemon.core.components.locale import translator
+from tuxemon.core.components.locale import T
 from tuxemon.core.components.menu import PopUpMenu
 from tuxemon.core.components.menu.interface import MenuItem
 from tuxemon.core.components.menu.menu import Menu
@@ -38,7 +38,7 @@ class MainCombatMenuState(PopUpMenu):
         )
 
         for key, callback in menu_items_map:
-            label = translator.translate(key).upper()
+            label = T.translate(key).upper()
             image = self.shadow_text(label)
             yield MenuItem(image, label, None, callback)
 
@@ -63,12 +63,12 @@ class MainCombatMenuState(PopUpMenu):
 
         def swap_it(menuitem):
             monster = menuitem.game_object
-            trans = translator.translate
+
             if monster in self.game.get_state_name('CombatState').active_monsters:
-                tools.open_dialog(self.game, [trans('combat_isactive', {"name": monster.name})])
+                tools.open_dialog(self.game, [T.format('combat_isactive', {"name": monster.name})])
                 return
             elif monster.current_hp < 1:
-                tools.open_dialog(self.game, [trans('combat_fainted', {"name": monster.name})])
+                tools.open_dialog(self.game, [T.format('combat_fainted', {"name": monster.name})])
                 return
             combat_state = self.game.get_state_name("CombatState")
             swap = Technique("technique_swap")
