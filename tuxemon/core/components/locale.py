@@ -49,6 +49,7 @@ class TranslatorPo(object):
 
     def __init__(self):
         self.locale = CONFIG.locale
+        self.translate = None
         self.languages = self.collect_languages()
         self.build_translations()
         self.load_locale(CONFIG.locale)
@@ -99,6 +100,25 @@ class TranslatorPo(object):
         trans.install()
 
         self.translate = trans.gettext
+
+    def format(self, text, parameters={}):
+        """Replaces variables in a translation string with the given parameters.
+
+        :param text: The translation string with parameters.
+        :param parameters: A dictionary of variables to replace in the string.
+
+        :returns: The formatted translation string.
+
+        """
+
+        # translate input text if locale was loaded or force-load locale and translate
+        if self.translate is not None:
+            text = self.translate(text)
+        else:
+            self.load_locale(self.locale)
+            text = self.translate(text)         # self.load_locale populates self.translate
+
+        return text.format(**parameters)
 
 
 class Translator(object):
@@ -212,6 +232,7 @@ class Translator(object):
         :returns: The formatted translation string.
 
         """
+
         for key, value in parameters.items():
             text = text.replace("${{" + key + "}}", value)
 
