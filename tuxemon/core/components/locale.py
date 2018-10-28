@@ -110,6 +110,8 @@ class TranslatorPo(object):
         :returns: The formatted translation string.
 
         """
+        # fix escaped newline symbols
+        text = text.replace(r"\n", "\n")
 
         # translate input text if locale was loaded or force-load locale and translate
         if self.translate is not None:
@@ -232,7 +234,6 @@ class Translator(object):
         :returns: The formatted translation string.
 
         """
-
         for key, value in parameters.items():
             text = text.replace("${{" + key + "}}", value)
 
