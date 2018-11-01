@@ -115,7 +115,7 @@ msgstr "You've been defeated!"
 msgid "combat_draw"
 msgstr "All parties have fainted!"
 
-msgid "combat_capturing success"
+msgid "combat_capturing_success"
 msgstr "You captured {name}!"
 
 msgid "combat_capturing_fail"
