@@ -51,7 +51,7 @@ msgid "potion"
 msgstr "Lektvar"
 
 msgid "potion_description"
-msgstr Vyléčí tvoru 50 životů."
+msgstr "Vyléčí tvoru 50 životů."
 
 # Super Potion
 msgid "super_potion"
@@ -757,7 +757,7 @@ msgid "inchoate"
 msgstr "Inchoate"
 
 msgid "prehensile"
-msgstr Zručný"
+msgstr "Zručný"
 
 msgid "island"
 msgstr "Ostrov"
@@ -1208,4 +1208,4 @@ msgid "okaythen2"
 msgstr "Well, it looks like your Tuxemon are full of energy! Here they are!"
 
 msgid "input_name"
-msgstr Jméno?"
+msgstr "Jméno?"
