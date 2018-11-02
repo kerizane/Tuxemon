@@ -1194,10 +1194,10 @@ msgid "splendid\n"
 msgstr "You will? Splendid! Now, to find you a suitable Tuxemon...\n"
 "... ... You already have a Tuxemon? Well, I'm sure that you'd be able to handle yourself well...\n"
 
-msgid "cottonnurse"
+msgid "cottonnurse_dialog"
 msgstr "Welcome to the Cotton Town Tuxecenter!"
 
-msgid "tabanurse\n"
+msgid "tabanurse_dialog\n"
 msgstr "Welcome to the Taba Town Tuxecenter!\n"
 "Do you want to heal your Tuxemon?\n"
 
