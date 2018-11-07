@@ -83,6 +83,15 @@ class TuxepediaStore:
                 with open(txmn_json_path, "w") as f:
                     json.dump(txmn_json_full[txmn_name], f, indent=4)
 
+        locale = {}
+        for name, data in txmn_json_full.items():
+            locale[data["name_trans"]] = name
+            locale[data["description_trans"]] = data["blurp"]
+            locale[data["category_trans"]] = data["category"]
+
+        with open("temp_locale.json", "w") as f:
+            json.dump(locale, f, indent=4)
+
     def update_txmn_json(self, txmn_name, txmn_json_new, overwrite=True):
         """Update a tuxemon JSON file record
 

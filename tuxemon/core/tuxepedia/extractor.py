@@ -71,12 +71,13 @@ class TuxepediaWebExtractor:
                     "category_trans": f"txmn_{safe_name}_category",
 
                     "ai": "RandomAI",
-                    # "blurp": self.get_monster_blurp(monster_row),
-                    # "call": self.get_monster_call(monster_row),
+                    "blurp": self.get_monster_blurp(monster_row),
+                    "category": self.get_monster_category(monster_row),
+                    "call": self.get_monster_call(monster_row),
                     "moveset": [],
                     "shape": self.get_monster_shape(monster_row),
                     "sprites": self.get_complete_monster_sprites(monster_row),
-                    # "tuxepedia_url": self.get_monster_url(monster_row),
+                    "tuxepedia_url": self.get_monster_url(monster_row),
                     "types": self.get_monster_types(monster_row),
                     "weight": 25,
                 }
@@ -347,6 +348,16 @@ class TuxepediaWebExtractor:
             return cry_file
         except Exception as e:
             self.get_logger().warning(e)
+
+    def get_monster_category(self, monster_row):
+        """Get tuxemon description/blurp from Tuxepedia table row
+
+        :param monster_row: HTML <tr> table row element
+        :return: tuxemon description/blurp text
+        """
+
+        if self.completed_monsters:
+            return monster_row[3].text_content()
 
     def url_to_html(self, url, params, headers = None):
         """Extract Web content into an HTML tree object
