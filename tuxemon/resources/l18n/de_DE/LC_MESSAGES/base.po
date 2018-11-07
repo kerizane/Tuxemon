@@ -10,7 +10,7 @@ msgstr ""
 "PO-Revision-Date: 2018-10-07 20:58:38+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: cs_CZ\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,128 +20,128 @@ msgstr ""
 
 # Apple
 msgid "apple"
-msgstr "Jablko"
+msgstr Apfel"
 
 msgid "apple_description"
-msgstr "Vyléčí tvoru 10 životů."
+msgstr "Heilt ein Monster um 10 HP."
 
 # Berry
 msgid "berry"
-msgstr "Bobule"
+msgstr "Beere"
 
 msgid "berry_description"
-msgstr "Vyléčí tvoru 10 životů."
+msgstr "Heilt ein Monster um 10 HP."
 
 # Cherry
 msgid "cherry"
-msgstr "Třešeň"
+msgstr "Kirsche"
 
 msgid "cherry_description"
-msgstr "Vyléčí tvoru 10 životů."
+msgstr "Heilt ein Monster um 10 HP."
 
 # Orange
 msgid "orange"
-msgstr "Pomeranč"
+msgstr "Orange"
 
 msgid "orange_description"
-msgstr "Vyléčí tvoru 20 životů."
+msgstr "Heilt ein Monster um 20 HP."
 
 # Potion
 msgid "potion"
-msgstr "Lektvar"
+msgstr "Trank"
 
 msgid "potion_description"
-msgstr "Vyléčí tvoru 50 životů."
+msgstr "Heilt ein Monster um 50 KP."
 
 # Super Potion
 msgid "super_potion"
-msgstr "Super lektvar"
+msgstr "Super Trank"
 
 msgid "super_potion_description"
-msgstr "Vyléčí tvoru 150 životů."
+msgstr "Heilt ein Monster um 150 KP."
 
 # Imperial Potion
 msgid "imperial_potion"
-msgstr "Císařský lektvar"
+msgstr "Imperial Trank"
 
 msgid "imperial_potion_description"
-msgstr "Vyléčí tvoru 350 životů."
+msgstr "Heilt ein Monster um 350 HP."
 
 # Capture Device
 msgid "capture_device"
-msgstr "Chytací zařízení"
+msgstr "Einfang Gerät"
 
 msgid "capture_device_description"
-msgstr "Chytí tvora."
+msgstr "Fängt ein Monster."
 
 
 ## NOTIFICATION TRANSLATIONS ##
 
 # Combat notifications
 msgid "combat_used_x"
-msgstr "{user} použil {name}!"
+msgstr "{user} benutzt {name}!"
 
 msgid "combat_run"
-msgstr "{user} utekl!"
+msgstr "{user} ist geflohen!"
 
 msgid "combat_player_run"
-msgstr "Podařilo se ti utéct!"
+msgstr "Du bist geflohen!"
 
 msgid "combat_used_x_on_y"
-msgstr "{user} použil {name} na {target}!"
+msgstr "{user} benutzt {name} auf {target}!"
 
 msgid "combat_swap"
 msgstr "{user} sent out {target}!"
 
 msgid "combat_call_tuxemon"
-msgstr "Běž {name}!"
+msgstr "Los {name}!"
 
 # TODO: similar to combat_swap - refactor!
 msgid "combat_opponent_call_tuxemon"
-msgstr "{user} posílá ven {name}!"
+msgstr "{user} schickt {name} hinaus!"
 
 msgid "combat_state_poison_damage"
-msgstr "{name} byl otráven!"
+msgstr "Das Gift schadet {name}!"
 
 msgid "combat_status_damage"
-msgstr "{name} byl zasažen {status}!"
+msgstr "{name} erleidet Schaden durch {status}!"
 
 msgid "combat_victory"
-msgstr "VYHRÁL JSI!"
+msgstr "Du hast gewonnen!"
 
 msgid "combat_defeat"
-msgstr "PROHRÁL JSI!"
+msgstr "Du wurdest geschlagen!"
 
 msgid "combat_draw"
 msgstr "All parties have fainted!"
 
 msgid "combat_capturing_success"
-msgstr "Chytil jsi {name}!"
+msgstr "Du hast {name} gefangen!"
 
 msgid "combat_capturing_fail"
-msgstr "{name} se vymanil!"
+msgstr "{name} ist ausgebrochen!"
 
 msgid "combat_replacement"
-msgstr "Vyber náhradníka!"
+msgstr "Wähle einen Ersatz!"
 
 msgid "combat_replacement_is_fainted"
-msgstr "Tento tvor omdlel!"
+msgstr "Dieses Monster ist erschöpft!"
 
 msgid "combat_wild_appeared"
-msgstr "Objevil se divoký ${{name}}!"
+msgstr "Ein wildes ${{name}} erscheint!"
 
 msgid "combat_monster_choice"
-msgstr "Co udělá {name}?"
+msgstr "Was soll {name} tun?"
 
 msgid "combat_fainted"
-msgstr "{name} omdlel!"
+msgstr "{name} ist erschöpft!"
 
 msgid "combat_isactive"
-msgstr "{name} je již nasazen."
+msgstr "{name} kämpft bereits."
 
 # Generic notifications
 msgid "not_implemented"
-msgstr "Tato funkce zatím není implementována."
+msgstr "Diese Funktion ist noch nicht verfûgbar."
 
 msgid "generic_success"
 msgstr "It worked!"
@@ -150,80 +150,80 @@ msgid "generic_failure"
 msgstr "It failed!"
 
 msgid "empty_slot"
-msgstr "prázdná pozice"
+msgstr "Leerer Slot"
 
 msgid "exit"
-msgstr "Vypnout"
+msgstr "Verlassen"
 
 msgid "item_confirm_use"
-msgstr "Použít"
+msgstr "Benutzen"
 
 msgid "item_confirm_cancel"
-msgstr "Zrušit"
+msgstr "Abbrechen"
 
 # TODO same as generic_success and generic_failure - refactor!
 msgid "item_success"
-msgstr "Fungovalo to!"
+msgstr "Es hat funktioniert!"
 
 msgid "item_failure"
-msgstr "Selhalo to!"
+msgstr "Es hat nicht funktioniert!"
 
 msgid "attempting_capture"
-msgstr "Pokus o chycení..."
+msgstr "Versuche zu fangen..."
 
 msgid "gotcha"
-msgstr "Mám tě!"
+msgstr "Geschnappt!"
 
 msgid "item_cannot_use_here"
-msgstr "{name} nemůže tady být použito!"
+msgstr "{name} kann hier nicht benutzt werden!"
 
 msgid "receive_happiness"
 msgstr "Received 5 Capture Devices!"
 
 msgid "received_x"
-msgstr "Obdržel {name}!"
+msgstr "{name} erhalten!"
 
 msgid "save_success"
-msgstr "Uloženo!"
+msgstr "Gespeichert!"
 
 msgid "save_failure"
-msgstr "Při ukládání došlo k chybě!"
+msgstr "Fehler beim Speichervorgang!"
 
 msgid "slot"
-msgstr "Místo"
+msgstr "Slot"
 
 msgid "status_faint"
-msgstr "Bezvědomý"
+msgstr "K.O."
 
 msgid "status_poison"
-msgstr "Otrava"
+msgstr "Gift"
 
 
 ## TECHNIQUE TRANSLATIONS ##
 
 msgid "bite"
-msgstr "Kousnutí"
+msgstr "Biss"
 
 msgid "fire_explosion"
-msgstr "Ohnivý výbuch"
+msgstr "Feuer Explosion"
 
 msgid "poison_string"
-msgstr "Jedové žihadlo"
+msgstr "Gift Stachel"
 
 msgid "pound"
-msgstr "Úder"
+msgstr "Stoß"
 
 msgid "swap"
-msgstr "Výměna"
+msgstr "Tausch"
 
 msgid "water_shot"
-msgstr "Vodní střela"
+msgstr "Wasser Schuss"
 
 msgid "whirlwind"
-msgstr "Vichřice"
+msgstr "Wirbelwind"
 
 msgid "run"
-msgstr "Utéct"
+msgstr "Flucht"
 
 
 ## MENU TRANSLATIONS ##
@@ -233,85 +233,85 @@ msgid "monster_menu_info"
 msgstr "Info"
 
 msgid "monster_menu_move"
-msgstr "Posun"
+msgstr "Fähigk."
 
 # Menu notifications
 msgid "log_off"
-msgstr "Odhlásit se"
+msgstr "Ausloggen"
 
 msgid "menu_bag"
-msgstr "Batoh"
+msgstr "Tasche"
 
 msgid "menu_fight"
-msgstr "Souboj"
+msgstr "Kampf"
 
 msgid "menu_item"
-msgstr "Předmět"
+msgstr "Item"
 
 msgid "menu_items"
-msgstr "Předměty"
+msgstr "Items"
 
 msgid "menu_journal"
-msgstr "Deník"
+msgstr Journal"
 
 msgid "menu_load"
-msgstr "Nahrát"
+msgstr "Laden"
 
 msgid "menu_monster"
 msgstr "Tuxemon"
 
 # TODO: duplicate of menu_monster?
 msgid "menu_monsters"
-msgstr "Tuxemoni"
+msgstr "Monster"
 
 msgid "menu_multiplayer"
-msgstr "Multiplayer"
+msgstr "Mehrspieler"
 
 msgid "menu_new_game"
-msgstr "Nová hra"
+msgstr "Neues Spiel"
 
 msgid "menu_options"
-msgstr "Nastavení"
+msgstr "Optionen"
 
 msgid "menu_player"
-msgstr "Hráč"
+msgstr "Spieler"
 
 msgid "menu_run"
-msgstr "Utéct"
+msgstr "Flucht"
 
 msgid "menu_save"
-msgstr "Uložit"
+msgstr "Speichern"
 
 # Multiplayer notifications
 msgid "multiplayer_accept"
-msgstr "Přijmout"
+msgstr "Akezeptieren"
 
 msgid "multiplayer_decline"
-msgstr "Odmítnout"
+msgstr "Ablehnen"
 
 msgid "multiplayer_duel"
-msgstr "{name} by chtěl Duel!"
+msgstr "{name} möchte ein Duell!"
 
 msgid "multiplayer_host_game"
-msgstr "Hostit hru"
+msgstr "Spiel hosten"
 
 msgid "multiplayer_scan_games"
-msgstr "Vyhledat hry"
+msgstr "Suche nach Spielen"
 
 msgid "multiplayer_join_game"
-msgstr "Připojit se ke hře"
+msgstr "Spiel beitreten"
 
 msgid "multiplayer_hosting_ready"
-msgstr "Připraven příjmat klienty!"
+msgstr "Bereit Clients anzunehmen!"
 
 msgid "multiplayer_already_hosting"
-msgstr "Již hostováno!"
+msgstr Bereit Clients anzunehmen!"
 
 msgid "multiplayer_no_servers"
-msgstr "Servery nebyly nalezeny..."
+msgstr "Keine Server gefunden..."
 
 msgid "multiplayer_join_prompt"
-msgstr "Hostname nebo IP?"
+msgstr "Hostname oder IP?"
 
 
 ## MONSTER TRANSLATIONS ##
@@ -363,19 +363,19 @@ msgid "axylightl"
 msgstr "Axylightl"
 
 msgid "axylightl_description"
-msgstr "Pomocí svého ocasu osvětlí hluboké vody, odhalý bezpečný úkryt pro rybu."
+msgstr "Mit seinem leuchtenden Schweif markiert es sichere Unterkünfte für Fische in tiefen Gewässern."
 
 msgid "bamboon"
 msgstr "Bamboon"
 
 msgid "bamboon_description"
-msgstr "Bojuje pomocí svojí bambusové hole, kterou používá také při balancování."
+msgstr "Es kämpft mit seinem Bambusstab, den er zusätzlich für seine Balance nutzt."
 
 msgid "bigfin"
 msgstr "Bigfin"
 
 msgid "bigfin_description"
-msgstr "Na jeho zádech je celý ekosystém, takže se snaží se nepotápět"
+msgstr "Ein ganzes Ökosysem existiert auf seinem Rücken, wodurch es das Tauchen meidet."
 
 msgid "bolt"
 msgstr "Bolt"
@@ -441,19 +441,19 @@ msgid "dandylion"
 msgstr "Dandylion"
 
 msgid "dandylion_description"
-msgstr "Rodí jen jednou ve svém životě. Pak se potuluje po světě a snaží se najít svoje potomky."
+msgstr "Es hat einen Wurf in seinem Leben. Dann wandert es durch die Welt, um sie wieder zu finden."
 
 msgid "djinnbo"
 msgstr "Djinnbo"
 
 msgid "djinnbo_description"
-msgstr "Legendy říkají, že to je člověk, který zemřel při požáru. Ve skutečnosti se to stalo jeho příbuzným."
+msgstr "Fälschlicherweise glaubt man, dass dies ein Mensch sei, welcher im Feuer starb. Eigentlich, waren es seine Verwandten."
 
 msgid "dollfin"
 msgstr "Dollfin"
 
 msgid "dollfin_description"
-msgstr "Každý z nich následuje loď z místa na místo, a prozkoumává svět."
+msgstr "Jeder einzelne folgt einem Schiff von Ort zu Ort, die Welt entdeckend."
 
 msgid "dracune"
 msgstr "Dracune"
@@ -483,7 +483,7 @@ msgid "eyenemy"
 msgstr "Eyenemy"
 
 msgid "eyenemy_description"
-msgstr "Živí se krásným výhledem a jinou podívanou."
+msgstr "Es nährt sich von schöner Aussicht und anderen spektakulären Besichtigungen."
 
 msgid "falcono"
 msgstr "Falcono"
@@ -537,7 +537,7 @@ msgid "lambert"
 msgstr "Lambert"
 
 msgid "lambert_description"
-msgstr "Do své skořápky byl uložen svými rodiči a poté vyslán do světa."
+msgstr "Die Eltern legen es in die Nuss und schicken es hinaus in die Welt."
 
 msgid "legko"
 msgstr "Legko"
@@ -585,7 +585,7 @@ msgid "nudiflot"
 msgstr "Nudiflot"
 
 msgid "nudiflot_description"
-msgstr "Jí a ukládá jed z mořských tvorů které pozře."
+msgstr "Es frisst Sea Kreaturen und speichert das Gift jener in seinem Körper."
 
 msgid "nut"
 msgstr "Nut"
@@ -681,13 +681,13 @@ msgid "sumobug"
 msgstr "Sumobug"
 
 msgid "sumobug_description"
-msgstr "Využívá svoji hmotnost k poražení mnohem větších nepřátel. Jeho hustota je tak vysoká jako v jádru hvězdy."
+msgstr "Es nutzt sein Gewicht um viel größere Gegner zu stürzen. Seine Dichte gleicht einem Stern."
 
 msgid "tigrock"
 msgstr "Tigrock"
 
 msgid "tigrock_description"
-msgstr "Říká se, že musel vynalézt sám sebe, protože evoluce ho nemohla navrhnout.."
+msgstr "Man sagt dass es sich selbst erfand, da eine Evolution nicht erdacht wurde."
 
 msgid "tumblecoon"
 msgstr "Tumblecoon"
@@ -739,7 +739,7 @@ msgstr "Cheerful ZUNNA sucks up all the food it can find into its stomach."
 
 # Monster categories
 msgid "anteater"
-msgstr "Zárodek"
+msgstr "Anteater"
 
 msgid "snout"
 msgstr "Snout"
@@ -757,10 +757,10 @@ msgid "inchoate"
 msgstr "Inchoate"
 
 msgid "prehensile"
-msgstr "Zručný"
+msgstr "Prehensile"
 
 msgid "island"
-msgstr "Ostrov"
+msgstr "Island"
 
 msgid "host"
 msgstr "Host"
@@ -781,13 +781,13 @@ msgid "horned_raptor"
 msgstr "Horned Raptor"
 
 msgid "lions_tooth"
-msgstr "Lví zub"
+msgstr "Lion's Tooth"
 
 msgid "vengeance"
-msgstr "Odveta"
+msgstr "Vengeance"
 
 msgid "joyful"
-msgstr "Radostný"
+msgstr "Joyful"
 
 msgid "cloaked"
 msgstr "Cloaked"
@@ -796,7 +796,7 @@ msgid "cirrus"
 msgstr "Cirrus"
 
 msgid "pupil"
-msgstr "Učeň"
+msgstr "Pupil"
 
 msgid "fire"
 msgstr "Fire"
@@ -805,7 +805,7 @@ msgid "sanguine"
 msgstr "Sanguine"
 
 msgid "wood"
-msgstr "Dřevo"
+msgstr "Wood"
 
 msgid "climbing"
 msgstr "Climbing"
@@ -814,7 +814,7 @@ msgid "crested"
 msgstr "Crested"
 
 msgid "metal_water"
-msgstr "Kov, Voda"
+msgstr "Metal, Water"
 
 msgid "gumnut"
 msgstr "Gumnut"
@@ -823,7 +823,7 @@ msgid "lizard"
 msgstr "Lizard"
 
 msgid "earth_fire"
-msgstr "Země, Oheň"
+msgstr "Earth, Fire"
 
 msgid "devil"
 msgstr "Devil"
@@ -835,16 +835,16 @@ msgid "probiscus"
 msgstr "Probiscus"
 
 msgid "flopped"
-msgstr "Propadlo"
+msgstr "Flopped"
 
 msgid "metal"
-msgstr "Kov"
+msgstr "Metal"
 
 msgid "visitor"
 msgstr "Visitor"
 
 msgid "earth"
-msgstr "Země"
+msgstr "Earth"
 
 msgid "rip"
 msgstr "Rip"
@@ -856,7 +856,7 @@ msgid "ex_machina"
 msgstr "Ex Machina"
 
 msgid "water"
-msgstr "Vodní"
+msgstr "Water"
 
 msgid "clot"
 msgstr "Clot"
@@ -893,7 +893,7 @@ msgid "liela"
 msgstr "Liela"
 
 msgid "maple_girl"
-msgstr "Javor"
+msgstr "Maple"
 
 msgid "misa"
 msgstr "Misa"
@@ -960,10 +960,10 @@ msgid "haveagoodday"
 msgstr "Have a nice day!"
 
 msgid "yes"
-msgstr "Ano"
+msgstr "Ja"
 
 msgid "no"
-msgstr "Ne"
+msgstr "Nein"
 
 msgid "door_problems"
 msgstr "The door is stuck and won't open..."
@@ -990,7 +990,7 @@ msgid "tree"
 msgstr "This tree looks happy and healthy!"
 
 msgid "route_2"
-msgstr "Cesta 2"
+msgstr "Route 2"
 
 msgid "sure_i_do"
 msgstr "Sure I do"
@@ -1000,39 +1000,39 @@ msgstr "Not really"
 
 # NPC dialogs
 msgid "professor_dialog\n"
-msgstr "Profesor:\n"
-"Hurá. Přesně ten člověk se kterým jsem se chtěl setkat.\n"
-"Slyšel jsem že se chceš učit o Tuxemonech.\n"
-"Tuxemoni jsou malá zvířata, někteří je nazývají monstry, se kterými se přátelíme a používáme je k boji s dalšími Tuxemony.\n"
-"Napadlo mě, že jsem zrovna získal tři nové Tuxemony pro svůj výzkum. Jednoho bych ti rád dal.\n"
-"Který by se ti líbil?\n"
+msgstr "Professor:\n"
+"Ah, yes. The very person I've been wanting to meet.\n"
+"I've heard that you want to learn about Tuxemon.\n"
+"Tuxemon are little animals, some call them monsters, that we befriend and use to battle other Tuxemon.\n"
+"I was wondering, I just received three new Tuxemon for research and I would like to give you one.\n"
+"Which one would you like?\n"
 
 msgid "professor_dialog6.1"
-msgstr "Profesor: Skvělá volba! Hydrone je vodní tuxemon"
+msgstr "Professor: An excellent choice! Hydrone is a water Tuxemon."
 
 msgid "professor_dialog6.2"
-msgstr "Profesor: Vynikající volba! Rockitten je zemní tuxemon"
+msgstr "Professor: A superb choice! Rockitten is an earth Tuxemon."
 
 msgid "professor_dialog6.3"
-msgstr "Profesor: Výborná volba! Fruitera je dřevní tuxemon"
+msgstr "Professor: A great choice! Fruitera is a wood Tuxemon."
 
 msgid "professor_dialog7"
-msgstr "Profesor: Doufám, že se uvidíme! Jdu se vydat na cestu, takže se možná někdy setkáme."
+msgstr "Professor: I hope to see you around! I'm about to head on a journey, so maybe we'll meet up sometime."
 
 msgid "karrianna_dialog1"
-msgstr "Karrianna: Trénovala jsem celý měsíc! Zatím mě nikdo neporazil!"
+msgstr "Karrianna: I've been training for the past month! Nobody has beaten me yet!"
 
 msgid "karrianna_dialog2"
-msgstr "No... Byl jsi první trenér, kterému jsem čelila ..."
+msgstr "Well... You were the first trainer I've faced..."
 
 msgid "xero_hideout1"
-msgstr "Institut Xero pro výzkum a vývoj v oblasti Tuxemonů."
+msgstr "Xero Institute for Tuxemon Research and Advancement ahead."
 
 msgid "cherry_found"
-msgstr "Našel jsi třešeň"
+msgstr "You found a cherry."
 
 msgid "xero_grunts_block"
-msgstr "Tato oblast je ve výstavbě, mělo by to být brzy hotovo."
+msgstr "This area is under construction, it should be done soon."
 
 msgid "waiting_for_misa"
 msgstr "Our leader would like to talk with you. When you are ready, talk to my friend next to me."
@@ -1208,4 +1208,4 @@ msgid "okaythen2"
 msgstr "Well, it looks like your Tuxemon are full of energy! Here they are!"
 
 msgid "input_name"
-msgstr "Jméno?"
+msgstr "Name?"
