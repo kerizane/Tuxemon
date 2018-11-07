@@ -223,7 +223,7 @@ msgid "whirlwind"
 msgstr "Vichřice"
 
 msgid "run"
-msgstr "Run"
+msgstr "Utéct"
 
 
 ## MENU TRANSLATIONS ##
