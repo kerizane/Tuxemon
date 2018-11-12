@@ -34,7 +34,7 @@ msgstr "Ĝi sanigas monstron de 10 SP."
 
 # Cherry
 msgid "cherry"
-msgstr Ĉerizo"
+msgstr "Ĉerizo"
 
 msgid "cherry_description"
 msgstr "Ĝi sanigas monstron de 10 SP."
@@ -104,7 +104,7 @@ msgid "combat_state_poison_damage"
 msgstr "{name} veneniĝis!"
 
 msgid "combat_status_damage"
-msgstr "{name} damaĝiĝis pro {status}!",
+msgstr "{name} damaĝiĝis pro {status}!"
 
 msgid "combat_victory"
 msgstr "Vi venkis!"
@@ -193,7 +193,7 @@ msgid "slot"
 msgstr "Ujo"
 
 msgid "status_faint"
-msgstr Svenite"
+msgstr "Svenite"
 
 msgid "status_poison"
 msgstr "veneno"
@@ -1000,7 +1000,7 @@ msgstr "Not really"
 
 # NPC dialogs
 msgid "professor_dialog\n"
-msgstr Profesoro: \n"
+msgstr "Profesoro: \n"
 "Ah, jes. Vi estas la persono, kiun mi antendas por renkontiĝi.\n"
 "Mi aŭdis, ke vi volas lerni pri Tuksemonoj.\n"
 "Tuksemonoj estas etaj bestoj, kelkaj personoj nomas ilin monstrojn, kiuj ni amikiĝas kaj uzas por batali kontraŭ aliaj Tuksemonoj.\n"

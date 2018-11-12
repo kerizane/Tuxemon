@@ -20,7 +20,7 @@ msgstr ""
 
 # Apple
 msgid "apple"
-msgstr Apfel"
+msgstr "Apfel"
 
 msgid "apple_description"
 msgstr "Heilt ein Monster um 10 HP."
@@ -252,7 +252,7 @@ msgid "menu_items"
 msgstr "Items"
 
 msgid "menu_journal"
-msgstr Journal"
+msgstr "Journal"
 
 msgid "menu_load"
 msgstr "Laden"
@@ -305,7 +305,7 @@ msgid "multiplayer_hosting_ready"
 msgstr "Bereit Clients anzunehmen!"
 
 msgid "multiplayer_already_hosting"
-msgstr Bereit Clients anzunehmen!"
+msgstr "Bereit Clients anzunehmen!"
 
 msgid "multiplayer_no_servers"
 msgstr "Keine Server gefunden..."

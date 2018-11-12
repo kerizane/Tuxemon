@@ -208,7 +208,7 @@ msgid "fire_explosion"
 msgstr "Explosión de fuego"
 
 msgid "poison_string"
-msgstr Púa venenosa"
+msgstr "Púa venenosa"
 
 msgid "pound"
 msgstr "Placaje"
@@ -265,7 +265,7 @@ msgid "menu_monsters"
 msgstr "Monstruos"
 
 msgid "menu_multiplayer"
-msgstr Multijugador"
+msgstr "Multijugador"
 
 msgid "menu_new_game"
 msgstr "Nueva partida"
@@ -781,7 +781,7 @@ msgid "horned_raptor"
 msgstr "Rapaz cornuda"
 
 msgid "lions_tooth"
-msgstr Diente de león"
+msgstr "Diente de león"
 
 msgid "vengeance"
 msgstr "Venganza"
@@ -1081,7 +1081,7 @@ msgstr "Buena elección. Lo siento, esto solo dolerá un poco."
 msgid "mwah\n"
 msgstr "???: ¿Qué quieres? ... ... ... Bueno, pues no. No vas a entrar aquí, incluso aunque vistas con tan buen gusto.\n"
 "Soy Allie por cierto.\n"
-"Allie: Sí, esto es el Omnichannel, pero yo soy solo una humilde guardia. ¿Quién eres tú?\n"???: What do you want? ... ... ... Well too bad. You're not getting in here even though your clothes are tastefully done.\n"
+"Allie: Sí, esto es el Omnichannel, pero yo soy solo una humilde guardia. ¿Quién eres tú?\n"
 "Mmm. Un nombre potente. Mi casa no está muy lejos, quizás... después del trabajo... ¿podrías enseñarme lo fuerte que eres?\n"
 "... ... ¡No! ¿Cómo que no? Salvo que... ... ¡Tú eres el nuevo novio de Jess, ¿no?! ¡Ha estado jugando conmigo todo este tiempo!\n"
 
