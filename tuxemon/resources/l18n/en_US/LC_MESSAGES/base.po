@@ -234,6 +234,12 @@ msgstr "Faint"
 msgid "status_poison"
 msgstr "Poison"
 
+msgid "status_lifeleech"
+msgstr "Lifeleech"
+
+msgid "status_recover"
+msgstr "Recover"
+
 
 ## TECHNIQUE TRANSLATIONS ##
 
