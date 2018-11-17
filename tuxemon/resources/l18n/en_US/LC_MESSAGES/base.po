@@ -1128,9 +1128,6 @@ msgstr "Devil"
 msgid "nightcrawler"
 msgstr "Nightcrawler"
 
-msgid "probiscus"
-msgstr "Probiscus"
-
 msgid "flopped"
 msgstr "Flopped"
 
