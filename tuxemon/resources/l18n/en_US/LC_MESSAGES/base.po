@@ -74,18 +74,24 @@ msgstr "Capture Device"
 msgid "capture_device_description"
 msgstr "Captures a monster."
 
+msgid "item_cannot_use_here"
+msgstr "{name} cannot be used here!"
+
 
 ## NOTIFICATION TRANSLATIONS ##
 
 # Combat notifications
-msgid "combat_used_x"
-msgstr "{user} used {name}!"
-
 msgid "combat_run"
 msgstr "{user} ran away!"
 
+msgid "combat_miss"
+msgstr "It missed..."
+
 msgid "combat_player_run"
 msgstr "You have run away!"
+
+msgid "combat_used_x"
+msgstr "{user} used {name}!"
 
 msgid "combat_used_x_on_y"
 msgstr "{user} used {name} on {target}!"
@@ -100,8 +106,29 @@ msgstr "Go {name}!"
 msgid "combat_opponent_call_tuxemon"
 msgstr "{user} sent out {name}!"
 
+msgid "combat_state_poison_get"
+msgstr "{target} is poisoned."
+
 msgid "combat_state_poison_damage"
 msgstr "{name} took poison damage!"
+
+msgid "combat_state_lifeleech_get"
+msgstr "{user} is leeching health from {target}."
+
+msgid "combat_state_lifeleech_success"
+msgstr "{user} lost health to lifeleech!"
+
+msgid "combat_state_lifeleech_failure"
+msgstr "{link} can't heal any further."
+
+msgid "combat_state_recover_get"
+msgstr "{target} started to recover health."
+
+msgid "combat_state_recover_success"
+msgstr "{user} recovered health!"
+
+msgid "combat_state_recover_failure"
+msgstr "{user} can't heal any further."
 
 msgid "combat_status_damage"
 msgstr "{name} took {status} damage!"
@@ -139,16 +166,19 @@ msgstr "{name} fainted!"
 msgid "combat_isactive"
 msgstr "{name} is already in play."
 
+msgid "attack_very_effective"
+msgstr "The attack did a lot of extra damage!"
+
+msgid "attack_effective"
+msgstr "The attack did extra damage!"
+
+msgid "attack_resisted"
+msgstr "The attack was resisted!"
+
+msgid "attack_weak"
+msgstr "The attack was strongly resisted!"
+
 # Generic notifications
-msgid "not_implemented"
-msgstr "This feature is not yet implemented."
-
-msgid "generic_success"
-msgstr "It worked!"
-
-msgid "generic_failure"
-msgstr "It failed!"
-
 msgid "empty_slot"
 msgstr "Empty Slot"
 
@@ -168,14 +198,20 @@ msgstr "It worked!"
 msgid "item_failure"
 msgstr "It failed!"
 
+msgid "generic_success"
+msgstr "It worked!"
+
+msgid "generic_failure"
+msgstr "It failed!"
+
 msgid "attempting_capture"
 msgstr "Attempting capture..."
 
 msgid "gotcha"
 msgstr "Gotcha!"
 
-msgid "item_cannot_use_here"
-msgstr "{name} cannot be used here!"
+msgid "not_implemented"
+msgstr "This feature is not yet implemented."
 
 msgid "receive_happiness"
 msgstr "Received 5 Capture Devices!"
@@ -201,29 +237,275 @@ msgstr "Poison"
 
 ## TECHNIQUE TRANSLATIONS ##
 
-msgid "bite"
-msgstr "Bite"
+msgid "all_in"
+msgstr "All In"
 
-msgid "fire_explosion"
-msgstr "Fire Explosion"
+msgid "amnesia"
+msgstr "Amnesia"
 
-msgid "poison_string"
-msgstr "Poison Sting"
+msgid "avalanche"
+msgstr "Avalanche"
 
-msgid "pound"
-msgstr "Pound"
+msgid "battery_acid"
+msgstr "Battery Acid"
 
-msgid "swap"
-msgstr "Swap"
+msgid "battery_discharge"
+msgstr "Battery Discharge"
 
-msgid "water_shot"
-msgstr "Water Shot"
+msgid "beam"
+msgstr "Beam"
+
+msgid "berserk"
+msgstr "Berserk"
+
+msgid "biting_winds"
+msgstr "Biting Winds"
+
+msgid "blade"
+msgstr "Blade"
+
+msgid "blood_bond"
+msgstr "Blood Bond"
+
+msgid "blossom"
+msgstr "Blossom"
+
+msgid "boulder"
+msgstr "Boulder"
+
+msgid "breathe_fire"
+msgstr "Breathe Fire"
+
+msgid "bubble_trap"
+msgstr "Bubble Trap"
+
+msgid "bullet"
+msgstr "Bullet"
+
+msgid "chill_mist"
+msgstr "Chill Mist"
+
+msgid "clamp_on"
+msgstr "Clamp On"
+
+msgid "constrict"
+msgstr "Constrict"
+
+msgid "electrical_storm"
+msgstr "Electrical Storm"
+
+msgid "energy_claws"
+msgstr "Energy Claws"
+
+msgid "energy_field"
+msgstr "Energy Field"
+
+msgid "eyebite"
+msgstr "Eyebite"
+
+msgid "feint"
+msgstr "Feint"
+
+msgid "fester"
+msgstr "Fester"
+
+msgid "fire_ball"
+msgstr "Fire Ball"
+
+msgid "fire_claw"
+msgstr "Fire Claw"
+
+msgid "flamethrower"
+msgstr "Flamethrower"
+
+msgid "flood"
+msgstr "Flood"
+
+msgid "flow"
+msgstr "Flow"
+
+msgid "fluff_up"
+msgstr "Fluff Up"
+
+msgid "font"
+msgstr "Font"
+
+msgid "frostbite"
+msgstr "Frostbite"
+
+msgid "fume"
+msgstr "Fume"
+
+msgid "give_all"
+msgstr "Give All"
+
+msgid "glower"
+msgstr "Glower"
+
+msgid "goad"
+msgstr "Goad"
+
+msgid "headbutt"
+msgstr "Headbutt"
+
+msgid "hibernate"
+msgstr "Hibernate"
+
+msgid "ice_claw"
+msgstr "Ice Claw"
+
+msgid "icicle_spear"
+msgstr "Icicle Spear"
+
+msgid "invictus"
+msgstr "Invictus"
+
+msgid "kindling_flame"
+msgstr "Kindling Flame"
+
+msgid "levitate"
+msgstr "Levitate"
+
+msgid "midnight_mantle"
+msgstr "Midnight Mantle"
+
+msgid "muddle"
+msgstr "Muddle"
+
+msgid "mudslide"
+msgstr "Mudslide"
+
+msgid "one_two"
+msgstr "One-Two"
+
+msgid "overgrowth"
+msgstr "Overgrowth"
+
+msgid "peck"
+msgstr "Peck"
+
+msgid "peregrine"
+msgstr "Peregrine"
+
+msgid "perfect_cut"
+msgstr "Perfect Cut"
+
+msgid "petrify"
+msgstr "Petrify"
+
+msgid "probiscus"
+msgstr "Probiscus"
+
+msgid "pseudopod"
+msgstr "Pseudopod"
+
+msgid "quicksand"
+msgstr "Quicksand"
+
+msgid "ram"
+msgstr "Ram"
+
+msgid "refresh"
+msgstr "Refresh"
+
+msgid "rock"
+msgstr "Rock"
+
+msgid "rot"
+msgstr "Rot"
+
+msgid "rust_bomb"
+msgstr "Rust Bomb"
+
+msgid "salamander"
+msgstr "Salamander"
+
+msgid "sand_spray"
+msgstr "Sand Spray"
+
+msgid "shadow_boxing"
+msgstr "Shadow Boxing"
+
+msgid "shrapnel"
+msgstr "Shrapnel"
+
+msgid "shuriken"
+msgstr "Shuriken"
+
+msgid "sleep_bomb"
+msgstr "Sleep Bomb"
+
+msgid "sleeping_powder"
+msgstr "Sleeping Powder"
+
+msgid "snowstorm"
+msgstr "Snowstorm"
+
+msgid "splinter"
+msgstr "Splinter"
+
+msgid "spray"
+msgstr "Spray"
+
+msgid "stampede"
+msgstr "Stampede"
+
+msgid "starfall"
+msgstr "Starfall"
+
+msgid "static_field"
+msgstr "Static Field"
+
+msgid "sting"
+msgstr "Sting"
+
+msgid "stone_rot"
+msgstr "Stone Rot"
+
+msgid "strike"
+msgstr "Strike"
+
+msgid "suck_poison"
+msgstr "Suck Poison"
+
+msgid "sudden_glow"
+msgstr "Sudden Glow"
+
+msgid "supernova"
+msgstr "Supernova"
+
+msgid "surge"
+msgstr "Surge"
+
+msgid "take_cover"
+msgstr "Take Cover"
+
+msgid "thunderball"
+msgstr "Thunderball"
+
+msgid "thunderclap"
+msgstr "Thunderclap"
+
+msgid "tonguespear"
+msgstr "Tonguespear"
+
+msgid "venomous_tentacle"
+msgstr "Venomous Tentacle"
+
+msgid "wall_of_steel"
+msgstr "Wall of Steel"
+
+msgid "wallow"
+msgstr "Wallow"
+
+msgid "web"
+msgstr "Web"
 
 msgid "whirlwind"
 msgstr "Whirlwind"
 
-msgid "run"
-msgstr "Run"
+msgid "wing_tip"
+msgstr "Wing Tip"
 
 
 ## MENU TRANSLATIONS ##
@@ -317,425 +599,434 @@ msgstr "Hostname or IP?"
 ## MONSTER TRANSLATIONS ##
 
 # Monster details
-msgid "aardart"
-msgstr "Aardart"
-
 msgid "aardart_description"
 msgstr "It keeps count of every ant it has eaten, and celebrates significant numbers."
 
-msgid "aardorn"
-msgstr "Aardorn"
+msgid "aardart"
+msgstr "Aardart"
 
 msgid "aardorn_description"
 msgstr "When born it is placed in an anthill and left to eat its way out."
 
-msgid "agnidon"
-msgstr "Agnidon"
+msgid "aardorn"
+msgstr "Aardorn"
 
 msgid "agnidon_description"
 msgstr "It prefers four legs, but can stand on two to open doors, push over trees or hold things."
 
-msgid "agnigon"
-msgstr "Agnigon"
+msgid "agnidon"
+msgstr "Agnidon"
 
 msgid "agnigon_description"
 msgstr "It is called a 'false dragon', because it appears to be a dragon, but actually evolved from a different line of ancient reptiles."
 
-msgid "agnite"
-msgstr "Agnite"
+msgid "agnigon"
+msgstr "Agnigon"
 
 msgid "agnite_description"
 msgstr "It is playful, but must be taught early on to keep its fire in check."
 
-msgid "allagon"
-msgstr "Allagon"
+msgid "agnite"
+msgstr "Agnite"
 
 msgid "allagon_description"
 msgstr "Allagon are drawn to relics made from the metals left behind by their ancestors, and will be violent to retrieve them."
 
-msgid "anoleaf"
-msgstr "Anoleaf"
+msgid "allagon"
+msgstr "Allagaon"
 
 msgid "anoleaf_description"
 msgstr "It considers the plants growing near it to be its brothers and sisters."
 
-msgid "axylightl"
-msgstr "Axylightl"
+msgid "anoleaf"
+msgstr "Anoleaf"
 
 msgid "axylightl_description"
 msgstr "It lights the deep waters with its tail, marking a safe shelter for fish."
 
-msgid "bamboon"
-msgstr "Bamboon"
+msgid "axylightl"
+msgstr "Axylightl"
 
 msgid "bamboon_description"
 msgstr "It fights with its bamboo staff, which it also uses for balance."
 
-msgid "bigfin"
-msgstr "Bigfin"
+msgid "bamboon"
+msgstr "Bamboon"
 
 msgid "bigfin_description"
 msgstr "A whole ecosystem exists on its back, so it tries not to go underwater."
 
-msgid "bolt"
-msgstr "Bolt"
+msgid "bigfin"
+msgstr "Bigfin"
 
 msgid "bolt_description"
-msgstr " "
+msgstr ""
 
-msgid "cairfrey"
-msgstr "Cairfrey"
+msgid "bolt"
+msgstr "Bolt"
 
 msgid "cairfrey_description"
 msgstr "A jolly piece of furniture who awoke one morning and decided to explore."
 
-msgid "capiti"
-msgstr "Capiti"
+msgid "cairfrey"
+msgstr "Cairfrey"
 
 msgid "capiti_description"
 msgstr "It looks like a baby, but some specimens have been found that are hundreds of years old."
 
-msgid "cardiling"
-msgstr "Cardiling"
+msgid "capiti"
+msgstr "Capiti"
 
 msgid "cardiling_description"
 msgstr "One wouldn't expect it to breathe fire, until it does."
 
-msgid "cardinale"
-msgstr "Cardinale"
+msgid "cardiling"
+msgstr "Cardiling"
 
 msgid "cardinale_description"
 msgstr "It hates all predators with a passion, and makes war with them and their young when it can."
 
-msgid "cardiwing"
-msgstr "Cardiwing"
+msgid "cardinale"
+msgstr "Cardinale"
 
 msgid "cardiwing_description"
 msgstr "Its song is remarkable, but few dare keep an explosive songbird."
 
-msgid "chillimp"
-msgstr "Chillimp"
+msgid "cardiwing"
+msgstr "Cardiwing"
 
 msgid "chillimp_description"
 msgstr "It is rumoured to live atop snowy mountains, but no clear photo of it has ever been taken."
 
-msgid "chloragon"
-msgstr "Chloragon"
+msgid "chillimp"
+msgstr "Chillimp"
 
 msgid "chloragon_description"
-msgstr "It hatches when an ancient egg is planted in fertile soil. When the eggs run out, there will be no more Chloragon."
+msgstr "It hatches when an ancient egg is planted in fertile soil. When the eggs run out, there will be no more CHLORAGON."
 
-msgid "conifrost"
-msgstr "Conifrost"
+msgid "chloragon"
+msgstr "Chloragon"
 
 msgid "conifrost_description"
 msgstr "If it sneezes, an avalanche occurs. It has a permanent sniffle."
 
-msgid "corvix"
-msgstr "Corvix"
+msgid "conifrost"
+msgstr "Conifrost"
 
 msgid "corvix_description"
 msgstr "It arms its wings with bone shards from its victims."
 
-msgid "dandylion"
-msgstr "Dandylion"
+msgid "corvix"
+msgstr "Corvix"
 
 msgid "dandylion_description"
 msgstr "It gives birth to one litter in its life. Then it wanders the world trying to find them."
 
-msgid "djinnbo"
-msgstr "Djinnbo"
+msgid "dandylion"
+msgstr "Dandylion"
 
 msgid "djinnbo_description"
 msgstr "It is mistakenly believed that it is a human who died in a fire. Actually, its relatives did."
 
-msgid "dollfin"
-msgstr "Dollfin"
+msgid "djinnbo"
+msgstr "Djinnbo"
 
 msgid "dollfin_description"
 msgstr "Each one follows a ship from place to place, exploring the world."
 
-msgid "dracune"
-msgstr "Dracune"
+msgid "dollfin"
+msgstr "Dollfin"
 
 msgid "dracune_description"
 msgstr "It is immobile during the day, but can wriggle and bite at night."
 
-msgid "dragarbor"
-msgstr "Dragarbor"
+msgid "dracune"
+msgstr "Dracune"
 
 msgid "dragarbor_description"
 msgstr "When it feels it is coming to the end of its life, it travels to a graveyard where it plants itself. Its tail flower grows forever."
 
-msgid "dune_pincher"
-msgstr "Dune Pincher"
+msgid "dragarbor"
+msgstr "Dragarbor"
 
 msgid "dune_pincher_description"
-msgstr " "
+msgstr ""
 
-msgid "eaglace"
-msgstr "Eaglace"
+msgid "dune_pincher"
+msgstr "Dune Pincher"
 
 msgid "eaglace_description"
 msgstr "When it takes flight, clouds form. When it claps its wings, hail falls."
 
-msgid "eyenemy"
-msgstr "Eyenemy"
+msgid "eaglace"
+msgstr "Eaglace"
+
+msgid "eruptibus_description"
+msgstr "Smiths work with it, heating up metals in its caldera."
+
+msgid "eruptibus"
+msgstr "Eruptibus"
 
 msgid "eyenemy_description"
 msgstr "It feeds on beautiful views and other spectacular sights."
 
-msgid "falcono"
-msgstr "Falcono"
+msgid "eyenemy"
+msgstr "Eyenemy"
 
 msgid "falcono_description"
 msgstr "It is totally unafraid of adversaries, and will attack an enemy of any size without hesitation."
 
-msgid "ferricran"
-msgstr "Ferricran"
+msgid "falcono"
+msgstr "Falcono"
 
 msgid "ferricran_description"
 msgstr "Once, the Ferricran were covered all over with adamantine scales, and had wings of mithril."
 
-msgid "firomenis"
-msgstr "Firomenis"
+msgid "ferricran"
+msgstr "Ferricran"
 
 msgid "firomenis_description"
-msgstr " "
+msgstr ""
 
-msgid "fluttaflap"
-msgstr "Fluttaflap"
+msgid "firomenis"
+msgstr "Firomenis"
 
 msgid "fluttaflap_description"
 msgstr "It feeds on impurities, so it returns purified blood to those it sucks on."
 
-msgid "fruitera"
-msgstr "Fruitera"
+msgid "fluttaflap"
+msgstr "Fluttaflap"
 
 msgid "fruitera_description"
-msgstr " "
+msgstr ""
 
-msgid "gectile"
-msgstr "Gectile"
+msgid "fruitera"
+msgstr "Fruitera"
 
 msgid "gectile_description"
 msgstr "It is so quick and light that it can walk on leaves."
 
-msgid "heronquak"
-msgstr "Heronquak"
+msgid "gectile"
+msgstr "Gectile"
 
 msgid "heronquak_description"
 msgstr "The crystal on its chest is mistaken for a diamond by poachers. It melts when it is removed from HERONQUAK's body."
 
+msgid "heronquak"
+msgstr "Heronquak"
+
+msgid "hydrone_description"
+msgstr ""
+
 msgid "hydrone"
 msgstr "Hydrone"
 
-msgid "hydrone_description"
-msgstr " "
+msgid "katacoon_description"
+msgstr "It stays in a meditative pose for its chrysalis, moving only to jab enemies."
 
-msgid "lambert"
-msgstr "Lambert"
+msgid "katacoon"
+msgstr "Katacoon"
 
 msgid "lambert_description"
 msgstr "It is placed in its nut by its parent, who then sends it into the world."
 
-msgid "legko"
-msgstr "Legko"
+msgid "lambert"
+msgstr "Lambert"
 
 msgid "legko_description"
 msgstr "Long thought to be legless, its leaves are actually vestigial limbs."
 
+msgid "legko"
+msgstr "Legko"
+
+msgid "magmaturtle_description"
+msgstr ""
+
 msgid "magmaturtle"
 msgstr "Magmaturtle"
 
-msgid "magmaturtle_description"
-msgstr " "
+msgid "merlicun_description"
+msgstr ""
 
 msgid "merlicun"
 msgstr "Merlicun"
 
-msgid "merlicun_description"
-msgstr " "
+msgid "moloch_description"
+msgstr "It can stiffen or soften its skin to respond to friends and foes."
 
 msgid "moloch"
 msgstr "Moloch"
 
-msgid "moloch_description"
-msgstr "It can stiffen or soften its skin to respond to friends and foes."
+msgid "noctalo_description"
+msgstr "It inhabits only places abandoned by humans - castles, graveyards and sewers."
 
 msgid "noctalo"
 msgstr "Noctalo"
 
-msgid "noctalo_description"
-msgstr "It inhabits only places abandoned by humans - castles, graveyards and sewers."
+msgid "noctula_description"
+msgstr "It eats bugs and PIPIS eat fruit, so despite living in close proximity they do not compete."
 
 msgid "noctula"
 msgstr "Noctula"
 
-msgid "noctula_description"
-msgstr "It eats bugs and PIPIS eat fruit, so despite living in close proximity they do not compete."
+msgid "nostray_description"
+msgstr "It can smell anything in the ocean, no matter how far away."
 
 msgid "nostray"
 msgstr "Nostray"
 
-msgid "nostray_description"
-msgstr "It can smell anything in the ocean, no matter how far away."
-
-msgid "nudiflot"
-msgstr "Nudiflot"
-
-msgid "nudiflot_description"
+msgid "nudiflot_female_description"
 msgstr "It eats and stores the poison of the sea creatures that it feeds upon."
+
+msgid "nudiflot_male_description"
+msgstr "It eats and stores the poison of the sea creatures that it feeds upon."
+
+msgid "nudiflot_female"
+msgstr "Nudiflot (F)"
+
+msgid "nudiflot_male"
+msgstr "Nudiflot (M)"
+
+msgid "nut_description"
+msgstr ""
 
 msgid "nut"
 msgstr "Nut"
 
-msgid "nut_description"
-msgstr " "
-
-msgid "onaclov"
-msgstr "Onaclov"
-
-msgid "onaclov_description"
-msgstr " "
+msgid "pigabyte_description"
+msgstr ""
 
 msgid "pigabyte"
 msgstr "Pigabyte"
 
-msgid "pigabyte_description"
-msgstr " "
+msgid "possessun_description"
+msgstr "It is a ghost that inhabits a dead CAIRFREY."
 
 msgid "possessun"
 msgstr "Possessun"
 
-msgid "possessun_description"
-msgstr "It is a ghost that inhabits a dead cairfrey."
+msgid "propellercat_description"
+msgstr ""
 
 msgid "propellercat"
 msgstr "Propellercat"
 
-msgid "propellercat_description"
-msgstr " "
+msgid "rockat_description"
+msgstr ""
 
 msgid "rockat"
 msgstr "Rockat"
 
-msgid "rockat_description"
-msgstr " "
+msgid "rockitten_description"
+msgstr ""
 
 msgid "rockitten"
 msgstr "Rockitten"
 
-msgid "rockitten_description"
-msgstr " "
+msgid "sapragon_description"
+msgstr "In olden times, each element had a mighty dragon - but those creatures have diminished and are rare in these days."
 
 msgid "sapragon"
 msgstr "Sapragon"
 
-msgid "sapragon_description"
-msgstr "In olden times, each element had a mighty dragon - but those creatures have diminished and are rare in these days."
+msgid "selket_description"
+msgstr ""
 
 msgid "selket"
 msgstr "Selket"
 
-msgid "selket_description"
-msgstr " "
+msgid "selmatek_description"
+msgstr ""
 
 msgid "selmatek"
 msgstr "Selmatek"
 
-msgid "selmatek_description"
-msgstr " "
-
-msgid "simba"
-msgstr "Simba"
-
-msgid "simba_description"
-msgstr " "
-
-msgid "sludgehog"
-msgstr "Sludgehog"
-
-msgid "sludgehog_description"
-msgstr " "
+msgid "sharpfin_description"
+msgstr "It is invisible in the water, being visible only when it leaps out of the water to drag animals on the shore back into the deep."
 
 msgid "sharpfin"
 msgstr "Sharpfin"
 
-msgid "sharpfin_description"
-msgstr "It is invisible in the water, being visible only when it leaps out of the water to drag animals on the shore back into the deep."
+msgid "sludgehog_description"
+msgstr ""
 
-msgid "snowrilla"
-msgstr "Snowrilla"
+msgid "sludgehog"
+msgstr "Sludgehog"
 
 msgid "snowrilla_description"
 msgstr "It delights in playing tag with skiers on desolate slopes."
 
+msgid "snowrilla"
+msgstr "Snowrilla"
+
+msgid "spycozeus_description"
+msgstr ""
+
 msgid "spycozeus"
 msgstr "Spycozeus"
 
-msgid "spycozeus_description"
-msgstr " "
-
-msgid "sumobug"
-msgstr "Sumobug"
-
-msgid "sumobug_description"
+msgid "sumchon_description"
 msgstr "It uses its weight to trip much larger enemies. It is as dense as a star."
 
-msgid "tigrock"
-msgstr "Tigrock"
+msgid "sumchon"
+msgstr "Sumchon"
+
+msgid "swap"
+msgstr "Swap"
+
+msgid "template_description"
+msgstr "Some description here"
+
+msgid "template"
+msgstr "Template Name"
 
 msgid "tigrock_description"
 msgstr "It is said that it had to invent itself because an evolution was not designed."
 
-msgid "tumblecoon"
-msgstr "Tumblecoon"
+msgid "tigrock"
+msgstr "Tigrock"
 
-msgid "tumblecoon_description"
-msgstr " "
+msgid "tumbleworm_description"
+msgstr ""
 
 msgid "tumbleworm"
 msgstr "Tumbleworm"
 
-msgid "tumbleworm_description"
-msgstr " "
+msgid "tux_description"
+msgstr ""
 
 msgid "tux"
 msgstr "Tux"
 
-msgid "tux_description"
-msgstr " "
+msgid "tweesher_description"
+msgstr "The colder the weather, the harder its beak. At below 0 degrees, it is harder than diamond."
 
 msgid "tweesher"
 msgstr "Tweesher"
 
-msgid "tweesher_description"
-msgstr "The colder the weather, the harder its beak. At below 0 degrees, it is harder than diamond."
+msgid "vamporm_description"
+msgstr "It thirsts for blood, but must make do with tree sap."
 
 msgid "vamporm"
 msgstr "Vamporm"
 
-msgid "vamporm_description"
-msgstr "It thirsts for blood, but must make do with tree sap."
+msgid "velocitile_description"
+msgstr "It can outrun a bullet, but only when it has warmed up."
 
 msgid "velocitile"
 msgstr "Velocitile"
 
-msgid "velocitile_description"
-msgstr "It can outrun a bullet, but only when it has warmed up."
+msgid "wrougon_description"
+msgstr "Each WROUGON is born with a patch of rust larger than the patch of its parents."
 
 msgid "wrougon"
 msgstr "Wrougon"
 
-msgid "wrougon_description"
-msgstr "Each Wrougon is born with a patch of rust larger than the patch of its parents."
+msgid "zunna_description"
+msgstr "Cheerful ZUNNA sucks up all the food it can find into its stomach."
 
 msgid "zunna"
 msgstr "Zunna"
-
-msgid "zunna_description"
-msgstr "Cheerful ZUNNA sucks up all the food it can find into its stomach."
 
 # Monster categories
 msgid "anteater"
@@ -795,6 +1086,9 @@ msgstr "Cloaked"
 msgid "cirrus"
 msgstr "Cirrus"
 
+msgid "hot_rock"
+msgstr "Hot Rock"
+
 msgid "pupil"
 msgstr "Pupil"
 
@@ -815,6 +1109,9 @@ msgstr "Crested"
 
 msgid "metal_water"
 msgstr "Metal, Water"
+
+msgid "stance"
+msgstr "Stance"
 
 msgid "gumnut"
 msgstr "Gumnut"
@@ -851,6 +1148,9 @@ msgstr "Rip"
 
 msgid "yeti"
 msgstr "Yeti"
+
+msgid "some_category_here"
+msgstr "Some category here"
 
 msgid "ex_machina"
 msgstr "Ex Machina"
