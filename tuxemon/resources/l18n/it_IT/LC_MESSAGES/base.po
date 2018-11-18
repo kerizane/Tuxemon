@@ -956,7 +956,7 @@ msgid "sludgehog"
 msgstr "Sludgehog"
 
 msgid "snowrilla_description"
-msgstr "Si diletta nel giocare a "Ce l'hai" con sciatori su pendii desolati."
+msgstr "Si diletta nel giocare a \"Ce l'hai\" con sciatori su pendii desolati."
 
 msgid "snowrilla"
 msgstr "Snowrilla"
@@ -1256,7 +1256,7 @@ msgid "healmytuxemon"
 msgstr "Vuoi guarire i tuoi Tuxemon?"
 
 msgid "haveagoodday"
-msgstr Ti auguro una buona giornata!"
+msgstr "Ti auguro una buona giornata!"
 
 msgid "yes"
 msgstr "Sì"
