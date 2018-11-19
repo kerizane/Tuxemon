@@ -43,28 +43,17 @@ from tuxemon.constants import paths
 
 logger = logging.getLogger(__name__)
 
-
 # Create game dir if missing
-try:
-    os.makedirs(paths.USER_GAME_DIR, exist_ok=True)
-except OSError:
-    if not os.path.isdir(paths.USER_GAME_DIR):
-        raise
-
+if not os.path.isdir(paths.USER_GAME_DIR):
+    os.makedirs(paths.USER_GAME_DIR)
 
 # Create game data dir if missing
-try:
-    os.makedirs(paths.USER_GAME_DATA_DIR, exist_ok=True)
-except OSError:
-    if not os.path.isdir(paths.USER_GAME_DATA_DIR):
-        raise
+if not os.path.isdir(paths.USER_GAME_DATA_DIR):
+    os.makedirs(paths.USER_GAME_DATA_DIR)
 
 # Create game savegame dir if missing
-try:
-    os.makedirs(paths.USER_GAME_SAVE_DIR, exist_ok=True)
-except OSError:
-    if not os.path.isdir(paths.USER_GAME_SAVE_DIR):
-        raise
+if not os.path.isdir(paths.USER_GAME_SAVE_DIR):
+    os.makedirs(paths.USER_GAME_SAVE_DIR)
 
 # Generate default config
 config.generate_default_config()
