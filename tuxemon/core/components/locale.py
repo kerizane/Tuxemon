@@ -75,7 +75,7 @@ class TranslatorPo(object):
 
             # build only complete translations
             if os.path.exists(infile):
-                subprocess.run(["msgfmt", "-o", outfile, infile], check=True)
+                subprocess.call(["msgfmt", "-o", outfile, infile])
 
     def load_locale(self, locale_name="en_US"):
         """Load a selected locale for translation.
