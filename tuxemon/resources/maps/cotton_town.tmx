@@ -401,7 +401,7 @@
   <object id="259" name="Create liela" type="event" x="16" y="80" width="16" height="16">
    <properties>
     <property name="act1" value="create_npc liela,38,17,,stand"/>
-    <property name="act2" value="npc_face iela,up"/>
+    <property name="act2" value="npc_face liela,up"/>
     <property name="cond1" value="not npc_exists liela"/>
    </properties>
   </object>
