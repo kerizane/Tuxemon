@@ -656,11 +656,11 @@ class CombatState(CombatAnimations):
 
                 element_damage_key = MULT_MAP.get(result['element_multiplier'])
                 if element_damage_key:
-                    m = trans(element_damage_key)
+                    m = T.translate(element_damage_key)
                     message += "\n" + m
 
                 for status in result.get("statuses", []):
-                    m = trans(status.execute_trans, {"user": status.link.name if status.link else "", "target": status.carrier.name})
+                    m = T.format(status.execute_trans, {"user": status.link.name if status.link else "", "target": status.carrier.name})
                     message += "\n" + m
 
             else:  # assume this was an item used
