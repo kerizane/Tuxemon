@@ -70,7 +70,7 @@ class MainCombatMenuState(PopUpMenu):
                 tools.open_dialog(self.game, [T.format('combat_fainted', {"name": monster.name})])
                 return
             combat_state = self.game.get_state_name("CombatState")
-            swap = Technique("technique_swap")
+            swap = Technique("swap")
             swap.combat_state = combat_state
             player = self.game.player1
             target = monster
