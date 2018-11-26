@@ -17,7 +17,6 @@ from tuxemon.core.components.ui.draw import GraphicBox
 
 # Create a logger for optional handling of debug messages.
 logger = logging.getLogger(__name__)
-trans = translator.translate
 
 
 class MainCombatMenuState(PopUpMenu):
@@ -153,7 +152,7 @@ class MainCombatMenuState(PopUpMenu):
             technique = menu_item.game_object
             if technique.next_use > 0:
                 params = {"move": technique.name, "name": self.monster.name}
-                tools.open_dialog(self.game, [trans('combat_recharging', params)])
+                tools.open_dialog(self.game, [T.format('combat_recharging', params)])
                 return
 
             combat_state = self.game.get_state_name("CombatState")
