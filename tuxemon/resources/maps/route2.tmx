@@ -243,9 +243,9 @@
    <properties>
     <property name="act1" value="translated_dialog route2speech"/>
     <property name="act2" value="npc_face misa,right"/>
-    <property name="act3" value="translated_dialog route2speech2"/>
+    <property name="act3" value="translated_dialog route2speech2\n"/>
     <property name="act5" value="npc_face misa,up"/>
-    <property name="act6" value="translated_dialog route2speech3"/>
+    <property name="act6" value="translated_dialog route2speech3\n"/>
     <property name="act63" value="set_variable skadoosh:no"/>
     <property name="act7" value="translated_dialog_choice sure_i_do:not_really,route2choice"/>
     <property name="cond1" value="is player_at"/>
@@ -278,7 +278,7 @@
    <properties>
     <property name="act1" value="npc_face misa,right"/>
     <property name="act11" value="set_variable yahoo:maybe"/>
-    <property name="act2" value="translated_dialog spillit"/>
+    <property name="act2" value="translated_dialog spillit\n"/>
     <property name="act22" value="npc_face misa,up"/>
     <property name="act23" value="translated_dialog spillit3"/>
     <property name="act231" value="npc_face misa,right"/>

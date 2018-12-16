@@ -387,7 +387,7 @@
   <object id="103" name="Player Spawn" type="event" x="80" y="592" width="16" height="16"/>
   <object id="105" name="explanation" type="event" x="48" y="400" width="16" height="16">
    <properties>
-    <property name="act1" value="translated_dialog iamknight"/>
+    <property name="act1" value="translated_dialog iamknight\n"/>
     <property name="act10" value="set_variable choice:maybe"/>
     <property name="act5" value="translated_dialog_choice yes:no,choice"/>
     <property name="cond1" value="is player_at"/>
@@ -416,7 +416,7 @@
   </object>
   <object id="110" name="Yes" type="event" x="48" y="400" width="16" height="16">
    <properties>
-    <property name="act1" value="translated_dialog splendid"/>
+    <property name="act1" value="translated_dialog splendid\n"/>
     <property name="act3" value="npc_face knight1,left"/>
     <property name="act4" value="npc_face knight2,right"/>
     <property name="cond1" value="is player_at"/>
