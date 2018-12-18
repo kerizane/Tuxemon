@@ -1,26 +1,27 @@
 {
-    "slug": "txmn_chenipode",
-    "name_trans": "txmn_chenipode_name",
-    "description_trans": "txmn_chenipode_descr",
-    "category_trans": "txmn_chenipode_category",
-    "ai": "RandomAI",
-    "moveset": [
-        {
-            "level_learned": 2,
-            "technique": "technique_rock"
-        },
-        {
-            "level_learned": 2,
-            "technique": "technique_clamp_on"
-        },
-        {
-            "level_learned": 2,
-            "technique": "technique_take_cover"
-        }
-    ],
-    "shape": "Grub",
-    "types": [
-        "Earth"
-    ],
-    "weight": 25
+  "slug": "chenipode",
+  "category": "chenipode_category",
+
+  "ai": "RandomAI",
+
+  "moveset": [
+    {
+      "level_learned": 2,
+      "technique": "rock"
+    },
+    {
+      "level_learned": 2,
+      "technique": "clamp_on"
+    },
+    {
+      "level_learned": 2,
+      "technique": "take_cover"
+    }
+  ],
+
+  "shape": "Grub",
+  "types": [
+    "Earth"
+  ],
+  "weight": 25
 }

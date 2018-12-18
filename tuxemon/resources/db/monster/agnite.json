@@ -2,40 +2,31 @@
   "slug": "agnite",
   "category": "false_dragon",
 
-  "attack_base":            60,
-  "defense_base":           7,
-  "hp_base":                50,
-  "special_attack_base":    6,
-  "special_defense_base":   10,
-  "speed_base":             7,
-
-  "attack_mod":             1,
-  "defense_mod":            1,
-  "hp_mod":                 1,
-  "special_attack_mod":     1,
-  "special_defense_mod":    1,
-  "speed_mod":              1,
-
-  "exp_give_mod":           3,
-  "exp_req_mod":            27,
-
   "ai": "RandomAI",
+
   "moveset": [
     {
       "level_learned": 2,
-      "technique": "bite"
+      "technique": "fire_claw"
     },
     {
       "level_learned": 2,
-      "technique": "fire_explosion"
+      "technique": "fire_ball"
+    },
+    {
+      "level_learned": 2,
+      "technique": "fume"
     }
   ],
+
   "sprites": {
     "battle1": "gfx/sprites/battle/agnite-front.png",
     "battle2": "gfx/sprites/battle/agnite-back.png",
     "menu1": "gfx/sprites/battle/agnite-menu01.png",
     "menu2": "gfx/sprites/battle/agnite-menu02.png"
   },
+
+  "shape": "Dragon",
   "types": [
     "fire"
   ],

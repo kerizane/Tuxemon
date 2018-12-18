@@ -1,26 +1,27 @@
 {
-    "slug": "txmn_anu",
-    "name_trans": "txmn_anu_name",
-    "description_trans": "txmn_anu_descr",
-    "category_trans": "txmn_anu_category",
-    "ai": "RandomAI",
-    "moveset": [
-        {
-            "level_learned": 2,
-            "technique": "technique_perfect_cut"
-        },
-        {
-            "level_learned": 2,
-            "technique": "technique_shrapnel"
-        },
-        {
-            "level_learned": 2,
-            "technique": "technique_wall_of_steel"
-        }
-    ],
-    "shape": "",
-    "types": [
-        "Metal"
-    ],
-    "weight": 25
+  "slug": "txmn_anu",
+  "category": "anu_category",
+
+  "ai": "RandomAI",
+
+  "moveset": [
+    {
+      "level_learned": 2,
+      "technique": "perfect_cut"
+    },
+    {
+      "level_learned": 2,
+      "technique": "shrapnel"
+    },
+    {
+      "level_learned": 2,
+      "technique": "wall_of_steel"
+    }
+  ],
+
+  "shape": "",
+  "types": [
+    "Metal"
+  ],
+  "weight": 25
 }
