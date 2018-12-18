@@ -42,9 +42,9 @@ from . import db, fusion
 logger = logging.getLogger(__name__)
 
 # Load the monster database
-monsters_db = db.JSONDatabase()
-monsters_db.load("monster")
-monsters_db.load("technique")
+monsters = db.JSONDatabase()
+monsters.load("monster")
+monsters.load("technique")
 
 SIMPLE_PERSISTANCE_ATTRIBUTES = (
     'current_hp',
@@ -181,7 +181,7 @@ class Monster(object):
     **Example:**
 
     >>> bulbatux = Monster()
-    >>> bulbatux.load("Bulbatux")
+    >>> bulbatux.load_from_db("Bulbatux")
     >>> pprint.pprint(bulbatux.__dict__)
         {'attack': 10,
          'attack_modifier': [u'1', u'1.1', u'1.2'],
@@ -210,8 +210,8 @@ class Monster(object):
     def __init__(self, save_data={}):
         self.slug = ""
         self.name = ""          # The display name of the Tuxemon
-        self.category = ""
-        self.description = ""
+	self.category = ""        
+	self.description = ""
 
         self.armour = 0
         self.dodge = 0
@@ -260,7 +260,7 @@ class Monster(object):
         self.set_state(save_data)
         self.set_stats()
 
-    def load(self, slug):
+    def load_from_db(self, slug):
         """Loads and sets this monster's attributes from the monster.db database.
         The monster is looked up in the database by name.
 
@@ -273,67 +273,28 @@ class Monster(object):
         **Examples:**
 
         >>> bulbatux = Monster()
-        >>> bulbatux.load("Bigfin")
+        >>> bulbatux.load_from_db("Bigfin")
+
         """
 
         # Look up the monster by name and set the attributes in this instance
-        results = monsters_db.lookup(slug)
+        results = monsters.lookup(slug)
 
         if results is None:
-            logger.error("monster {} not found".format(slug))
+            logger.error("monster {} is not found".format(slug))
             raise RuntimeError
 
         self.slug = results["slug"]                             # short English identifier
         self.name = T.translate(results["slug"])                # translated name
         self.description = T.translate("{}_description".format(results["slug"]))  # translated description
         self.category = T.translate(results["category"])        # translated category
+	self.shape = results.get("shape", "landrace").lower()
+	types = results.get("types")
 
-        self.hp = results["hp_base"]
-        self.current_hp = results["hp_base"]
-        self.attack = results["attack_base"]
-        self.defense = results["defense_base"]
-        self.speed = results["speed_base"]
-        self.special_attack = results["special_attack_base"]
-        self.special_defense = results["special_defense_base"]
-
-        self.hp_modifier = (
-            results["hp_mod"] - 1,
-            results["hp_mod"],
-            results["hp_mod"] + 1
-        )
-        self.attack_modifier = (
-            results["attack_mod"] - 1,
-            results["attack_mod"],
-            results["attack_mod"] + 1
-        )
-        self.defense_modifier = (
-            results["defense_mod"] - 1,
-            results["defense_mod"],
-            results["defense_mod"] + 1,
-        )
-        self.speed_modifier = (
-            results["speed_mod"] - 1,
-            results["speed_mod"],
-            results["speed_mod"] + 1,
-        )
-        self.special_attack_modifier = (
-            results["special_attack_mod"] - 1,
-            results["special_attack_mod"],
-            results["special_attack_mod"] + 1,
-        )
-        self.special_defense_modifier = (
-            results["special_defense_mod"] - 1,
-            results["special_defense_mod"],
-            results["special_defense_mod"] + 1,
-        )
-        self.experience_give_modifier = results["exp_give_mod"]
-        self.experience_required_modifier = results["exp_req_mod"]
-
-        self.type1 = results["types"][0]
-        if len(results["types"]) > 1:
-            self.type2 = results["types"][1]
-        else:
-            self.type2 = None
+	if types:
+	    self.type1 = results["types"][0].lower()
+	    if len(types) > 1:
+	        self.type2 = results["types"][1].lower()
 
         self.weight = results['weight']
 
@@ -356,24 +317,6 @@ class Monster(object):
             self.ai = ai.SimpleAI()
         elif ai_result == "RandomAI":
             self.ai = ai.RandomAI()
-
-    def load_sprite_from_db(self):
-        """Looks up the path to the monster's battle sprites so they can be
-        loaded as pygame surfaces.
-
-        :param: None
-
-        :rtype: None
-        :returns: None
-
-        """
-
-        # Look up the monster's sprite image paths
-        results = monsters_db.lookup_sprite(self.slug)
-
-        self.front_battle_sprite = results["sprite_battle1"]
-        self.back_battle_sprite = results["sprite_battle2"]
-        self.menu_sprite = results["sprite_menu1"]
 
     def learn(self, technique):
         """Adds a technique to this tuxemon's moveset.
@@ -559,7 +502,7 @@ class Monster(object):
         if not save_data:
             return
 
-        self.load(save_data['slug'])
+        self.load_from_db(save_data['slug'])
 
         for key, value in save_data.items():
             if key == 'status' and value:
