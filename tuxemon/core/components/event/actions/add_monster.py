@@ -42,7 +42,7 @@ class AddMonsterAction(EventAction):
         monster_slug, monster_level = self.parameters
 
         current_monster = monster.Monster()
-        current_monster.load(monster_slug)
+        current_monster.load_from_db(monster_slug)
         current_monster.set_level(monster_level)
 
         self.game.player1.add_monster(current_monster)

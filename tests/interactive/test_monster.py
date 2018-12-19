@@ -4,10 +4,10 @@ from monster.py
 
 if __name__ == "__main__":
     mytuxemon = Monster()
-    mytuxemon.load("Bulbatux")
+    mytuxemon.load_from_db("Bulbatux")
     mytuxemon.level = 5
     othertux = Monster()
-    othertux.load("Bulbatux")
+    othertux.load_from_db("Bulbatux")
     othertux.level = 5
 
     pound_tech = Technique("Pound")

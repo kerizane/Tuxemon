@@ -210,8 +210,8 @@ class Monster(object):
     def __init__(self, save_data={}):
         self.slug = ""
         self.name = ""          # The display name of the Tuxemon
-	self.category = ""        
-	self.description = ""
+        self.category = ""
+        self.description = ""
 
         self.armour = 0
         self.dodge = 0
@@ -288,13 +288,12 @@ class Monster(object):
         self.name = T.translate(results["slug"])                # translated name
         self.description = T.translate("{}_description".format(results["slug"]))  # translated description
         self.category = T.translate(results["category"])        # translated category
-	self.shape = results.get("shape", "landrace").lower()
-	types = results.get("types")
-
-	if types:
-	    self.type1 = results["types"][0].lower()
-	    if len(types) > 1:
-	        self.type2 = results["types"][1].lower()
+        self.shape = results.get("shape", "landrace").lower()
+        types = results.get("types")
+        if types:
+            self.type1 = results["types"][0].lower()
+            if len(types) > 1:
+                self.type2 = results["types"][1].lower()
 
         self.weight = results['weight']
 

@@ -89,7 +89,7 @@ class RandomEncounterAction(EventAction):
 
             # Create a monster object
             current_monster = monster.Monster()
-            current_monster.load(encounter['monster'])
+            current_monster.load_from_db(encounter['monster'])
 
             # Set the monster's level based on the specified level range
             if len(encounter['level_range']) > 1:
