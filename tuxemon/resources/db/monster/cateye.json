@@ -1,27 +1,24 @@
 {
-  "slug": "cateye",
-  "category": "cateye_category",
-
-  "ai": "RandomAI",
-
-  "moveset": [
-    {
-      "level_learned": 2,
-      "technique": "amnesia"
-    },
-    {
-      "level_learned": 2,
-      "technique": "eyebite"
-    },
-    {
-      "level_learned": 2,
-      "technique": "flow"
-    }
-  ],
-
-  "shape": "Hunter",
-  "types": [
-    "Metal"
-  ],
-  "weight": 25
+    "slug": "cateye",
+    "category": "sentinel",
+    "ai": "RandomAI",
+    "moveset": [
+        {
+            "level_learned": 2,
+            "technique": "amnesia"
+        },
+        {
+            "level_learned": 2,
+            "technique": "eyebite"
+        },
+        {
+            "level_learned": 2,
+            "technique": "flow"
+        }
+    ],
+    "shape": "Hunter",
+    "types": [
+        "Metal"
+    ],
+    "weight": 25
 }

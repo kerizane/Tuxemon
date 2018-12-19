@@ -1,21 +1,19 @@
 {
-    "slug": "txmn_spighter",
-    "name_trans": "txmn_spighter_name",
-    "description_trans": "txmn_spighter_descr",
-    "category_trans": "txmn_spighter_category",
+    "slug": "spighter",
+    "category": "eyerachnid",
     "ai": "RandomAI",
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "technique_web"
+            "technique": "web"
         },
         {
             "level_learned": 2,
-            "technique": "technique_eyebite"
+            "technique": "eyebite"
         },
         {
             "level_learned": 2,
-            "technique": "technique_fester"
+            "technique": "fester"
         }
     ],
     "shape": "Grub",

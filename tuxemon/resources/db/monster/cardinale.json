@@ -1,34 +1,24 @@
 {
-  "slug": "cardinale",
-  "category": "firebird",
-
-  "ai": "RandomAI",
-
-  "moveset": [
-    {
-      "level_learned": 2,
-      "technique": "breathe_fire"
-    },
-    {
-      "level_learned": 2,
-      "technique": "berserk"
-    },
-    {
-      "level_learned": 2,
-      "technique": "peregrine"
-    }
-  ],
-
-  "sprites": {
-    "battle1": "gfx/sprites/battle/cardinale-front.png",
-    "battle2": "gfx/sprites/battle/cardinale-back.png",
-    "menu1": "gfx/sprites/battle/cardinale-menu01.png",
-    "menu2": "gfx/sprites/battle/cardinale-menu02.png"
-  },
-
-  "shape": "Flier",
-  "types": [
-    "fire"
-  ],
-  "weight": 25
+    "slug": "cardinale",
+    "category": "firebird",
+    "ai": "RandomAI",
+    "moveset": [
+        {
+            "level_learned": 2,
+            "technique": "breathe_fire"
+        },
+        {
+            "level_learned": 2,
+            "technique": "berserk"
+        },
+        {
+            "level_learned": 2,
+            "technique": "peregrine"
+        }
+    ],
+    "shape": "Flier",
+    "types": [
+        "Fire"
+    ],
+    "weight": 25
 }

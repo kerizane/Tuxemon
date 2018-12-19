@@ -1,27 +1,24 @@
 {
-  "slug": "araignee",
-  "category": "araignee_category",
-
-  "ai": "RandomAI",
-
-  "moveset": [
-    {
-      "level_learned": 2,
-      "technique": "web"
-    },
-    {
-      "level_learned": 2,
-      "technique": "petrify"
-    },
-    {
-      "level_learned": 2,
-      "technique": "shrapnel"
-    }
-  ],
-
-  "shape": "Grub",
-  "types": [
-    "Metal"
-  ],
-  "weight": 25
+    "slug": "araignee",
+    "category": "weaver",
+    "ai": "RandomAI",
+    "moveset": [
+        {
+            "level_learned": 2,
+            "technique": "web"
+        },
+        {
+            "level_learned": 2,
+            "technique": "petrify"
+        },
+        {
+            "level_learned": 2,
+            "technique": "shrapnel"
+        }
+    ],
+    "shape": "Grub",
+    "types": [
+        "Metal"
+    ],
+    "weight": 25
 }

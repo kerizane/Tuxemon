@@ -1,34 +1,24 @@
 {
-  "slug": "aardart",
-  "category": "anteater",
-
-  "ai": "RandomAI",
-
-  "moveset": [
-    {
-      "level_learned": 2,
-      "technique": "tonguespear"
-    },
-    {
-      "level_learned": 2,
-      "technique": "stampede"
-    },
-    {
-      "level_learned": 2,
-      "technique": "hibernate"
-    }
-  ],
-
-  "sprites": {
-    "battle1": "gfx/sprites/battle/aardart-front.png",
-    "battle2": "gfx/sprites/battle/aardart-back.png",
-    "menu1": "gfx/sprites/battle/aardart-menu01.png",
-    "menu2": "gfx/sprites/battle/aardart-menu02.png"
-  },
-
-  "shape": "Varmint",
-  "types": [
-    "earth"
-  ],
-  "weight": 25
+    "slug": "aardart",
+    "category": "anteater",
+    "ai": "RandomAI",
+    "moveset": [
+        {
+            "level_learned": 2,
+            "technique": "tonguespear"
+        },
+        {
+            "level_learned": 2,
+            "technique": "stampede"
+        },
+        {
+            "level_learned": 2,
+            "technique": "hibernate"
+        }
+    ],
+    "shape": "Varmint",
+    "types": [
+        "Earth"
+    ],
+    "weight": 25
 }
