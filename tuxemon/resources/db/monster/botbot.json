@@ -1,27 +1,24 @@
 {
-  "slug": "botbot",
-  "category": "botbot_category",
-
-  "ai": "RandomAI",
-
-  "moveset": [
-    {
-      "level_learned": 2,
-      "technique": "beam"
-    },
-    {
-      "level_learned": 2,
-      "technique": "levitate"
-    },
-    {
-      "level_learned": 2,
-      "technique": "battery_discharge"
-    }
-  ],
-
-  "shape": "Grub",
-  "types": [
-    "Metal"
-  ],
-  "weight": 25
+    "slug": "botbot",
+    "category": "socket",
+    "ai": "RandomAI",
+    "moveset": [
+        {
+            "level_learned": 2,
+            "technique": "beam"
+        },
+        {
+            "level_learned": 2,
+            "technique": "levitate"
+        },
+        {
+            "level_learned": 2,
+            "technique": "battery_discharge"
+        }
+    ],
+    "shape": "Grub",
+    "types": [
+        "Metal"
+    ],
+    "weight": 25
 }

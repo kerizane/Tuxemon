@@ -1,35 +1,24 @@
 {
-  "slug": "bigfin",
-  "category": "island",
-
-  "ai": "RandomAI",
-
-  "moveset": [
-    {
-      "level_learned": 2,
-      "technique": "refresh"
-    },
-    {
-      "level_learned": 2,
-      "technique": "flood"
-    },
-    {
-      "level_learned": 2,
-      "technique": "goad"
-    }
-  ],
-
-  "sprites": {
-    "battle1": "gfx/sprites/battle/bigfin-front.png",
-    "battle2": "gfx/sprites/battle/bigfin-back.png",
-    "menu1": "gfx/sprites/battle/bigfin-menu01.png",
-    "menu2": "gfx/sprites/battle/bigfin-menu02.png"
-  },
-
-  "shape": "Leviathan",
-  "types": [
-    "water",
-    "wood"
-  ],
-  "weight": 50
+    "slug": "bigfin",
+    "category": "island",
+    "ai": "RandomAI",
+    "moveset": [
+        {
+            "level_learned": 2,
+            "technique": "refresh"
+        },
+        {
+            "level_learned": 2,
+            "technique": "flood"
+        },
+        {
+            "level_learned": 2,
+            "technique": "goad"
+        }
+    ],
+    "shape": "Leviathan",
+    "types": [
+        "Water"
+    ],
+    "weight": 25
 }

@@ -1,34 +1,24 @@
 {
-  "slug": "anoleaf",
-  "category": "sprout",
-
-  "ai": "RandomAI",
-
-  "moveset": [
-    {
-      "level_learned": 2,
-      "technique": "sting"
-    },
-    {
-      "level_learned": 2,
-      "technique": "feint"
-    },
-    {
-      "level_learned": 2,
-      "technique": "whirlwind"
-    }
-  ],
-
-  "sprites": {
-    "battle1": "gfx/sprites/battle/anoleaf-front.png",
-    "battle2": "gfx/sprites/battle/anoleaf-back.png",
-    "menu1": "gfx/sprites/battle/anoleaf-menu01.png",
-    "menu2": "gfx/sprites/battle/anoleaf-menu02.png"
-  },
-
-  "shape": "Varmint",
-  "types": [
-    "wood"
-  ],
-  "weight": 25
+    "slug": "anoleaf",
+    "category": "sprout",
+    "ai": "RandomAI",
+    "moveset": [
+        {
+            "level_learned": 2,
+            "technique": "sting"
+        },
+        {
+            "level_learned": 2,
+            "technique": "feint"
+        },
+        {
+            "level_learned": 2,
+            "technique": "whirlwind"
+        }
+    ],
+    "shape": "Varmint",
+    "types": [
+        "Wood"
+    ],
+    "weight": 25
 }

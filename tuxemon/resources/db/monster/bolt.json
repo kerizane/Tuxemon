@@ -1,34 +1,24 @@
 {
-  "slug": "bolt",
-  "category": "",
-
-  "ai": "RandomAI",
-
-  "moveset": [
-    {
-      "level_learned": 2,
-      "technique": "bullet"
-    },
-    {
-      "level_learned": 2,
-      "technique": "static_field"
-    },
-    {
-      "level_learned": 2,
-      "technique": "clamp_on"
-    }
-  ],
-
-  "sprites": {
-    "battle1": "gfx/sprites/battle/bolt-front.png",
-    "battle2": "gfx/sprites/battle/bolt-back.png",
-    "menu1": "gfx/sprites/battle/bolt-menu01.png",
-    "menu2": "gfx/sprites/battle/bolt-menu02.png"
-  },
-
-  "shape": "Blob",
-  "types": [
-    "metal"
-  ],
-  "weight": 25
+    "slug": "bolt",
+    "category": "hardware",
+    "ai": "RandomAI",
+    "moveset": [
+        {
+            "level_learned": 2,
+            "technique": "bullet"
+        },
+        {
+            "level_learned": 2,
+            "technique": "static_field"
+        },
+        {
+            "level_learned": 2,
+            "technique": "clamp_on"
+        }
+    ],
+    "shape": "Blob",
+    "types": [
+        "Metal"
+    ],
+    "weight": 25
 }

@@ -1,34 +1,24 @@
 {
-  "slug": "allagon",
-  "category": "dragon",
-
-  "ai": "RandomAI",
-
-  "moveset": [
-    {
-      "level_learned": 2,
-      "technique": "perfect_cut"
-    },
-    {
-      "level_learned": 2,
-      "technique": "shrapnel"
-    },
-    {
-      "level_learned": 2,
-      "technique": "rust_bomb"
-    }
-  ],
-
-  "sprites": {
-    "battle1": "gfx/sprites/battle/allagon-front.png",
-    "battle2": "gfx/sprites/battle/allagon-back.png",
-    "menu1": "gfx/sprites/battle/allagon-menu01.png",
-    "menu2": "gfx/sprites/battle/allagon-menu02.png"
-  },
-
-  "shape": "Dragon",
-  "types": [
-    "metal"
-  ],
-  "weight": 25
+    "slug": "allagon",
+    "category": "dragon",
+    "ai": "RandomAI",
+    "moveset": [
+        {
+            "level_learned": 2,
+            "technique": "perfect_cut"
+        },
+        {
+            "level_learned": 2,
+            "technique": "shrapnel"
+        },
+        {
+            "level_learned": 2,
+            "technique": "rust_bomb"
+        }
+    ],
+    "shape": "Dragon",
+    "types": [
+        "Metal"
+    ],
+    "weight": 25
 }

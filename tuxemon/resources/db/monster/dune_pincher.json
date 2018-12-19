@@ -1,24 +1,24 @@
 {
-    "slug": "aardorn",
-    "category": "snout",
+    "slug": "dune_pincher",
+    "category": "hermit",
     "ai": "RandomAI",
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "tonguespear"
+            "technique": "flood"
         },
         {
             "level_learned": 2,
-            "technique": "ram"
+            "technique": "avalanche"
         },
         {
             "level_learned": 2,
-            "technique": "hibernate"
+            "technique": "refresh"
         }
     ],
-    "shape": "Varmint",
+    "shape": "Grub",
     "types": [
-        "Earth"
+        "Water"
     ],
     "weight": 25
 }

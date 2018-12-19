@@ -1,34 +1,25 @@
 {
-  "slug": "chillimp",
-  "category": "frost_ape",
-
-  "ai": "RandomAI",
-
-  "moveset": [
-    {
-      "level_learned": 2,
-      "technique": "ice_claw"
-    },
-    {
-      "level_learned": 2,
-      "technique": "icicle_spear"
-    },
-    {
-      "level_learned": 2,
-      "technique": "snowstorm"
-    }
-  ],
-
-  "sprites": {
-    "battle1": "gfx/sprites/battle/chillimp-front.png",
-    "battle2": "gfx/sprites/battle/chillimp-back.png",
-    "menu1": "gfx/sprites/battle/chillimp-menu01.png",
-    "menu2": "gfx/sprites/battle/chillimp-menu02.png"
-  },
-
-  "shape": "Brute",
-  "types": [
-    "water"
-  ],
-  "weight": 25
+    "slug": "chillimp",
+    "category": "frost_ape",
+    "ai": "RandomAI",
+    "moveset": [
+        {
+            "level_learned": 2,
+            "technique": "ice_claw"
+        },
+        {
+            "level_learned": 2,
+            "technique": "icicle_spear"
+        },
+        {
+            "level_learned": 2,
+            "technique": "snowstorm"
+        }
+    ],
+    "shape": "Brute",
+    "types": [
+        "Water",
+        "Earth"
+    ],
+    "weight": 25
 }
