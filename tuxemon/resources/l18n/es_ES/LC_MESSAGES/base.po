@@ -1000,8 +1000,7 @@ msgstr "Not really"
 
 # NPC dialogs
 msgid "professor_dialog\n"
-msgstr "Profesor:\n"
-"Ah, sí. Justo la persona a la que quería ver.\n"
+msgstr "Profesor: Ah, sí. Justo la persona a la que quería ver.\n"
 "He oído que quieres aprender sobre los Tuxemon.\n"
 "Los Tuxemon son pequeños animales, algunos dirían monstruos, con los que es posible entablar amistad y pelear contra otros Tuxemon.\n"
 "Precisamente acabo de recibir tres nuevos Tuxemon para realizar investigaciones, y me gustaría darte uno.\n"
@@ -1126,8 +1125,9 @@ msgstr "Centro de la Catedral: Vivimos para Servir."
 msgid "Cotton_Mart"
 msgstr "¡Obtén la novedad en la Tienda de Novedades!"
 
-msgid "Cotton_Town_Sign"
-msgstr "Bienvenidos a Pueblo Algodón: Una Fuerza en Crecimiento \n \n^ Pueblo Algodón --- Ruta 1 v"
+msgid "Cotton_Town_Sign\n"
+msgstr "Bienvenidos a Pueblo Algodón: Una Fuerza en Crecimiento\n"
+"^ Pueblo Algodón --- Ruta 1 v\n"
 
 msgid "column1"
 msgstr "Una columna rara y antigua. Esto solía ser un templo."

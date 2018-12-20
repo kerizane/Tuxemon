@@ -1000,8 +1000,7 @@ msgstr "Not really"
 
 # NPC dialogs
 msgid "professor_dialog\n"
-msgstr "Profesor:\n"
-"Hurá. Přesně ten člověk se kterým jsem se chtěl setkat.\n"
+msgstr "Profesor: Hurá. Přesně ten člověk se kterým jsem se chtěl setkat.\n"
 "Slyšel jsem že se chceš učit o Tuxemonech.\n"
 "Tuxemoni jsou malá zvířata, někteří je nazývají monstry, se kterými se přátelíme a používáme je k boji s dalšími Tuxemony.\n"
 "Napadlo mě, že jsem zrovna získal tři nové Tuxemony pro svůj výzkum. Jednoho bych ti rád dal.\n"
@@ -1128,8 +1127,9 @@ msgstr "Cathedral Center: We Live to Serve"
 msgid "Cotton_Mart"
 msgstr "Get the scoop at the Scoop Store!"
 
-msgid "Cotton_Town_Sign"
-msgstr "Welcome to Cotton Town: A Growing Force \n \n^ Cotton Town --- Route 1 v"
+msgid "Cotton_Town_Sign\n"
+msgstr "Welcome to Cotton Town: A Growing Force\n"
+"^ Cotton Town --- Route 1 v\n"
 
 msgid "column1"
 msgstr "A rare and ancient column. This used to be a temple."

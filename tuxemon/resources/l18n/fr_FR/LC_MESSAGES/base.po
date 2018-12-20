@@ -1128,8 +1128,9 @@ msgstr "Cathedral Center: We Live to Serve"
 msgid "Cotton_Mart"
 msgstr "Get the scoop at the Scoop Store!"
 
-msgid "Cotton_Town_Sign"
-msgstr "Welcome to Cotton Town: A Growing Force \n \n^ Cotton Town --- Route 1 v"
+msgid "Cotton_Town_Sign\n"
+msgstr "Welcome to Cotton Town: A Growing Force\n"
+"^ Cotton Town --- Route 1 v\n"
 
 msgid "column1"
 msgstr "A rare and ancient column. This used to be a temple."
