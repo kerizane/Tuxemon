@@ -45,12 +45,13 @@ def process_translate_text(game, text_slug, parameters):
         # match special placeholders like ${{name}}
         replace_values[key] = replace_text(game, value)
 
-    # 'text_slug' can be a collection
-    pages = text_slug if isinstance(text_slug, list) else (text_slug,)
+    # generate translation
+    text = T.format(text_slug, replace_values)
 
-    # translate all text slugs with possible formatting
-    pages = (T.format(page, replace_values) for page in pages)
+    # split text into pages for scrolling
+    pages = text.split("\n")
 
+    # generate scrollable text
     return [replace_text(game, page) for page in pages]
 
 
