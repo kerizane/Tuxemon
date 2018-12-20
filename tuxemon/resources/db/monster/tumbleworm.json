@@ -4,12 +4,16 @@
     "ai": "RandomAI",
     "moveset": [
         {
-            "level_learned": 1,
-            "technique": "pound"
+            "level_learned": 2,
+            "technique": "strike"
         },
         {
             "level_learned": 2,
-            "technique": "bite"
+            "technique": "web"
+        },
+        {
+            "level_learned": 2,
+            "technique": "constrict"
         }
     ],
     "shape": "Grub",

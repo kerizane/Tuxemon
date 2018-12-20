@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "pound"
+            "technique": "splinter"
         },
         {
             "level_learned": 2,
-            "technique": "poison_sting"
+            "technique": "peregrine"
+        },
+        {
+            "level_learned": 2,
+            "technique": "whirlwind"
         }
     ],
     "shape": "Humanoid",

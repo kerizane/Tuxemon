@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "pound"
+            "technique": "amnesia"
         },
         {
             "level_learned": 2,
-            "technique": "poison_sting"
+            "technique": "spray"
+        },
+        {
+            "level_learned": 2,
+            "technique": "glower"
         }
     ],
     "shape": "Serpent",

@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "pound"
+            "technique": "goad"
         },
         {
             "level_learned": 2,
-            "technique": "poison_sting"
+            "technique": "flood"
+        },
+        {
+            "level_learned": 2,
+            "technique": "flow"
         }
     ],
     "shape": "Aquatic",

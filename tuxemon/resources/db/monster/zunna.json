@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "pound"
+            "technique": "constrict"
         },
         {
             "level_learned": 2,
-            "technique": "bite"
+            "technique": "goad"
+        },
+        {
+            "level_learned": 2,
+            "technique": "strike"
         }
     ],
     "shape": "Blob",

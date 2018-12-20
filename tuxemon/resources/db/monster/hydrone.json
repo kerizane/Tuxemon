@@ -4,12 +4,16 @@
     "ai": "RandomAI",
     "moveset": [
         {
-            "level_learned": 1,
-            "technique": "pound"
+            "level_learned": 2,
+            "technique": "electrical_storm"
         },
         {
             "level_learned": 2,
-            "technique": "water_shot"
+            "technique": "perfect_cut"
+        },
+        {
+            "level_learned": 2,
+            "technique": "shrapnel"
         }
     ],
     "shape": "Humanoid",

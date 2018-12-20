@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "pound"
+            "technique": "pseudopod"
         },
         {
             "level_learned": 2,
-            "technique": "bite"
+            "technique": "amnesia"
+        },
+        {
+            "level_learned": 2,
+            "technique": "muddle"
         }
     ],
     "shape": "Blob",

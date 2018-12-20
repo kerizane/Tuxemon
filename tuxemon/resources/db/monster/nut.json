@@ -5,7 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "pound"
+            "technique": "bullet"
+        },
+        {
+            "level_learned": 2,
+            "technique": "static_field"
+        },
+        {
+            "level_learned": 2,
+            "technique": "shuriken"
         }
     ],
     "shape": "Blob",

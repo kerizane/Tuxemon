@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "bite"
+            "technique": "overgrowth"
         },
         {
             "level_learned": 2,
-            "technique": "poison_sting"
+            "technique": "thunderball"
+        },
+        {
+            "level_learned": 2,
+            "technique": "boulder"
         }
     ],
     "shape": "Brute",

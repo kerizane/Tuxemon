@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "bite"
+            "technique": "overgrowth"
         },
         {
             "level_learned": 2,
-            "technique": "poison_sting"
+            "technique": "blossom"
+        },
+        {
+            "level_learned": 2,
+            "technique": "boulder"
         }
     ],
     "shape": "Serpent",
