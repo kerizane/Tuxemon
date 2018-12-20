@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "pound"
+            "technique": "probiscus"
         },
         {
             "level_learned": 2,
-            "technique": "water_shot"
+            "technique": "spray"
+        },
+        {
+            "level_learned": 2,
+            "technique": "refresh"
         }
     ],
     "shape": "Grub",

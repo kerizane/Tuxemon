@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "pound"
+            "technique": "perfect_cut"
         },
         {
             "level_learned": 2,
-            "technique": "bite"
+            "technique": "shrapnel"
+        },
+        {
+            "level_learned": 2,
+            "technique": "strike"
         }
     ],
     "shape": "Dragon",

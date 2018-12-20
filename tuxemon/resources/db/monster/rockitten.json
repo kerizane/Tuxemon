@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "pound"
+            "technique": "ram"
         },
         {
             "level_learned": 2,
-            "technique": "bite"
+            "technique": "boulder"
+        },
+        {
+            "level_learned": 2,
+            "technique": "thunderball"
         }
     ],
     "shape": "Hunter",

@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "bite"
+            "technique": "probiscus"
         },
         {
             "level_learned": 2,
-            "technique": "water_shot"
+            "technique": "chill_mist"
+        },
+        {
+            "level_learned": 2,
+            "technique": "snowstorm"
         }
     ],
     "shape": "Aquatic",

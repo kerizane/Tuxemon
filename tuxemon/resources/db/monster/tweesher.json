@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "water_shot"
+            "technique": "ice_claw"
         },
         {
             "level_learned": 2,
-            "technique": "whirlwind"
+            "technique": "flow"
+        },
+        {
+            "level_learned": 2,
+            "technique": "energy_field"
         }
     ],
     "shape": "Flier",

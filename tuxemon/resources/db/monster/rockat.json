@@ -4,12 +4,16 @@
     "ai": "RandomAI",
     "moveset": [
         {
-            "level_learned": 1,
-            "technique": "pound"
+            "level_learned": 2,
+            "technique": "ram"
         },
         {
             "level_learned": 2,
-            "technique": "bite"
+            "technique": "glower"
+        },
+        {
+            "level_learned": 2,
+            "technique": "thunderball"
         }
     ],
     "shape": "Hunter",

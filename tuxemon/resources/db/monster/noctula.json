@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "bite"
+            "technique": "midnight_mantle"
         },
         {
             "level_learned": 2,
-            "technique": "water_shot"
+            "technique": "rot"
+        },
+        {
+            "level_learned": 2,
+            "technique": "take_cover"
         }
     ],
     "shape": "Flier",

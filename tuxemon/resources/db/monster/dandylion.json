@@ -4,12 +4,16 @@
     "ai": "RandomAI",
     "moveset": [
         {
-            "level_learned": 1,
-            "technique": "pound"
+            "level_learned": 2,
+            "technique": "energy_claws"
         },
         {
             "level_learned": 2,
-            "technique": "bite"
+            "technique": "overgrowth"
+        },
+        {
+            "level_learned": 2,
+            "technique": "sleeping_powder"
         }
     ],
     "shape": "Hunter",

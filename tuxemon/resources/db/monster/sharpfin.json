@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "bite"
+            "technique": "goad"
         },
         {
             "level_learned": 2,
-            "technique": "poison_sting"
+            "technique": "splinter"
+        },
+        {
+            "level_learned": 2,
+            "technique": "web"
         }
     ],
     "shape": "Aquatic",

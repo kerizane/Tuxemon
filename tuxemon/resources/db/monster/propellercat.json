@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "pound"
+            "technique": "wing_tip"
         },
         {
             "level_learned": 2,
-            "technique": "poison_sting"
+            "technique": "perfect_cut"
+        },
+        {
+            "level_learned": 2,
+            "technique": "fluff_up"
         }
     ],
     "shape": "Flier",

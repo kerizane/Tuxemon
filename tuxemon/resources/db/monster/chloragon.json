@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "pound"
+            "technique": "all_in"
         },
         {
             "level_learned": 2,
-            "technique": "poison_sting"
+            "technique": "web"
+        },
+        {
+            "level_learned": 2,
+            "technique": "hibernate"
         }
     ],
     "shape": "Dragon",

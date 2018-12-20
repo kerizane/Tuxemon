@@ -5,11 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "pound"
+            "technique": "petrify"
         },
         {
             "level_learned": 2,
-            "technique": "bite"
+            "technique": "give_all"
+        },
+        {
+            "level_learned": 2,
+            "technique": "flamethrower"
         }
     ],
     "shape": "Humanoid",

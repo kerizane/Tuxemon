@@ -4,12 +4,16 @@
     "ai": "RandomAI",
     "moveset": [
         {
-            "level_learned": 1,
-            "technique": "pound"
+            "level_learned": 2,
+            "technique": "fester"
         },
         {
             "level_learned": 2,
-            "technique": "bite"
+            "technique": "venomous_tentacle"
+        },
+        {
+            "level_learned": 2,
+            "technique": "energy_claws"
         }
     ],
     "shape": "Landrace",
