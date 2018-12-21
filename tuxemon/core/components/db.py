@@ -167,8 +167,7 @@ class JSONDatabase(object):
 
 def set_defaults(results, table):
     if table == "monster":
-        slug = results['slug']
-        name = slug.partition('_')[2]
+        name = results['slug']
 
         sprites = results.setdefault(
             "sprites",
