@@ -103,7 +103,7 @@ class RandomEncounterAction(EventAction):
             current_monster.current_hp = current_monster.hp
 
             # Create an NPC object which will be this monster's "trainer"
-            npc = NPC("npc_maple")
+            npc = NPC("maple_girl")
             npc.monsters.append(current_monster)
             npc.party_limit = 0
 
