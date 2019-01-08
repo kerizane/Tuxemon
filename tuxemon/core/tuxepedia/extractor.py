@@ -66,10 +66,10 @@ class TuxepediaWebExtractor:
                 self.get_logger().info(name)
                 self.get_complete_monster_sprites(monster_row)
                 monsters[name] = {
-                    "slug": f"txmn_{safe_name}",
-                    "name_trans": f"txmn_{safe_name}_name",
-                    "description_trans": f"txmn_{safe_name}_descr",
-                    "category_trans": f"txmn_{safe_name}_category",
+                    "slug": "txmn_{}".format(safe_name),
+                    "name_trans": "txmn_{}_name".format(safe_name),
+                    "description_trans": "txmn_{}_descr".format(safe_name),
+                    "category_trans": "txmn_{}_category".format(safe_name),
 
                     "ai": "RandomAI",
                     # "blurp": self.get_monster_blurp(monster_row),
@@ -397,7 +397,8 @@ class TuxepediaWebExtractor:
         if headers is None:
             headers = self.headers
         else:
-            headers = {**self.headers, **headers}
+            headers = {}.update(self.headers)
+            headers.update(headers)
 
         response = requests.get(url, params=params, headers=headers, stream=stream)
 
