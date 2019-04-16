@@ -14,7 +14,7 @@
   "range": "touch",
   "recharge": 2,
   "sfx": "blaster1.ogg",
-  "slug": "one_two",
+  "slug": "one-two",
   "sort": "damage",
   "target": {
     "enemy monster": 2,

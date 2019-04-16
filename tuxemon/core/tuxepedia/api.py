@@ -5,6 +5,7 @@
     license: GPLv3
 """
 from __future__ import unicode_literals
+from collections import OrderedDict
 
 from contextlib import contextmanager
 import json
@@ -83,6 +84,7 @@ class TuxepediaStore:
                 # dump tuxemon JSON
                 with open(txmn_json_path, "w") as f:
                     json.dump(txmn_json_full[txmn_name], f, indent=4)
+                    f.write("\n")
 
     def update_txmn_json(self, txmn_name, txmn_json_new, overwrite=True):
         """Update a tuxemon JSON file record
@@ -98,7 +100,7 @@ class TuxepediaStore:
 
         # load previous tuxemon JSON from file
         with open(txmn_json_path) as f:
-            txmn_json_old = json.load(f)
+            txmn_json_old = json.load(f, object_pairs_hook=OrderedDict)
 
         # diff JSON records and add elements as needed
         for field in txmn_json_new:
@@ -114,6 +116,7 @@ class TuxepediaStore:
         # dump tuxemon JSON
         with open(txmn_json_path, "w") as f:
             json.dump(txmn_json_old, f, indent=4)
+            f.write("\n")
 
     def get_txmn_json(self, txmn_name):
         """Extract tuxemon JSON from file
@@ -129,7 +132,7 @@ class TuxepediaStore:
 
         if os.path.isfile(txmn_json_path):
             with open(txmn_json_path) as f:
-                txmn_json = json.load(f)
+                txmn_json = json.load(f, object_pairs_hook=OrderedDict)
 
         # report if no JSON record was found
         else:

@@ -6,6 +6,7 @@
     license: GPLv3
 """
 from __future__ import unicode_literals
+from collections import OrderedDict
 
 import logging
 import os
@@ -66,22 +67,61 @@ class TuxepediaWebExtractor:
 
                 self.get_logger().info(name)
                 self.get_complete_monster_sprites(monster_row)
-                monsters[name] = {
-                    "slug": safe_name,
-                    "category": fix_name(self.get_monster_category(monster_row).lower()),
-                    "ai": "RandomAI",
-                    # "blurp": self.get_monster_blurp(monster_row),
-                    # "call": self.get_monster_call(monster_row),
-                    # "moveset": [],
-                    "shape": self.get_monster_shape(monster_row),
-                    # "tuxepedia_url": self.get_monster_url(monster_row),
-                    "types": self.get_monster_types(monster_row),
-                    "weight": 25,
-                }
+                types = self.get_monster_types(monster_row)
+                moveset = self.get_move_list(monster_row) or self.get_default_moveset(types[0])
+                monsters[name] = dict(
+                    slug=safe_name,
+                    category=fix_name(self.get_monster_category(monster_row).lower()),
+                    ai="RandomAI",
+                    # blurp=self.get_monster_blurp(monster_row),
+                    # call=self.get_monster_call(monster_row),
+                    moveset=moveset,
+                    shape=self.get_monster_shape(monster_row),
+                    # tuxepedia_url=self.get_monster_url(monster_row),
+                    types=types,
+                    weight=25,
+                )
             except Exception as e:
                 self.get_logger().warning(e)
 
         return monsters
+
+    def get_default_moveset(self, type):
+        defaults = {
+            "Water": [
+                "Flood",
+                "Flow",
+                "Font",
+            ],
+            "Wood": [
+                "Fluff Up",
+                "Sting",
+                "Splinter",
+            ],
+            "Earth": [
+                "Mudslide",
+                "Ram",
+                "Rock",
+            ],
+            "Fire": [
+                "Fire Ball",
+                "Fire Claw",
+                "Flamethrower",
+            ],
+            "Metal": [
+                "Perfect Cut",
+                "Shrapnel",
+                "Wall of Steel",
+            ]
+        }
+        return [
+            OrderedDict(
+                level_learned=2,
+                technique=fix_name(move).lower(),
+            )
+            for move in defaults[type]
+        ]
+
 
     def get_monsters(self):
         """Extract monster data from the Tuxepedia Wiki page
@@ -123,10 +163,7 @@ class TuxepediaWebExtractor:
         """
 
         # get all type elements (<a> blocks)
-        types = monster_row[3].findall("a")
-
-        categories = [el.text_content() for el in types] or ['']
-        return categories[0]
+        return monster_row[3].text or ""
 
     def get_monster_name(self, monster_row):
         """Get tuxemon name from Tuxepedia table row
@@ -166,6 +203,27 @@ class TuxepediaWebExtractor:
 
         # extract tyoe names
         return [el.text_content() for el in types]
+
+    def get_move_list(self, monster_row):
+        """Get tuxemon sprites from Tuxepedia table row
+
+        :param monster_row: HTML <tr> table row element
+        :return: dict/JSON of tuxemon sprites
+        """
+
+        monster_url = self.get_monster_url(monster_row)
+        monster_page = self.url_to_html(monster_url, {})
+        try:
+            table = monster_page.xpath(WEB_PATHS.moves_xpath)[0].getparent()
+        except IndexError:
+            return []
+        return [
+            OrderedDict(
+                level_learned=2,
+                technique=fix_name(row.text).lower(),
+            )
+            for row in table.findall(".//a")[2:]
+        ]
 
     def get_complete_monster_sprites(self, monster_row):
         """Get tuxemon sprites from Tuxepedia table row

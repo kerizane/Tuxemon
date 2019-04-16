@@ -17,6 +17,7 @@ class WEB_PATHS:
     monsters_xpath = '//*[@id="mw-content-text"]/table[1]/tr[1]/td[1]/table'
     monster_sound_xpath = '//*[@id="mw-content-text"]/div[1]/a'
     monster_main_sprites = '//*[@id="mw-content-text"]/table[4]'
+    moves_xpath = '//*[@class="Has-Technique"]'
 
 
 class RESOURCE_PATHS:
