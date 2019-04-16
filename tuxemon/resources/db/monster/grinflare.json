@@ -9,11 +9,11 @@
         },
         {
             "level_learned": 2,
-            "technique": "fire_claw"
+            "technique": "surge"
         },
         {
             "level_learned": 2,
-            "technique": "give_all"
+            "technique": "stampede"
         }
     ],
     "shape": "Brute",

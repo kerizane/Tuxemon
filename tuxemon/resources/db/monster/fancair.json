@@ -1,6 +1,6 @@
 {
     "slug": "fancair",
-    "category": "",
+    "category": "deadly_fan",
     "ai": "RandomAI",
     "moveset": [
         {
@@ -16,7 +16,7 @@
             "technique": "wall_of_steel"
         }
     ],
-    "shape": "",
+    "shape": "Sprite",
     "types": [
         "Metal"
     ],

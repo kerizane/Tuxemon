@@ -1,0 +1,25 @@
+{
+    "slug": "grumpi",
+    "category": "gummy",
+    "ai": "RandomAI",
+    "moveset": [
+        {
+            "level_learned": 2,
+            "technique": "mudslide"
+        },
+        {
+            "level_learned": 2,
+            "technique": "ram"
+        },
+        {
+            "level_learned": 2,
+            "technique": "rock"
+        }
+    ],
+    "shape": "Brute",
+    "types": [
+        "Earth",
+        "Water"
+    ],
+    "weight": 25
+}

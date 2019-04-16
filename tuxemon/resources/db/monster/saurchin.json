@@ -1,6 +1,6 @@
 {
     "slug": "saurchin",
-    "category": "",
+    "category": "spiny",
     "ai": "RandomAI",
     "moveset": [
         {
@@ -16,7 +16,7 @@
             "technique": "font"
         }
     ],
-    "shape": "",
+    "shape": "Dragon",
     "types": [
         "Water"
     ],

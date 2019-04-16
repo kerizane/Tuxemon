@@ -1,6 +1,6 @@
 {
     "slug": "windeye",
-    "category": "",
+    "category": "tower",
     "ai": "RandomAI",
     "moveset": [
         {
@@ -16,7 +16,7 @@
             "technique": "wall_of_steel"
         }
     ],
-    "shape": "",
+    "shape": "Humanoid",
     "types": [
         "Metal"
     ],

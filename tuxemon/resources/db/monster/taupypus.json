@@ -1,0 +1,24 @@
+{
+    "slug": "taupypus",
+    "category": "flatfoot",
+    "ai": "RandomAI",
+    "moveset": [
+        {
+            "level_learned": 2,
+            "technique": "flood"
+        },
+        {
+            "level_learned": 2,
+            "technique": "flow"
+        },
+        {
+            "level_learned": 2,
+            "technique": "font"
+        }
+    ],
+    "shape": "Varmint",
+    "types": [
+        "Water"
+    ],
+    "weight": 25
+}

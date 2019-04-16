@@ -9,11 +9,7 @@
         },
         {
             "level_learned": 2,
-            "technique": "sting"
-        },
-        {
-            "level_learned": 2,
-            "technique": "splinter"
+            "technique": "1"
         }
     ],
     "shape": "Flier",

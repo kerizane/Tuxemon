@@ -1,0 +1,24 @@
+{
+    "slug": "vividactil",
+    "category": "exhumed",
+    "ai": "RandomAI",
+    "moveset": [
+        {
+            "level_learned": 2,
+            "technique": "mudslide"
+        },
+        {
+            "level_learned": 2,
+            "technique": "ram"
+        },
+        {
+            "level_learned": 2,
+            "technique": "rock"
+        }
+    ],
+    "shape": "Flier",
+    "types": [
+        "Earth"
+    ],
+    "weight": 25
+}

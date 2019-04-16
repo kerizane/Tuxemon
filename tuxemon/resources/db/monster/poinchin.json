@@ -1,6 +1,6 @@
 {
     "slug": "poinchin",
-    "category": "",
+    "category": "spiny",
     "ai": "RandomAI",
     "moveset": [
         {
@@ -16,7 +16,7 @@
             "technique": "font"
         }
     ],
-    "shape": "",
+    "shape": "Grub",
     "types": [
         "Water"
     ],

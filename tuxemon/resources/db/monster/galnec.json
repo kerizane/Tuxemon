@@ -1,6 +1,6 @@
 {
     "slug": "galnec",
-    "category": "",
+    "category": "dry_desert",
     "ai": "RandomAI",
     "moveset": [
         {
@@ -16,7 +16,7 @@
             "technique": "rock"
         }
     ],
-    "shape": "",
+    "shape": "Hunter",
     "types": [
         "Earth"
     ],

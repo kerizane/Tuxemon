@@ -9,11 +9,11 @@
         },
         {
             "level_learned": 2,
-            "technique": "fire_ball"
+            "technique": "kindling_flame"
         },
         {
             "level_learned": 2,
-            "technique": "take_cover"
+            "technique": "energy_claws"
         }
     ],
     "shape": "Dragon",

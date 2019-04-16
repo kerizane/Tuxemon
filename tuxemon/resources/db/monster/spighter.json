@@ -5,15 +5,15 @@
     "moveset": [
         {
             "level_learned": 2,
-            "technique": "fluff_up"
+            "technique": "web"
         },
         {
             "level_learned": 2,
-            "technique": "sting"
+            "technique": "eyebite"
         },
         {
             "level_learned": 2,
-            "technique": "splinter"
+            "technique": "fester"
         }
     ],
     "shape": "Grub",
