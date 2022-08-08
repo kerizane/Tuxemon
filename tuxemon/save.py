@@ -36,7 +36,16 @@ import json
 import logging
 import os
 from operator import itemgetter
-from typing import Any, Callable, Literal, Mapping, Optional, TextIO, TypeVar
+from typing import (
+    Any,
+    Callable,
+    Dict,
+    Literal,
+    Mapping,
+    Optional,
+    TextIO,
+    TypeVar,
+)
 
 import pygame
 
@@ -194,9 +203,7 @@ def json_load(
     )
 
 
-# This isn't right as it could be an old format at this point
-def open_save_file(save_path: str) -> Optional[SaveData]:
-
+def open_save_file(save_path: str) -> Optional[Dict[str, Any]]:
     try:
         try:
             if config.compress_save is None and prepare.SAVE_METHOD == "CBOR":
