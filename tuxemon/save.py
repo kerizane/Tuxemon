@@ -42,6 +42,7 @@ from typing import (
     Dict,
     Literal,
     Mapping,
+    NewType,
     Optional,
     TextIO,
     TypeVar,
@@ -71,9 +72,11 @@ slot_number: Optional[int] = None
 TIME_FORMAT = "%Y-%m-%d %H:%M"
 config = prepare.CONFIG
 
+EncodedScreenshot = NewType("EncodedScreenshot", str)
+
 
 class SaveData(NPCState):
-    screenshot: str  # screenshot encoded as a string
+    screenshot: EncodedScreenshot
     screenshot_width: int
     screenshot_height: int
     time: str
