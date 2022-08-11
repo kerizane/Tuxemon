@@ -113,7 +113,8 @@ class ItemModel(BaseModel):
     )
     ## Optional fields:
     battle_menu: Optional[ItemBattleMenu] = Field(
-        "", description="Which menu should be used to choose the target of the item."
+        "",
+        description="Which menu should be used to choose the target of the item.",
     )
 
     class Config:
@@ -418,6 +419,9 @@ class NpcModel(BaseModel):
 class BattleGraphicsModel(BaseModel):
     island_back: str = Field(..., description="Sprite used for back combat")
     island_front: str = Field(..., description="Sprite used for front combat")
+    background: Optional[str] = Field(
+        None, description="Sprite used for combat background"
+    )
 
     # Validate resources that should exist
     @validator("island_back", "island_front")
